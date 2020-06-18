@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": "@reuters-graphics/eslint-config",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  }
+}
