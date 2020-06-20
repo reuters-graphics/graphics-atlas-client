@@ -4,9 +4,9 @@
 
 [![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client)
 
-Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
+Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html). Includes translations for country names in German, French, Italian, Spanish, Japanese, Chinese and Persian/Fārsī.
 
-Includes translations for country names in German, French, Italian, Spanish, Japanese, Chinese and Persian/Fārsī.
+Also includes a complete repository of topojson files for countries and UN regions and sub-regions at 1:50m and 1:110m resolution.
 
 ### Install
 
@@ -14,12 +14,12 @@ Includes translations for country names in German, French, Italian, Spanish, Jap
 $ yarn add @reuters-graphics/graphics-atlas-client
 ```
 
-### Use
+### Use the metadata client
 
 ```javascript
-import AtlasClient from '@reuters-graphics/graphics-atlas-client';
+import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
 
-const client = new AtlasClient();
+const client = new AtlasMetadataClient();
 
 client.regions;
 // [
@@ -116,3 +116,32 @@ client.getCountryName('IRL'); // Country slug or code
 - Kosovo
 - Northern Cyprus
 - Channel Islands
+
+### Use the TopoJSON
+
+```javascript
+// Use a country's ISO alpha 2 code and the resolution level
+// 1:50m Germany
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.50m.json';
+// 1:110m Germany
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.110m.json';
+
+// Use a UN region or sub-region's slug to get a collection of countries
+// 1:50m Africa
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/africa.50m.json';
+// 1:110m Central America
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-america.110m.json';
+```
+
+### Building data
+
+```
+$ yarn build:metadata
+$ yarn build
+$ yarn build:maps
+```
+
+### Data sources
+
+- [World Atlas TopoJSON](https://github.com/topojson/world-atlas)
+- [Umpirsky country list](https://github.com/umpirsky/country-list)
