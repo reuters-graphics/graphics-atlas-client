@@ -1,13 +1,18 @@
 {
   "name": "@reuters-graphics/graphics-atlas-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "repository": "https://github.com/reuters-graphics/graphics-atlas-client",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist/**/*",
+    "topojson/**/*"
+  ],
   "scripts": {
-    "build-metadata": "npx ./bin/createMetadata/index.js",
+    "build:metadata": "npx ./bin/buildMetadata/index.js",
+    "build:maps": "npx ./bin/buildMaps/index.js",
     "build": "rollup --config rollup.config.js",
     "test": "mocha"
   },
@@ -23,7 +28,8 @@
     "node-fetch": "^2.6.0",
     "rollup": "^2.10.5",
     "rollup-plugin-node-externals": "^2.2.0",
-    "rollup-plugin-size-snapshot": "^0.12.0"
+    "rollup-plugin-size-snapshot": "^0.12.0",
+    "topojson": "^3.0.2"
   },
   "dependencies": {
     "lodash": "^4.17.15"
