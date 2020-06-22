@@ -4,7 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client)
 
-Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html). Includes translations for country names in German, French, Italian, Spanish, Japanese, Chinese and Persian/Fārsī.
+Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html). Includes translations for country names in German, French, Italian, Spanish, Portuguese, Japanese, Chinese and Persian/Fārsī.
 
 Also includes a complete repository of topojson files for countries and UN regions and sub-regions at 1:50m and 1:110m resolution.
 

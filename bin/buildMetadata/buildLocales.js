@@ -30,6 +30,7 @@ module.exports = async() => {
     'de', // German
     'en', // English
     'es', // Spanish
+    'pt', // Portuguese
     'fa', // Persian
     'fr', // French
     'it', // Italian
