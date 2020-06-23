@@ -22,13 +22,13 @@ const createMetadata = async() => {
     name: d.name,
     slug: slugify(d.name),
     translations: locales[d.iso_alpha_2],
-    unRegion: {
-      name: d.un_region === '' ? null : d.un_region,
-      slug: d.un_region === '' ? null : slugify(d.un_region),
+    unRegion: d.un_region === '' ? null : {
+      name: d.un_region,
+      slug: slugify(d.un_region),
     },
-    unSubregion: {
-      name: d.un_subregion === '' ? null : d.un_subregion,
-      slug: d.un_subregion === '' ? null : slugify(d.un_subregion),
+    unSubregion: d.un_subregion === '' ? null : {
+      name: d.un_subregion,
+      slug: slugify(d.un_subregion),
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,
