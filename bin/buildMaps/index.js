@@ -2,9 +2,17 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
 const topojson = require('topojson');
+const parse = require('csv-parse/lib/sync');
+const getCentroid = require('@turf/centroid').default;
 const AtlasClient = require('../../dist/index.js');
 
 const WRITE_PATH = path.resolve(__dirname, '../../');
+
+const CENTROIDS_PATH = path.resolve(__dirname, '../../data/custom_centroids.csv');
+const customCentroids = parse(fs.readFileSync(CENTROIDS_PATH), {
+  columns: true,
+  skip_empty_lines: true,
+});
 
 const atlas = new AtlasClient();
 
@@ -30,13 +38,23 @@ const getCountryGeoJson = (topology, country) => {
   const metadata = atlas.getCountry(country.id);
   if (!metadata) return null;
   const geoJson = topojson.feature(topology, country);
-  geoJson.properties = { ...metadata };
+  const customCentroid = customCentroids.find(d =>
+    atlas.getCountry(d.isoAlpha3).isoNumeric === country.id);
+  let centroid;
+  if (!customCentroid) {
+    // returned as [longitude, latitude]
+    centroid = getCentroid(geoJson).geometry.coordinates;
+  } else {
+    centroid = [+customCentroid.longitude, +customCentroid.latitude];
+  }
+  geoJson.properties = { ...metadata, centroid };
   return geoJson;
 };
 
 const createMaps = async(level) => {
   const topology = await fetchTopojson(level);
   const countries = topology.objects.countries.geometries;
+
   for (const country of countries) {
     const geoJson = getCountryGeoJson(topology, country);
     if (!geoJson) continue;

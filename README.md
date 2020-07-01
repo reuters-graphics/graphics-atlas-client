@@ -141,6 +141,10 @@ $ yarn build
 $ yarn build:maps
 ```
 
+### Centroids
+
+Centroids for each country are automatically calculated and added to the properties of each country's topojson. You can override the default calculation by adding a custom centroid to the `data/custom_centroids.csv` file and rebuilding the maps.
+
 ### Data sources
 
 - [World Atlas TopoJSON](https://github.com/topojson/world-atlas)
