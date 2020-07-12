@@ -4,8 +4,17 @@ const parseCSV = require('csv-parse/lib/sync');
 const buildLocales = require('./buildLocales');
 const slugify = require('@sindresorhus/slugify');
 
+const DATA_DIR = path.join(__dirname, '../../data/');
+const unRegionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_region.csv'), 'utf-8');
+const unRegionTranslations = parseCSV(unRegionsFile, { columns: true, skip_empty_lines: true });
+// const unSubregionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_subregion.csv'), 'utf-8');
+// const unSubregionTranslations = parseCSV(unSubregionsFile, { columns: true, skip_empty_lines: true });
+
+const getRegionTranslations = (enName) => unRegionTranslations.find(d => d.en === enName) || {};
+// const getSubregionTranslations = (enName) => unSubregionTranslations.find(d => d.en === enName) || {};
+
 const createMetadata = async() => {
-  const metadataPath = path.join(__dirname, '../../data/base_metadata.csv');
+  const metadataPath = path.join(DATA_DIR, 'base_metadata.csv');
   const metadataFile = fs.readFileSync(metadataPath, 'utf-8');
 
   const metadata = parseCSV(metadataFile, {
@@ -25,10 +34,12 @@ const createMetadata = async() => {
     unRegion: d.un_region === '' ? null : {
       name: d.un_region,
       slug: slugify(d.un_region),
+      translations: getRegionTranslations(d.un_region),
     },
     unSubregion: d.un_subregion === '' ? null : {
       name: d.un_subregion,
       slug: slugify(d.un_subregion),
+      // translations: getSubregionTranslations(d.un_subregion),
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,
