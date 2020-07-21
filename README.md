@@ -6,7 +6,7 @@
 
 Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html). Includes translations for country and UN region names in German, French, Italian, Spanish, Portuguese, Japanese, Chinese and Persian/Fārsī.
 
-Also includes a complete repository of topojson files for countries and UN regions and sub-regions at 1:50m and 1:110m resolution.
+Also includes a complete repository of topojson files for countries and UN regions and sub-regions.
 
 ### Install
 
@@ -128,17 +128,18 @@ client.getCountryName('IRL'); // Country slug or code
 ### Use the TopoJSON
 
 ```javascript
-// Use a country's ISO alpha 2 code and the resolution level
-// 1:50m Germany
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.50m.json';
-// 1:110m Germany
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.110m.json';
+// Use a country's ISO alpha 2 code
+// Germany
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.json';
 
 // Use a UN region or sub-region's slug to get a collection of countries
-// 1:50m Africa
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/africa.50m.json';
-// 1:110m Central America
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-america.110m.json';
+// Africa
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/africa.json';
+// Central America
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-america.json';
+
+// World includes all countries and disputed boundaries
+import topology from '@reuters-graphics/graphics-atlas-client/topojson/world.json';
 ```
 
 ### Building data
@@ -155,5 +156,6 @@ Centroids for each country are automatically calculated and added to the propert
 
 ### Data sources
 
-- [World Atlas TopoJSON](https://github.com/topojson/world-atlas)
+- [GADM](https://gadm.org/index.html)
+- [Stanford World Boundaries of Disputed Areas](https://purl.stanford.edu/tq310nc7616)
 - [Umpirsky country list](https://github.com/umpirsky/country-list)

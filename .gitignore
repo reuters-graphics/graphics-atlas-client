@@ -158,3 +158,4 @@ dist
 
 .size-snapshot.json
 topojson/
+tmp/
