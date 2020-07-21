@@ -147,7 +147,7 @@ import topology from '@reuters-graphics/graphics-atlas-client/topojson/world.jso
 #### CDN
 
 ```javascript
-fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@0.2.0/topojson/world.json')
+fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@latest/topojson/world.json')
   .then(res => res.json())
   .then((topology) => {
     console.log(topology);
