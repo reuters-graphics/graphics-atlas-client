@@ -127,6 +127,8 @@ client.getCountryName('IRL'); // Country slug or code
 
 ### Use the TopoJSON
 
+#### Package
+
 ```javascript
 // Use a country's ISO alpha 2 code
 // Germany
@@ -140,6 +142,16 @@ import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-a
 
 // World includes all countries and disputed boundaries
 import topology from '@reuters-graphics/graphics-atlas-client/topojson/world.json';
+```
+
+#### CDN
+
+```javascript
+fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@0.2.0/topojson/world.json')
+  .then(res => res.json())
+  .then((topology) => {
+    console.log(topology);
+  });
 ```
 
 ### Building data
