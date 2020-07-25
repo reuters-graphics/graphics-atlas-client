@@ -91,6 +91,9 @@ client.countries;
 //       en: 'United Kingdom',
 //       ...
 //     },
+//     dataProfile: {
+//       population: {},
+//     },
 //     region: {},
 //     subregion: {},
 //   }
@@ -131,7 +134,7 @@ client.getCountryName('IRL'); // Country slug or code
 
 ### Use the TopoJSON
 
-#### Package
+#### Import
 
 ```javascript
 // Use a country's ISO alpha 2 code
@@ -148,7 +151,27 @@ import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-a
 import topology from '@reuters-graphics/graphics-atlas-client/topojson/world.json';
 ```
 
-#### CDN
+#### Fetch from client
+
+```javascript
+import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
+
+const client = new AtlasMetadataClient();
+
+// Use a country's name, slug or ISO code
+client.fetchCountryTopojson('germany')
+  .then((topojson) => { ... });
+
+// Use a UN region or sub-region's name or slug to get a collection of countries
+client.fetchRegionTopojson('Africa')
+  .then((topojson) => { ... });
+
+// Get the world topojson
+client.fetchGlobalTopojson()
+  .then((topojson) => { ... });
+```
+
+#### Fetch from CDN
 
 ```javascript
 fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@latest/topojson/world.json')

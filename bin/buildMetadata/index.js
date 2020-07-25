@@ -3,6 +3,9 @@ const fs = require('fs');
 const parseCSV = require('csv-parse/lib/sync');
 const buildLocales = require('./buildLocales');
 const slugify = require('@sindresorhus/slugify');
+const fetchPopulation = require('./fetchPopulation');
+
+const POPULATION_YEAR = '2019';
 
 const DATA_DIR = path.join(__dirname, '../../data/');
 const unRegionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_region.csv'), 'utf-8');
@@ -14,6 +17,8 @@ const getRegionTranslations = (enName) => unRegionTranslations.find(d => d.en ==
 // const getSubregionTranslations = (enName) => unSubregionTranslations.find(d => d.en === enName) || {};
 
 const createMetadata = async() => {
+  const population = await fetchPopulation();
+
   const metadataPath = path.join(DATA_DIR, 'base_metadata.csv');
   const metadataFile = fs.readFileSync(metadataPath, 'utf-8');
 
@@ -23,6 +28,14 @@ const createMetadata = async() => {
   });
 
   const locales = await buildLocales();
+
+  const getPopulation = (d) => {
+    const pop = population.find(p => p['Country Code'] === d.iso_alpha_3);
+    return pop ? {
+      d: parseInt(pop[POPULATION_YEAR]),
+      year: POPULATION_YEAR,
+    } : null;
+  };
 
   const codesData = metadata.map(d => ({
     isoAlpha2: d.iso_alpha_2,
@@ -40,6 +53,9 @@ const createMetadata = async() => {
       name: d.un_subregion,
       slug: slugify(d.un_subregion),
       // translations: getSubregionTranslations(d.un_subregion),
+    },
+    dataProfile: {
+      population: getPopulation(d),
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,
