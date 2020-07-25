@@ -12,4 +12,10 @@ describe('Metadata client', function() {
     console.log(client.countries[0]);
     expect(true).to.be(true);
   });
+
+  it('Should return region and subregion with country', function() {
+    const country = client.getCountry('DE');
+    expect(country.region.name).to.be('Europe');
+    expect(country.subregion.name).to.be('Western Europe');
+  });
 });
