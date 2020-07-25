@@ -30,6 +30,12 @@ describe('Metadata client', function() {
     expect(country.dataProfile.population.d).to.be.a('number');
   });
 
+  it('Should have 34 countries without pop', function() {
+    const countries = client.countries;
+    const nopops = countries.filter(c => c.dataProfile.population === null);
+    expect(nopops.length).to.be(34);
+  });
+
   it('Should fetch world topojson', async function() {
     const topojson = await client.fetchGlobalTopojson();
     expect(topojson.type).to.be('Topology');
