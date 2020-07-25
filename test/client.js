@@ -4,13 +4,16 @@ const expect = require('expect.js');
 const client = new CovidMetadataClient();
 
 describe('Metadata client', function() {
-  it('Should do stuff... TKTKTK', function() {
-    console.log('regions', client.regions);
-    console.log(client.regions.find(r => r.name === 'Asia'));
+  it('Should return regions', function() {
+    expect(client.regions.length).to.be(6);
+    const region = client.getRegion('Northern America');
+    expect(region.countries.length).to.be(5);
+  });
 
-    console.log(client.getCountriesByRegion('oceania'));
-    console.log(client.countries[0]);
-    expect(true).to.be(true);
+  it('Should return subregions', function() {
+    expect(client.subregions.length).to.be(22);
+    const subregion = client.getSubregion('Western Europe');
+    expect(subregion.countries.map(c => c.isoAlpha2).includes('DE')).to.be(true);
   });
 
   it('Should return region and subregion with country', function() {
