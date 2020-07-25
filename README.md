@@ -90,7 +90,9 @@ client.countries;
 //       de: 'Vereinigtes Königreich',
 //       en: 'United Kingdom',
 //       ...
-//     }
+//     },
+//     region: {},
+//     subregion: {},
 //   }
 //   ...
 // ]
@@ -106,7 +108,9 @@ client.getCountry('GB') // Country name, slug or code
 //     de: 'Vereinigtes Königreich',
 //     en: 'United Kingdom',
 //     ...
-//   }
+//   },
+//   region: {},
+//   subregion: {},
 // }
 
 client.getCountriesByRegion('Asia');

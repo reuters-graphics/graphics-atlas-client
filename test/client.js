@@ -9,6 +9,7 @@ describe('Metadata client', function() {
     console.log(client.regions.find(r => r.name === 'Asia'));
 
     console.log(client.getCountriesByRegion('oceania'));
+    console.log(client.countries[0]);
     expect(true).to.be(true);
   });
 });
