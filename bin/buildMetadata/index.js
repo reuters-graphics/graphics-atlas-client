@@ -4,6 +4,9 @@ const parseCSV = require('csv-parse/lib/sync');
 const buildLocales = require('./buildLocales');
 const slugify = require('@sindresorhus/slugify');
 const fetchPopulation = require('./fetchPopulation');
+const getCustomPopulation = require('./utils/getCustomPopulation');
+
+const customPopulation = getCustomPopulation();
 
 const POPULATION_YEAR = '2019';
 
@@ -30,10 +33,24 @@ const createMetadata = async() => {
   const locales = await buildLocales();
 
   const getPopulation = (d) => {
+    const customPop = customPopulation.find(p => p.isoAlpha3 === d.iso_alpha_3);
+
+    if (customPop) {
+      return {
+        d: parseInt(customPop.population),
+        year: customPop.year,
+        source: customPop.source_name,
+      };
+    }
+
     const pop = population.find(p => p['Country Code'] === d.iso_alpha_3);
+
+    if (!pop) console.log(`No pop for: ${d.name}`);
+
     return pop ? {
       d: parseInt(pop[POPULATION_YEAR]),
       year: POPULATION_YEAR,
+      source: 'World Bank',
     } : null;
   };
 

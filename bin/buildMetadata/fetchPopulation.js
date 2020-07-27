@@ -47,5 +47,6 @@ module.exports = async() => {
     trim: true,
     delimiter: ',',
   });
+
   return population;
 };
