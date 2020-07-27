@@ -60,7 +60,7 @@ module.exports = async() => {
   console.log('Converting to GeoJSON');
   let geoJson;
   geoJson = await shapefile.open(SHAPEFILE_FILE_PATH);
-  await writeFeatureCollection(geoJson, 0.05, 'gadm_005.geo.json');
+  await writeFeatureCollection(geoJson, 0.1, 'gadm_01.geo.json');
   geoJson = await shapefile.open(SHAPEFILE_FILE_PATH);
   await writeFeatureCollection(geoJson, 0.001, 'gadm_0001.geo.json');
   geoJson = await shapefile.open(SHAPEFILE_FILE_PATH);
