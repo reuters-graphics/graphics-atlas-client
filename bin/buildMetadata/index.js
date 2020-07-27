@@ -45,7 +45,7 @@ const createMetadata = async() => {
 
     const pop = population.find(p => p['Country Code'] === d.iso_alpha_3);
 
-    if (!pop) console.log(`No pop for: ${d.name}`);
+    // if (!pop) console.log(`No pop for: ${d.name}`);
 
     return pop ? {
       d: parseInt(pop[POPULATION_YEAR]),
