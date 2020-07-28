@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const topojson = require('topojson');
+const gzipSize = require('gzip-size');
+const chalk = require('chalk');
 const {
   WRITE_PATH,
   TOPOJSON_WRITE_PATH,
@@ -10,6 +12,14 @@ const ensureDir = require('./utils/ensureDir');
 const AtlasClient = require('../../dist/index.js');
 
 const atlas = new AtlasClient();
+
+const logSize = (filePath) => {
+  const fileName = path.basename(filePath);
+  const stats = fs.statSync(filePath);
+  const uncompressed = Math.round(stats.size / 1000);
+  const compressed = Math.round(gzipSize.fileSync(filePath) / 1000);
+  console.log(chalk`> {yellow ${fileName}} ${uncompressed}KB ~ {green ${compressed}KB}`);
+};
 
 const getCountryGeoJson = (topology, country) => {
   const geoJson = topojson.feature(topology, country);
@@ -27,8 +37,7 @@ const writeTopology = (fileName, geoJson) => {
   }
 
   fs.writeFileSync(filePath, JSON.stringify(topology));
-  const stats = fs.statSync(filePath);
-  console.log(`${fileName} ${Math.round(stats.size / 1000)}KB`);
+  logSize(filePath);
 };
 
 const createCountryMaps = async(topology) => {
@@ -73,8 +82,7 @@ const createWorldMap = async(topology) => {
   const fileName = 'world.json';
   const filePath = path.join(TOPOJSON_WRITE_PATH, fileName);
   fs.writeFileSync(filePath, JSON.stringify(topology));
-  const stats = fs.statSync(filePath);
-  console.log(`${fileName} ${Math.round(stats.size / 1000)}KB`);
+  logSize(filePath);
 };
 
 const createTopology = (geoJson, simplification, quantization) => {

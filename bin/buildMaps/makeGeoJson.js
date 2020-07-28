@@ -28,8 +28,7 @@ const writeFeatureCollection = async(source, simplification, fileName) => {
     const isoAlpha3 = geo.properties.GID_0;
     const country = atlas.getCountry(isoAlpha3);
     if (!country) return null;
-    const customCentroid = customCentroids.find(d =>
-      atlas.getCountry(d.isoAlpha3).isoNumeric === country.isoAlpha3);
+    const customCentroid = customCentroids.find(d => d.isoAlpha3 === country.isoAlpha3);
     let centroid;
     if (!customCentroid) {
       // returned as [longitude, latitude]
