@@ -14,7 +14,7 @@ const atlas = new AtlasClient();
 
 const writeFeatureCollection = async(source, simplification, fileName) => {
   const filePath = path.join(WRITE_PATH, fileName);
-  if (fs.existsSync(filePath)) return;
+  // if (fs.existsSync(filePath)) return;
 
   const GeoJSON = {
     type: 'FeatureCollection',
