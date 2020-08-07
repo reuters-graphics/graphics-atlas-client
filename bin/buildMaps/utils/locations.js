@@ -10,6 +10,10 @@ const TOPOJSON_WRITE_PATH = path.resolve(__dirname, '../../../topojson/');
 const DISPUTED_BOUNDARIES_URI = 'https://geodata.lib.berkeley.edu/download/file/stanford-tq310nc7616-geojson.json';
 const DISPUTED_BOUNDARIES_FILE_PATH = path.join(WRITE_PATH, 'disputed_boundaries.json');
 
+const CUSTOM_DATA_DIR = path.resolve(__dirname, '../../../data/');
+const CUSTOM_TOPOJSON = path.join(CUSTOM_DATA_DIR, 'world.topo.json');
+const CUSTOM_TOPOJSON_WRITE_PATH = path.join(TOPOJSON_WRITE_PATH, './custom/');
+
 module.exports = {
   WRITE_PATH,
   SHAPEFILE_URI,
@@ -20,4 +24,7 @@ module.exports = {
   TOPOJSON_WRITE_PATH,
   DISPUTED_BOUNDARIES_URI,
   DISPUTED_BOUNDARIES_FILE_PATH,
+  CUSTOM_DATA_DIR,
+  CUSTOM_TOPOJSON,
+  CUSTOM_TOPOJSON_WRITE_PATH,
 };
