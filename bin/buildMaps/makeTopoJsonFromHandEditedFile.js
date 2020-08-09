@@ -31,6 +31,7 @@ const createCountryProperties = (geo) => {
     centroid = [+customCentroid.longitude, +customCentroid.latitude];
   }
   geo.properties = { ...country, centroid };
+  // delete geo.properties.translations;
   return geo;
 };
 
@@ -57,6 +58,7 @@ const writeTopology = (fileName, geoJson, topology = null) => {
       topology = topojson.topology({ country: geoJson });
     }
   }
+  topology = topojson.quantize(topology, 1e6);
 
   fs.writeFileSync(filePath, JSON.stringify(topology));
   logSize(filePath);
@@ -156,6 +158,7 @@ const createWorldMap = async(topology) => {
   const fileName = 'world.json';
   const filePath = path.join(CUSTOM_TOPOJSON_WRITE_PATH, fileName);
   ensureDir(filePath);
+  topology = topojson.quantize(topology, 1e6);
   fs.writeFileSync(filePath, JSON.stringify(topology));
   logSize(filePath);
 };
