@@ -11,7 +11,7 @@ const DISPUTED_BOUNDARIES_URI = 'https://geodata.lib.berkeley.edu/download/file/
 const DISPUTED_BOUNDARIES_FILE_PATH = path.join(WRITE_PATH, 'disputed_boundaries.json');
 
 const CUSTOM_DATA_DIR = path.resolve(__dirname, '../../../data/');
-const CUSTOM_TOPOJSON = path.join(CUSTOM_DATA_DIR, 'world.topo.json');
+const CUSTOM_TOPOJSON = path.join(CUSTOM_DATA_DIR, 'world.simplified.topo.json');
 const CUSTOM_TOPOJSON_WRITE_PATH = path.join(TOPOJSON_WRITE_PATH, './custom/');
 
 module.exports = {
