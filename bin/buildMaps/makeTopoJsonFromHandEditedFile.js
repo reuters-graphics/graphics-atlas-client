@@ -6,6 +6,7 @@ const chalk = require('chalk');
 const getCentroid = require('@turf/centroid').default;
 const union = require('@turf/union').default;
 const turfHelpers = require('@turf/helpers');
+const findIndex = require('lodash/findIndex');
 const {
   CUSTOM_TOPOJSON_WRITE_PATH,
   CUSTOM_TOPOJSON,
@@ -139,6 +140,13 @@ const createRegionMaps = async(topology) => {
     const countryCodes = region.countries.map(c => c.isoAlpha2);
     const regionCountries = countries.geometries.filter(c => countryCodes.indexOf(c.properties.isoAlpha2) > -1);
     const features = regionCountries.map(rc => getCountryGeoJson(topology, rc));
+
+    // Silly thing to update the centroid to moscow for Russia when we cut the Europe map
+    if (region.slug === 'europe') {
+      const russiaIndex = findIndex(features, d => d.properties.name === 'Russia');
+      features[russiaIndex].properties.centroid = [37.6173, 55.7558];
+    }
+
     const geoJson = { type: 'FeatureCollection', features };
     const { disputedBoundaries } = filterDisputedBoundaries(topology, region.countries);
     const land = makeLand(features);
