@@ -107,5 +107,5 @@ module.exports = async() => {
   await createCountryMaps(createTopology(getGeo('00005'), 0.01, 1e4));
   await createSubregionMaps(createTopology(getGeo('0001'), 0.0001, 1e4));
   await createRegionMaps(createTopology(getGeo('0001'), 0.0001, 1e5));
-  await createWorldMap(createTopology(getGeo('01'), 0.0001, 1e5));
+  await createWorldMap(createTopology(getGeo('0001'), 0.0001, 1e5));
 };
