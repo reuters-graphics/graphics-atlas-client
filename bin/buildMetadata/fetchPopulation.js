@@ -9,7 +9,8 @@ const WRITE_PATH = path.resolve(__dirname, '../../tmp/');
 const ARCHIVE_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv';
 const ARCHIVE_PATH = path.join(WRITE_PATH, 'world_bank_pop.zip');
 const ARCHIVE_DIR = path.join(WRITE_PATH, 'world_bank_pop');
-const POP_FILE = path.join(ARCHIVE_DIR, 'API_SP.POP.TOTL_DS2_en_csv_v2_1217749.csv');
+const files = fs.readdirSync(path.join(WRITE_PATH, 'world_bank_pop'));
+const POP_FILE = path.join(ARCHIVE_DIR, files.filter(d => d.match(/^API/))[0]);
 
 const fetchArchive = async(level) => {
   console.log('Fetching population archive');

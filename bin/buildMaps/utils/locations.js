@@ -7,7 +7,7 @@ const SHAPEFILE_ARCHIVE_DIR = path.join(WRITE_PATH, 'gadm_shp/');
 const SHAPEFILE_FILE_PATH = path.join(SHAPEFILE_ARCHIVE_DIR, 'gadm36_0.shp');
 const TOPOJSON_FILE_PATH = path.join(WRITE_PATH, 'gadm.topo.json');
 const TOPOJSON_WRITE_PATH = path.resolve(__dirname, '../../../topojson/');
-const DISPUTED_BOUNDARIES_URI = 'https://geodata.lib.berkeley.edu/download/file/stanford-tq310nc7616-geojson.json';
+const DISPUTED_BOUNDARIES_URI = 'https://geodata.lib.berkeley.edu/download/file/stanford-qz147pn9706-geojson.json';
 const DISPUTED_BOUNDARIES_FILE_PATH = path.join(WRITE_PATH, 'disputed_boundaries.json');
 
 const CUSTOM_DATA_DIR = path.resolve(__dirname, '../../../data/');
