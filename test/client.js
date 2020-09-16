@@ -8,8 +8,8 @@ describe('Metadata client', function() {
 
   it('Should return regions', function() {
     expect(client.regions.length).to.be(6);
-    const region = client.getRegion('Northern America');
-    expect(region.countries.length).to.be(5);
+    const region = client.getRegion('Asia and the Middle East');
+    expect(region.countries.length).to.be(51);
   });
 
   it('Should return subregions', function() {
@@ -42,7 +42,7 @@ describe('Metadata client', function() {
   });
 
   it('Should fetch region topojson', async function() {
-    const region = client.getRegion('Asia and the Middle East');
+    const region = client.getRegion('Europe');
     const topojson = await client.fetchRegionTopojson(region.name);
     expect(topojson.type).to.be('Topology');
   });
