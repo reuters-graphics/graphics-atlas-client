@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/graphics-atlas-client",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "main": "dist/index.js",
   "repository": "https://github.com/reuters-graphics/graphics-atlas-client",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
