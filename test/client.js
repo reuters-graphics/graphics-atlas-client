@@ -42,7 +42,7 @@ describe('Metadata client', function() {
   });
 
   it('Should fetch region topojson', async function() {
-    const region = client.getRegion('Asia');
+    const region = client.getRegion('Asia and the Middle East');
     const topojson = await client.fetchRegionTopojson(region.name);
     expect(topojson.type).to.be('Topology');
   });
