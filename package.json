@@ -29,7 +29,7 @@
     "@turf/dissolve": "^5.1.5",
     "@turf/helpers": "^6.1.4",
     "@turf/union": "^6.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "csv-parse": "^4.10.1",
     "eslint": "^6.8.0",
