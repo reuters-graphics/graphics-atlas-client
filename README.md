@@ -91,6 +91,9 @@ client.countries;
 //       en: 'United Kingdom',
 //       ...
 //     },
+//     abbreviations: {
+//       en: 'U.K.',
+//     },
 //     dataProfile: {
 //       population: {},
 //     },
@@ -111,6 +114,9 @@ client.getCountry('GB') // Country name, slug or code
 //     de: 'Vereinigtes Königreich',
 //     en: 'United Kingdom',
 //     ...
+//   },
+//   abbreviations: {
+//     en: 'U.K.',
 //   },
 //   region: {},
 //   subregion: {},

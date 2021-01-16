@@ -9,12 +9,10 @@ const WRITE_PATH = path.resolve(__dirname, '../../tmp/');
 const ARCHIVE_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv';
 const ARCHIVE_PATH = path.join(WRITE_PATH, 'world_bank_pop.zip');
 const ARCHIVE_DIR = path.join(WRITE_PATH, 'world_bank_pop');
-const files = fs.readdirSync(path.join(WRITE_PATH, 'world_bank_pop'));
-const POP_FILE = path.join(ARCHIVE_DIR, files.filter(d => d.match(/^API/))[0]);
 
-const fetchArchive = async(level) => {
+const fetchArchive = async() => {
   console.log('Fetching population archive');
-  ensureDir(WRITE_PATH);
+  ensureDir(ARCHIVE_DIR);
   const writer = fs.createWriteStream(ARCHIVE_PATH);
   const response = await axios.get(ARCHIVE_URI, { responseType: 'stream' });
   response.data.pipe(writer);
@@ -39,6 +37,8 @@ module.exports = async() => {
   await fetchArchive();
   await unzipArchive();
 
+  const files = fs.readdirSync(path.join(WRITE_PATH, 'world_bank_pop'));
+  const POP_FILE = path.join(ARCHIVE_DIR, files.filter(d => d.match(/^API/))[0]);
   const popFile = fs.readFileSync(POP_FILE, 'utf-8').split('\r\n').slice(4).join('\n');
 
   const population = parseCSV(popFile, {

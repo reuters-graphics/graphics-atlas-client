@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const parseCSV = require('csv-parse/lib/sync');
-const buildLocales = require('./buildLocales');
+const buildTranslations = require('./buildTranslations');
+const buildAbbreviations = require('./buildAbbreviations');
 const slugify = require('@sindresorhus/slugify');
 const fetchPopulation = require('./fetchPopulation');
 const getCustomPopulation = require('./utils/getCustomPopulation');
@@ -30,7 +31,8 @@ const createMetadata = async() => {
     skip_empty_lines: true,
   });
 
-  const locales = await buildLocales();
+  const translations = await buildTranslations();
+  const abbreviations = await buildAbbreviations();
 
   const getPopulation = (d) => {
     const customPop = customPopulation.find(p => p.isoAlpha3 === d.iso_alpha_3);
@@ -60,7 +62,8 @@ const createMetadata = async() => {
     isoNumeric: d.iso_numeric,
     name: d.name,
     slug: slugify(d.name),
-    translations: locales[d.iso_alpha_2],
+    translations: translations[d.iso_alpha_2],
+    abbreviations: abbreviations[d.iso_alpha_2],
     unRegion: d.un_region === '' ? null : {
       name: d.un_region,
       slug: slugify(d.un_region),
@@ -82,7 +85,7 @@ const createMetadata = async() => {
 
   fs.writeFileSync(
     path.resolve(__dirname, '../../lib/data/metadata.json'),
-    JSON.stringify(codesData)
+    JSON.stringify(codesData, null, 2)
   );
 };
 
