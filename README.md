@@ -193,6 +193,7 @@ fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@late
 $ yarn build:metadata
 $ yarn build
 $ yarn build:maps
+$ yarn build:maps:custom
 ```
 
 ### Centroids
@@ -204,3 +205,4 @@ Centroids for each country are automatically calculated and added to the propert
 - [GADM](https://gadm.org/index.html)
 - [Stanford World Boundaries of Disputed Areas](https://purl.stanford.edu/tq310nc7616)
 - [Umpirsky country list](https://github.com/umpirsky/country-list)
+- [World Bank Classification](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)

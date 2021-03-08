@@ -41,6 +41,11 @@
         "d": 77142,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -88,6 +93,11 @@
         "d": 9770529,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -132,6 +142,11 @@
       "population": {
         "d": 38041754,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -178,6 +193,11 @@
         "d": 97118,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -219,7 +239,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -263,6 +284,11 @@
       "population": {
         "d": 2854191,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -309,6 +335,11 @@
         "d": 2957731,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -354,6 +385,11 @@
         "d": 31825295,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -378,7 +414,8 @@
     "unRegion": null,
     "unSubregion": null,
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -422,6 +459,11 @@
       "population": {
         "d": 44938712,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -468,6 +510,11 @@
         "d": 55312,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -512,6 +559,11 @@
       "population": {
         "d": 8877067,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -558,6 +610,11 @@
         "d": 25364307,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -603,6 +660,11 @@
         "d": 106314,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -644,7 +706,8 @@
       "slug": "northern-europe"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -688,6 +751,11 @@
       "population": {
         "d": 10023318,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -734,6 +802,11 @@
         "d": 3301000,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -778,6 +851,11 @@
       "population": {
         "d": 287025,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -824,6 +902,11 @@
         "d": 163046161,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -868,6 +951,11 @@
       "population": {
         "d": 11484055,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -914,6 +1002,11 @@
         "d": 20321378,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -958,6 +1051,11 @@
       "population": {
         "d": 6975761,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -1004,6 +1102,11 @@
         "d": 1641172,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -1048,6 +1151,11 @@
       "population": {
         "d": 11530580,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -1094,6 +1202,11 @@
         "d": 11801151,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -1135,7 +1248,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -1179,6 +1293,11 @@
       "population": {
         "d": 63918,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -1225,6 +1344,11 @@
         "d": 433285,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -1270,6 +1394,11 @@
         "d": 11513100,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -1311,7 +1440,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -1355,6 +1485,11 @@
       "population": {
         "d": 211049527,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -1401,6 +1536,11 @@
         "d": 389482,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -1446,6 +1586,11 @@
         "d": 763092,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -1487,7 +1632,8 @@
       "slug": "south-america"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -1531,6 +1677,11 @@
       "population": {
         "d": 2303697,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -1577,6 +1728,11 @@
         "d": 9466856,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -1621,6 +1777,11 @@
       "population": {
         "d": 390353,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -1667,6 +1828,11 @@
         "d": 37589262,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -1708,7 +1874,8 @@
       "slug": "australia-new-zealand"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -1752,6 +1919,11 @@
       "population": {
         "d": 86790567,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -1798,6 +1970,11 @@
         "d": 4745185,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -1842,6 +2019,11 @@
       "population": {
         "d": 5380508,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -1888,6 +2070,11 @@
         "d": 8574832,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -1933,6 +2120,11 @@
         "d": 25716544,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -1974,7 +2166,8 @@
       "slug": "polynesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -2018,6 +2211,11 @@
       "population": {
         "d": 18952038,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -2064,6 +2262,11 @@
         "d": 25876380,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -2108,6 +2311,11 @@
       "population": {
         "d": 1397715000,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -2154,6 +2362,11 @@
         "d": 50339443,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -2198,6 +2411,11 @@
       "population": {
         "d": 5047561,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -2244,6 +2462,11 @@
         "d": 11333483,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -2288,6 +2511,11 @@
       "population": {
         "d": 549935,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -2334,6 +2562,11 @@
         "d": 157538,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -2375,7 +2608,8 @@
       "slug": "australia-new-zealand"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -2419,6 +2653,11 @@
       "population": {
         "d": 1198575,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -2465,6 +2704,11 @@
         "d": 10669709,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -2509,6 +2753,11 @@
       "population": {
         "d": 83132799,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -2555,6 +2804,11 @@
         "d": 973560,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -2599,6 +2853,11 @@
       "population": {
         "d": 5818553,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -2645,6 +2904,11 @@
         "d": 71808,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -2689,6 +2953,11 @@
       "population": {
         "d": 10738958,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -2735,6 +3004,11 @@
         "d": 43053054,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -2779,6 +3053,11 @@
       "population": {
         "d": 17373662,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -2825,6 +3104,11 @@
         "d": 1326590,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -2870,6 +3154,11 @@
         "d": 100388073,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -2911,7 +3200,8 @@
       "slug": "northern-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -2955,6 +3245,11 @@
       "population": {
         "d": null,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -3001,6 +3296,11 @@
         "d": 47076781,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3045,6 +3345,11 @@
       "population": {
         "d": 112078730,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -3091,6 +3396,11 @@
         "d": 5520314,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3136,6 +3446,11 @@
         "d": 889953,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -3177,7 +3492,8 @@
       "slug": "south-america"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -3221,6 +3537,11 @@
       "population": {
         "d": 113815,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -3267,6 +3588,11 @@
         "d": 48678,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3312,6 +3638,11 @@
         "d": 67059887,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3356,6 +3687,11 @@
       "population": {
         "d": 2172579,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -3404,6 +3740,11 @@
         "d": 66834405,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3448,6 +3789,11 @@
       "population": {
         "d": 112003,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -3494,6 +3840,11 @@
         "d": 3720382,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -3535,7 +3886,8 @@
       "slug": "south-america"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -3576,7 +3928,8 @@
       "slug": "northern-europe"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -3620,6 +3973,11 @@
       "population": {
         "d": 30417856,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -3666,6 +4024,11 @@
         "d": 33701,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3710,6 +4073,11 @@
       "population": {
         "d": 56225,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -3756,6 +4124,11 @@
         "d": 2347706,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -3801,6 +4174,11 @@
         "d": 12771246,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -3842,7 +4220,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -3886,6 +4265,11 @@
       "population": {
         "d": 1355986,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -3932,6 +4316,11 @@
         "d": 10716322,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -3973,7 +4362,8 @@
       "slug": "south-america"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -4017,6 +4407,11 @@
       "population": {
         "d": 16604026,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -4063,6 +4458,11 @@
         "d": 167294,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4107,6 +4507,11 @@
       "population": {
         "d": 1920922,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -4153,6 +4558,11 @@
         "d": 782766,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -4198,6 +4608,11 @@
         "d": 7507400,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4239,7 +4654,8 @@
       "slug": "australia-new-zealand"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -4283,6 +4699,11 @@
       "population": {
         "d": 9746117,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -4329,6 +4750,11 @@
         "d": 4067500,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -4373,6 +4799,11 @@
       "population": {
         "d": 11263077,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -4419,6 +4850,11 @@
         "d": 9769949,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4463,6 +4899,11 @@
       "population": {
         "d": 270625568,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -4509,6 +4950,11 @@
         "d": 4941444,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4553,6 +4999,11 @@
       "population": {
         "d": 9053300,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -4599,6 +5050,11 @@
         "d": 84584,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4644,6 +5100,11 @@
         "d": 1366417754,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -4685,7 +5146,8 @@
       "slug": "western-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -4729,6 +5191,11 @@
       "population": {
         "d": 39309783,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -4775,6 +5242,11 @@
         "d": 82913906,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -4819,6 +5291,11 @@
       "population": {
         "d": 361313,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -4865,6 +5342,11 @@
         "d": 60297396,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -4906,7 +5388,8 @@
       "slug": "northern-europe"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -4950,6 +5433,11 @@
       "population": {
         "d": 2948279,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -4996,6 +5484,11 @@
         "d": 10101694,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -5040,6 +5533,11 @@
       "population": {
         "d": 126264931,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -5086,6 +5584,11 @@
         "d": 52573973,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -5130,6 +5633,11 @@
       "population": {
         "d": 6456900,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -5176,6 +5684,11 @@
         "d": 16486542,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -5220,6 +5733,11 @@
       "population": {
         "d": 117606,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -5266,6 +5784,11 @@
         "d": 850886,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -5308,8 +5831,13 @@
     },
     "dataProfile": {
       "population": {
-        "d": 52834,
+        "d": 52823,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -5356,6 +5884,11 @@
         "d": 25666161,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -5400,6 +5933,11 @@
       "population": {
         "d": 51709098,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -5446,6 +5984,11 @@
         "d": 4207083,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -5490,6 +6033,11 @@
       "population": {
         "d": 64948,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -5536,6 +6084,11 @@
         "d": 18513930,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -5580,6 +6133,11 @@
       "population": {
         "d": 7169455,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -5626,6 +6184,11 @@
         "d": 6855713,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -5670,6 +6233,11 @@
       "population": {
         "d": 182790,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -5716,6 +6284,11 @@
         "d": 38019,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -5760,6 +6333,11 @@
       "population": {
         "d": 21803000,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -5806,6 +6384,11 @@
         "d": 4937374,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -5850,6 +6433,11 @@
       "population": {
         "d": 2125268,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -5896,6 +6484,11 @@
         "d": 2786844,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -5940,6 +6533,11 @@
       "population": {
         "d": 619896,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -5986,6 +6584,11 @@
         "d": 1912789,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -6030,6 +6633,11 @@
       "population": {
         "d": 6777452,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -6076,6 +6684,11 @@
         "d": 36471769,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -6120,6 +6733,11 @@
       "population": {
         "d": 38964,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -6166,6 +6784,11 @@
         "d": 2657637,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -6210,6 +6833,11 @@
       "population": {
         "d": 622137,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -6256,6 +6884,11 @@
         "d": 38002,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -6300,6 +6933,11 @@
       "population": {
         "d": 26969307,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -6346,6 +6984,11 @@
         "d": 58791,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -6390,6 +7033,11 @@
       "population": {
         "d": 2083459,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -6436,6 +7084,11 @@
         "d": 19658031,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -6480,6 +7133,11 @@
       "population": {
         "d": 54045420,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -6526,6 +7184,11 @@
         "d": 3225167,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -6570,6 +7233,11 @@
       "population": {
         "d": 640445,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -6616,6 +7284,11 @@
         "d": 57216,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -6657,7 +7330,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -6702,6 +7376,11 @@
         "d": 4525696,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -6743,7 +7422,8 @@
       "slug": "caribbean"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -6787,6 +7467,11 @@
       "population": {
         "d": 502653,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -6833,6 +7518,11 @@
         "d": 1265711,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -6877,6 +7567,11 @@
       "population": {
         "d": 530953,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -6923,6 +7618,11 @@
         "d": 18628747,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -6967,6 +7667,11 @@
       "population": {
         "d": 127575529,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -7013,6 +7718,11 @@
         "d": 31949777,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -7057,6 +7767,11 @@
       "population": {
         "d": 30366036,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -7103,6 +7818,11 @@
         "d": 2494530,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -7147,6 +7867,11 @@
       "population": {
         "d": 287800,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -7193,6 +7918,11 @@
         "d": 23310715,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -7234,7 +7964,8 @@
       "slug": "australia-new-zealand"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -7278,6 +8009,11 @@
       "population": {
         "d": 200963599,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -7324,6 +8060,11 @@
         "d": 6545502,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -7368,6 +8109,11 @@
       "population": {
         "d": 17332850,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -7414,6 +8160,11 @@
         "d": 5347896,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -7458,6 +8209,11 @@
       "population": {
         "d": 28608710,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -7504,6 +8260,11 @@
         "d": 12581,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -7545,7 +8306,8 @@
       "slug": "polynesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -7589,6 +8351,11 @@
       "population": {
         "d": 4917000,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -7635,6 +8402,11 @@
         "d": 4974986,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -7679,6 +8451,11 @@
       "population": {
         "d": 4246439,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -7725,6 +8502,11 @@
         "d": 32510453,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -7769,6 +8551,11 @@
       "population": {
         "d": 279287,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -7815,6 +8602,11 @@
         "d": 8776109,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -7859,6 +8651,11 @@
       "population": {
         "d": 108116615,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -7905,6 +8702,11 @@
         "d": 216565318,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -7950,6 +8752,11 @@
         "d": 37970874,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -7991,7 +8798,8 @@
       "slug": "northern-america"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -8032,7 +8840,8 @@
       "slug": "polynesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -8076,6 +8885,11 @@
       "population": {
         "d": 3193694,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -8122,6 +8936,11 @@
         "d": 4685306,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -8166,6 +8985,11 @@
       "population": {
         "d": 10269417,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -8212,6 +9036,11 @@
         "d": 18008,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -8256,6 +9085,11 @@
       "population": {
         "d": 7044636,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -8302,6 +9136,11 @@
         "d": 2832067,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -8343,7 +9182,8 @@
       "slug": "eastern-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -8387,6 +9227,11 @@
       "population": {
         "d": 19356544,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -8433,6 +9278,11 @@
         "d": 6944975,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -8477,6 +9327,11 @@
       "population": {
         "d": 144373535,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -8523,6 +9378,11 @@
         "d": 12626950,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -8567,6 +9427,11 @@
       "population": {
         "d": 34268528,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -8613,6 +9478,11 @@
         "d": 669823,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -8657,6 +9527,11 @@
       "population": {
         "d": 97625,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -8703,6 +9578,11 @@
         "d": 42813238,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -8747,6 +9627,11 @@
       "population": {
         "d": 10285453,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -8793,6 +9678,11 @@
         "d": 5703569,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -8834,7 +9724,8 @@
       "slug": "western-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -8879,6 +9770,11 @@
         "d": 2087946,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -8920,7 +9816,8 @@
       "slug": "northern-europe"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -8964,6 +9861,11 @@
       "population": {
         "d": 5454073,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -9010,6 +9912,11 @@
         "d": 7813215,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9054,6 +9961,11 @@
       "population": {
         "d": 33860,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -9100,6 +10012,11 @@
         "d": 16296364,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9145,6 +10062,11 @@
         "d": 15442905,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9187,8 +10109,13 @@
     },
     "dataProfile": {
       "population": {
-        "d": 581363,
+        "d": 581372,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -9235,6 +10162,11 @@
         "d": 11062113,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9279,6 +10211,11 @@
       "population": {
         "d": 215056,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -9325,6 +10262,11 @@
         "d": 6453553,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -9369,6 +10311,11 @@
       "population": {
         "d": 40733,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -9415,6 +10362,11 @@
         "d": 17070135,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9459,6 +10411,11 @@
       "population": {
         "d": 1148130,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -9505,6 +10462,11 @@
         "d": 38191,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -9550,6 +10512,11 @@
         "d": 15946876,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9591,7 +10558,8 @@
       "slug": "eastern-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -9635,6 +10603,11 @@
       "population": {
         "d": 8082366,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -9681,6 +10654,11 @@
         "d": 69625582,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -9726,6 +10704,11 @@
         "d": 9321018,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9767,7 +10750,8 @@
       "slug": "polynesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -9811,6 +10795,11 @@
       "population": {
         "d": 1293119,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -9857,6 +10846,11 @@
         "d": 5942089,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -9901,6 +10895,11 @@
       "population": {
         "d": 11694719,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -9947,6 +10946,11 @@
         "d": 104494,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -9991,6 +10995,11 @@
       "population": {
         "d": 83429615,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -10037,6 +11046,11 @@
         "d": 1394973,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -10082,6 +11096,11 @@
         "d": 11646,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -10123,7 +11142,12 @@
       "slug": "eastern-asia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
+      }
     }
   },
   {
@@ -10167,6 +11191,11 @@
       "population": {
         "d": 58005463,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -10213,6 +11242,11 @@
         "d": 44385155,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -10258,6 +11292,11 @@
         "d": 44269594,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -10299,7 +11338,8 @@
       "slug": "micronesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -10346,6 +11386,11 @@
         "d": 328239523,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -10390,6 +11435,11 @@
       "population": {
         "d": 3461734,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -10436,6 +11486,11 @@
         "d": 33580650,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
+        "source": "World Bank"
       }
     }
   },
@@ -10477,7 +11532,8 @@
       "slug": "southern-europe"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -10521,6 +11577,11 @@
       "population": {
         "d": 110589,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }
@@ -10567,6 +11628,11 @@
         "d": 28515829,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
+        "source": "World Bank"
       }
     }
   },
@@ -10611,6 +11677,11 @@
       "population": {
         "d": 30030,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
         "source": "World Bank"
       }
     }
@@ -10657,6 +11728,11 @@
         "d": 106631,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "High income",
+        "LendingCategory": "..",
+        "source": "World Bank"
       }
     }
   },
@@ -10701,6 +11777,11 @@
       "population": {
         "d": 96462106,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -10747,6 +11828,11 @@
         "d": 299882,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -10788,7 +11874,8 @@
       "slug": "polynesia"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -10832,6 +11919,11 @@
       "population": {
         "d": 197097,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IDA",
         "source": "World Bank"
       }
     }
@@ -10878,6 +11970,11 @@
         "d": 29161922,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Low income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -10919,7 +12016,8 @@
       "slug": "eastern-africa"
     },
     "dataProfile": {
-      "population": null
+      "population": null,
+      "income": null
     }
   },
   {
@@ -10963,6 +12061,11 @@
       "population": {
         "d": 58558270,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Upper middle income",
+        "LendingCategory": "IBRD",
         "source": "World Bank"
       }
     }
@@ -11009,6 +12112,11 @@
         "d": 17861030,
         "year": "2019",
         "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "IDA",
+        "source": "World Bank"
       }
     }
   },
@@ -11053,6 +12161,11 @@
       "population": {
         "d": 14645468,
         "year": "2019",
+        "source": "World Bank"
+      },
+      "income": {
+        "IncomeGroup": "Lower middle income",
+        "LendingCategory": "Blend",
         "source": "World Bank"
       }
     }

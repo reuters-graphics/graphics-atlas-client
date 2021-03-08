@@ -14,6 +14,9 @@ const POPULATION_YEAR = '2019';
 const DATA_DIR = path.join(__dirname, '../../data/');
 const unRegionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_region.csv'), 'utf-8');
 const unRegionTranslations = parseCSV(unRegionsFile, { columns: true, skip_empty_lines: true });
+const worldBankFile = fs.readFileSync(path.join(DATA_DIR, 'world-bank-classification.csv'), 'utf-8');
+const worldBankData = parseCSV(worldBankFile, { columns: true, skip_empty_lines: true });
+
 // const unSubregionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_subregion.csv'), 'utf-8');
 // const unSubregionTranslations = parseCSV(unSubregionsFile, { columns: true, skip_empty_lines: true });
 
@@ -56,6 +59,16 @@ const createMetadata = async() => {
     } : null;
   };
 
+  const getIncomeCategory = (d) => {
+    const income = worldBankData.find(p => p['Code'] === d.iso_alpha_3);
+    // if (!pop) console.log(`No pop for: ${d.name}`);
+    return income ? {
+      IncomeGroup: income['Income group'],
+      LendingCategory: income['Lending category'],
+      source: 'World Bank',
+    } : null;
+  };
+
   const codesData = metadata.map(d => ({
     isoAlpha2: d.iso_alpha_2,
     isoAlpha3: d.iso_alpha_3,
@@ -76,6 +89,7 @@ const createMetadata = async() => {
     },
     dataProfile: {
       population: getPopulation(d),
+      income: getIncomeCategory(d)
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,
