@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 const topojson = require('topojson');
-const gzipSize = require('gzip-size');
-const chalk = require('chalk');
 const getCentroid = require('@turf/centroid').default;
 const union = require('@turf/union').default;
 const turfHelpers = require('@turf/helpers');
-const findIndex = require('lodash/findIndex');
 const {
   CUSTOM_TOPOJSON_WRITE_PATH,
   CUSTOM_TOPOJSON,
@@ -40,8 +38,8 @@ const logSize = (filePath) => {
   const fileName = path.basename(filePath);
   const stats = fs.statSync(filePath);
   const uncompressed = Math.round(stats.size / 1000);
-  const compressed = Math.round(gzipSize.fileSync(filePath) / 1000);
-  console.log(chalk`> {yellow ${fileName}} ${uncompressed}KB ~ {green ${compressed}KB}`);
+  const compressed = Math.round(zlib.gzipSync(fs.readFileSync(filePath)).length / 1000);
+  console.log(`> ${fileName} ${uncompressed}KB ~ ${compressed}KB`);
 };
 
 const getCountryGeoJson = (topology, country) => {
@@ -143,7 +141,7 @@ const createRegionMaps = async(topology) => {
 
     // Silly thing to update the centroid to moscow for Russia when we cut the Europe map
     if (region.slug === 'europe') {
-      const russiaIndex = findIndex(features, d => d.properties.name === 'Russia');
+      const russiaIndex = features.findIndex(d => d.properties.name === 'Russia');
       features[russiaIndex].properties.centroid = [37.6173, 55.7558];
     }
 

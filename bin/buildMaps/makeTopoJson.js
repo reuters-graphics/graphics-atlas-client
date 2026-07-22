@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 const topojson = require('topojson');
-const gzipSize = require('gzip-size');
-const chalk = require('chalk');
 const {
   WRITE_PATH,
   TOPOJSON_WRITE_PATH,
@@ -17,8 +16,8 @@ const logSize = (filePath) => {
   const fileName = path.basename(filePath);
   const stats = fs.statSync(filePath);
   const uncompressed = Math.round(stats.size / 1000);
-  const compressed = Math.round(gzipSize.fileSync(filePath) / 1000);
-  console.log(chalk`> {yellow ${fileName}} ${uncompressed}KB ~ {green ${compressed}KB}`);
+  const compressed = Math.round(zlib.gzipSync(fs.readFileSync(filePath)).length / 1000);
+  console.log(`> ${fileName} ${uncompressed}KB ~ ${compressed}KB`);
 };
 
 const getCountryGeoJson = (topology, country) => {
