@@ -60,7 +60,7 @@ const createMetadata = async() => {
   };
 
   const getIncomeCategory = (d) => {
-    const income = worldBankData.find(p => p['Code'] === d.iso_alpha_3);
+    const income = worldBankData.find(p => p.Code === d.iso_alpha_3);
     // if (!pop) console.log(`No pop for: ${d.name}`);
     return income ? {
       IncomeGroup: income['Income group'],
@@ -89,7 +89,7 @@ const createMetadata = async() => {
     },
     dataProfile: {
       population: getPopulation(d),
-      income: getIncomeCategory(d)
+      income: getIncomeCategory(d),
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,

@@ -6,7 +6,7 @@ const ensureDir = require('../buildMaps/utils/ensureDir');
 const parseCSV = require('csv-parse/lib/sync');
 
 const WRITE_PATH = path.resolve(__dirname, '../../tmp/');
-const ARCHIVE_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv';
+const ARCHIVE_URI = 'https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv';
 const ARCHIVE_PATH = path.join(WRITE_PATH, 'world_bank_pop.zip');
 const ARCHIVE_DIR = path.join(WRITE_PATH, 'world_bank_pop');
 
