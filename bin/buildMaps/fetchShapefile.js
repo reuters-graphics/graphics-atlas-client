@@ -1,5 +1,6 @@
 const fs = require('fs');
-const axios = require('axios');
+const { Readable } = require('stream');
+const { pipeline } = require('stream/promises');
 const unzipper = require('unzipper');
 const ensureDir = require('./utils/ensureDir');
 const {
@@ -8,16 +9,12 @@ const {
   SHAPEFILE_ARCHIVE_DIR,
 } = require('./utils/locations');
 
-const fetchArchive = async(level) => {
+const fetchArchive = async() => {
   console.log('Fetching shapefile archive');
   ensureDir(SHAPEFILE_ARCHIVE_PATH);
-  const writer = fs.createWriteStream(SHAPEFILE_ARCHIVE_PATH);
-  const response = await axios.get(SHAPEFILE_URI, { responseType: 'stream' });
-  response.data.pipe(writer);
-  return new Promise((resolve, reject) => {
-    writer.on('finish', resolve);
-    writer.on('error', reject);
-  });
+  const response = await fetch(SHAPEFILE_URI);
+  if (!response.ok) throw new Error(`Failed to fetch shapefile archive: ${response.status}`);
+  await pipeline(Readable.fromWeb(response.body), fs.createWriteStream(SHAPEFILE_ARCHIVE_PATH));
 };
 
 const unzipArchive = async() => {

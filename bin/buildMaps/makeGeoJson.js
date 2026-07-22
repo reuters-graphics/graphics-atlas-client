@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const shapefile = require('shapefile');
-const simplify = require('simplify-geojson');
+const simplify = require('@turf/simplify').default;
 const AtlasClient = require('../../dist/index.js');
 const getCentroid = require('@turf/centroid').default;
 const getCustomCentroids = require('./utils/getCustomCentroids');
@@ -37,7 +37,7 @@ const writeFeatureCollection = async(source, simplification, fileName) => {
       centroid = [+customCentroid.longitude, +customCentroid.latitude];
     }
     geo.properties = { ...country, centroid };
-    GeoJSON.features.push(simplify(geo, simplification));
+    GeoJSON.features.push(simplify(geo, { tolerance: simplification, highQuality: false }));
   };
 
   return source.read().then(function(result) {

@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const parseCSV = require('csv-parse/lib/sync');
+const parseCSV = require('csv-parse/sync').parse;
 const buildTranslations = require('./buildTranslations');
 const buildAbbreviations = require('./buildAbbreviations');
 const slugify = require('@sindresorhus/slugify');

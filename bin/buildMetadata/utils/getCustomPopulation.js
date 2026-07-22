@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const parse = require('csv-parse/lib/sync');
+const parse = require('csv-parse/sync').parse;
 
 const POPULATION_PATH = path.resolve(__dirname, '../../../data/custom_population.csv');
 module.exports = () => parse(fs.readFileSync(POPULATION_PATH), {
