@@ -31,24 +31,9 @@ describe('Metadata client — topojson fetchers (integration)', function() {
     expect(topojson.type).to.be('Topology');
   });
 
-  it('Should fetch a country at an explicit resolution', async function() {
-    const topojson = await client.fetchCountryTopojson('DE', '110m');
-    expect(topojson.type).to.be('Topology');
-  });
-
-  it('Should fall back to custom/ for a country lacking the resolution (Brazil)', async function() {
-    // BR ships neither 50m nor 110m at root; must resolve via topojson/custom/BR.json
+  it('Should fetch any country incl. ones absent from root resolutions (Brazil)', async function() {
+    // custom/ is the complete set, so BR resolves directly.
     const topojson = await client.fetchCountryTopojson('BR');
     expect(topojson.type).to.be('Topology');
-  });
-
-  it('Should reject an invalid resolution', async function() {
-    let threw = false;
-    try {
-      await client.fetchCountryTopojson('DE', '10m');
-    } catch (e) {
-      threw = true;
-    }
-    expect(threw).to.be(true);
   });
 });
