@@ -9,7 +9,17 @@ const getCustomPopulation = require('./utils/getCustomPopulation');
 
 const customPopulation = getCustomPopulation();
 
-const POPULATION_YEAR = '2019';
+// Pick the most recent year that has (near-)complete coverage across the World
+// Bank population rows, so the whole dataset shares one current year instead of
+// a hardcoded one. Falls back to the latest year present if none is "complete".
+const getLatestPopulationYear = (rows) => {
+  const yearCols = Object.keys(rows[0] || {}).filter(k => /^\d{4}$/.test(k));
+  if (!yearCols.length) return null;
+  const count = y => rows.reduce((n, r) => n + (r[y] !== '' && r[y] != null ? 1 : 0), 0);
+  const maxCount = Math.max(...yearCols.map(count));
+  const complete = yearCols.filter(y => count(y) >= maxCount * 0.98);
+  return (complete.length ? complete : yearCols).sort().pop();
+};
 
 const DATA_DIR = path.join(__dirname, '../../data/');
 const unRegionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_region.csv'), 'utf-8');
@@ -25,6 +35,7 @@ const getRegionTranslations = (enName) => unRegionTranslations.find(d => d.en ==
 
 const createMetadata = async() => {
   const population = await fetchPopulation();
+  const POPULATION_YEAR = getLatestPopulationYear(population);
 
   const metadataPath = path.join(DATA_DIR, 'base_metadata.csv');
   const metadataFile = fs.readFileSync(metadataPath, 'utf-8');
