@@ -59,4 +59,29 @@ describe('Metadata client', function() {
     }
     expect(threw).to.be(true);
   });
+
+  it('Should look up countries case-insensitively', function() {
+    expect(client.getCountry('france').name).to.be('France');
+    expect(client.getCountry('FRANCE').name).to.be('France');
+    expect(client.getCountry('fr').isoAlpha2).to.be('FR');
+    expect(client.getCountry('FrA').isoAlpha3).to.be('FRA');
+  });
+
+  it('Should look up a country by numeric ISO code', function() {
+    expect(client.getCountry(250).name).to.be('France');
+    expect(client.getCountry('250').name).to.be('France');
+  });
+
+  it('Should look up regions/subregions case-insensitively', function() {
+    expect(client.getRegion('europe').name).to.be('Europe');
+    expect(client.getSubregion('WESTERN EUROPE').name).to.be('Western Europe');
+  });
+
+  it('Should invalidate cache when metadata is replaced', function() {
+    const fresh = new AtlasMetadataClient();
+    const before = fresh.countries.length;
+    fresh.metadata = fresh.metadata.slice(0, 5);
+    expect(fresh.countries.length).to.be(5);
+    expect(fresh.countries.length).not.to.be(before);
+  });
 });
