@@ -52,6 +52,23 @@ describe('Metadata client', function() {
   it('Should throw (not crash) when fetching topojson for unknown input', async function() {
     // Guards run before any network request, so these are network-free.
     await assert.rejects(() => client.fetchRegionTopojson('not-a-region'));
+    await assert.rejects(() => client.fetchRegionLines('not-a-region'));
+    await assert.rejects(() => client.fetchCountryTopojson('not-a-country'));
+  });
+
+  it('Should reject an invalid detail level (network-free)', async function() {
+    await assert.rejects(() => client.fetchCountryTopojson('DE', 'ultra'), /Invalid detail/);
+    await assert.rejects(() => client.fetchGlobalTopojson('50m'), /Invalid detail/);
+    await assert.rejects(() => client.fetchGlobalLines('xl'), /Invalid detail/);
+  });
+
+  it('Should expose polygon + line fetchers', function() {
+    for (const m of [
+      'fetchGlobalTopojson', 'fetchRegionTopojson', 'fetchSubregionTopojson',
+      'fetchCountryTopojson', 'fetchGlobalLines', 'fetchRegionLines',
+    ]) {
+      assert.equal(typeof client[m], 'function');
+    }
   });
 
   it('Should look up countries case-insensitively', function() {
