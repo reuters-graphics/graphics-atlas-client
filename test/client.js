@@ -28,13 +28,15 @@ describe('Metadata client', function() {
     assert.match(country.dataProfile.population.year, /^\d{4}$/);
   });
 
-  it('Should return country coordinates as [lat, lon]', function() {
+  it('Should return country coordinates as [lon, lat] (GeoJSON order)', function() {
     const country = client.getCountry('DE');
     assert.ok(Array.isArray(country.coordinates));
     assert.equal(country.coordinates.length, 2);
-    const [lat, lon] = country.coordinates;
-    assert.ok(lat >= -90 && lat <= 90, 'lat in range');
+    const [lon, lat] = country.coordinates;
     assert.ok(lon >= -180 && lon <= 180, 'lon in range');
+    assert.ok(lat >= -90 && lat <= 90, 'lat in range');
+    // Germany is ~[10.6, 51.5] — sanity check the order
+    assert.ok(lon > 5 && lon < 16 && lat > 47 && lat < 55, 'DE roughly [lon, lat]');
     // every country has coordinates
     assert.ok(client.countries.every(c => Array.isArray(c.coordinates) && c.coordinates.length === 2));
   });

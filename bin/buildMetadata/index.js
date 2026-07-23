@@ -28,13 +28,13 @@ const worldBankFile = fs.readFileSync(path.join(DATA_DIR, 'world-bank-classifica
 const worldBankData = parseCSV(worldBankFile, { columns: true, skip_empty_lines: true });
 
 // Manually-editable country centroids (data/centroids.csv). Stored as
-// coordinates: [latitude, longitude] on each country.
+// coordinates: [longitude, latitude] (GeoJSON order) on each country.
 const centroidsFile = fs.readFileSync(path.join(DATA_DIR, 'centroids.csv'), 'utf-8');
 const centroidsData = parseCSV(centroidsFile, { columns: true, skip_empty_lines: true });
 const getCoordinates = (d) => {
   const row = centroidsData.find(c => c.isoAlpha3 === d.iso_alpha_3);
   if (!row || row.latitude === '' || row.longitude === '') return null;
-  return [Number(row.latitude), Number(row.longitude)];
+  return [Number(row.longitude), Number(row.latitude)];
 };
 
 // const unSubregionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_subregion.csv'), 'utf-8');
