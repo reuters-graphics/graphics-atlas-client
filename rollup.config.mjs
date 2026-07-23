@@ -8,14 +8,12 @@ const plugins = [
   externals({ deps: true }),
 ];
 
-const output = {
-  dir: 'dist',
-  format: 'cjs',
-  paths: { '@reuters-graphics/graphics-atlas-client': './index.js' },
-};
-
+// Dual build: CommonJS (require) + ES module (import).
 export default [{
   input: 'lib/index.js',
-  output,
+  output: [
+    { file: 'dist/index.js', format: 'cjs', exports: 'default' },
+    { file: 'dist/index.mjs', format: 'es' },
+  ],
   plugins,
 }];
