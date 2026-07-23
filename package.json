@@ -12,6 +12,7 @@
   "scripts": {
     "build:metadata": "npx ./bin/buildMetadata/index.js",
     "build": "rollup --config rollup.config.mjs",
+    "prepare": "rollup --config rollup.config.mjs",
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive"
   },
