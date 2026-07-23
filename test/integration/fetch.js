@@ -1,15 +1,15 @@
 // Integration tests — these hit the live jsDelivr CDN and are excluded from the
 // default `yarn test` run. Run explicitly with `yarn test:integration`.
 //
-// SKIPPED until @reuters-graphics/graphics-atlas-topojson is published to npm
-// (the FETCH_BASE package). Once it's live, drop the `.skip` and bump
-// TOPOJSON_VERSION in lib/index.js. See #31.
+// Served from the public graphics-atlas-topojson repo via jsDelivr /gh at the
+// pinned tag in lib/index.js (FETCH_BASE). When the assets move to npm, keep
+// these running and just repoint FETCH_BASE.
 const assert = require('node:assert/strict');
 const AtlasMetadataClient = require('../../dist');
 
 const client = new AtlasMetadataClient();
 
-describe.skip('Metadata client — topojson fetchers (integration)', function() {
+describe('Metadata client — topojson fetchers (integration)', function() {
   this.timeout(30000);
 
   // Polygons
