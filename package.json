@@ -7,13 +7,10 @@
   "license": "MIT",
   "private": false,
   "files": [
-    "dist/**/*",
-    "topojson/**/*"
+    "dist/**/*"
   ],
   "scripts": {
     "build:metadata": "npx ./bin/buildMetadata/index.js",
-    "build:maps": "npx ./bin/buildMaps/index.js",
-    "build:maps:custom": "npx ./bin/buildMaps/makeTopoJsonFromHandEditedFile.js",
     "build": "rollup --config rollup.config.mjs",
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive"
@@ -26,22 +23,12 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@sindresorhus/slugify": "^1.1.2",
-    "@turf/bbox": "^7.2.0",
-    "@turf/bbox-polygon": "^7.2.0",
-    "@turf/boolean-crosses": "^7.2.0",
-    "@turf/centroid": "^7.2.0",
-    "@turf/dissolve": "^7.2.0",
-    "@turf/helpers": "^7.2.0",
-    "@turf/simplify": "^7.2.0",
-    "@turf/union": "^7.2.0",
     "csv-parse": "^5.5.6",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
     "mocha": "^11.0.0",
     "rollup": "^4.0.0",
     "rollup-plugin-node-externals": "^8.0.0",
-    "shapefile": "^0.6.6",
-    "topojson": "^3.0.2",
     "unzipper": "^0.12.0"
   },
   "dependencies": {}

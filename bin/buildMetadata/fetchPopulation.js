@@ -3,7 +3,7 @@ const path = require('path');
 const { Readable } = require('stream');
 const { pipeline } = require('stream/promises');
 const unzipper = require('unzipper');
-const ensureDir = require('../buildMaps/utils/ensureDir');
+const ensureDir = require('./utils/ensureDir');
 const parseCSV = require('csv-parse/sync').parse;
 
 const WRITE_PATH = path.resolve(__dirname, '../../tmp/');
