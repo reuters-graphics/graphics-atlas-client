@@ -27,6 +27,16 @@ const unRegionTranslations = parseCSV(unRegionsFile, { columns: true, skip_empty
 const worldBankFile = fs.readFileSync(path.join(DATA_DIR, 'world-bank-classification.csv'), 'utf-8');
 const worldBankData = parseCSV(worldBankFile, { columns: true, skip_empty_lines: true });
 
+// Manually-editable country centroids (data/centroids.csv). Stored as
+// coordinates: [latitude, longitude] on each country.
+const centroidsFile = fs.readFileSync(path.join(DATA_DIR, 'centroids.csv'), 'utf-8');
+const centroidsData = parseCSV(centroidsFile, { columns: true, skip_empty_lines: true });
+const getCoordinates = (d) => {
+  const row = centroidsData.find(c => c.isoAlpha3 === d.iso_alpha_3);
+  if (!row || row.latitude === '' || row.longitude === '') return null;
+  return [Number(row.latitude), Number(row.longitude)];
+};
+
 // const unSubregionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_subregion.csv'), 'utf-8');
 // const unSubregionTranslations = parseCSV(unSubregionsFile, { columns: true, skip_empty_lines: true });
 
@@ -88,6 +98,7 @@ const createMetadata = async() => {
     slug: slugify(d.name),
     translations: translations[d.iso_alpha_2],
     abbreviations: abbreviations[d.iso_alpha_2],
+    coordinates: getCoordinates(d),
     unRegion: d.un_region === '' ? null : {
       name: d.un_region,
       slug: slugify(d.un_region),

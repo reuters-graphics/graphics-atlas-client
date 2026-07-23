@@ -47,7 +47,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      42.549486,
+      1.565842
+    ]
   },
   {
     "isoAlpha2": "AE",
@@ -99,7 +103,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      25.020213,
+      54.981409
+    ]
   },
   {
     "isoAlpha2": "AF",
@@ -149,7 +157,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      33.471209,
+      65.571937
+    ]
   },
   {
     "isoAlpha2": "AG",
@@ -199,7 +211,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      17.067326,
+      -61.882997
+    ]
   },
   {
     "isoAlpha2": "AI",
@@ -241,7 +257,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      18.227156,
+      -63.039909
+    ]
   },
   {
     "isoAlpha2": "AL",
@@ -291,7 +311,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      41.044667,
+      20.045658
+    ]
   },
   {
     "isoAlpha2": "AM",
@@ -341,7 +365,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      40.128375,
+      45.217891
+    ]
   },
   {
     "isoAlpha2": "AO",
@@ -391,7 +419,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -11.037595,
+      17.661375
+    ]
   },
   {
     "isoAlpha2": "AQ",
@@ -416,7 +448,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -72.459863,
+      -11.140184
+    ]
   },
   {
     "isoAlpha2": "AR",
@@ -466,7 +502,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -35.601774,
+      -66.49349
+    ]
   },
   {
     "isoAlpha2": "AS",
@@ -516,7 +556,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -14.289858,
+      -170.712168
+    ]
   },
   {
     "isoAlpha2": "AT",
@@ -566,7 +610,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      47.60306,
+      13.461103
+    ]
   },
   {
     "isoAlpha2": "AU",
@@ -616,7 +664,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -24.599416,
+      133.500693
+    ]
   },
   {
     "isoAlpha2": "AW",
@@ -666,7 +718,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      12.506928,
+      -69.97401
+    ]
   },
   {
     "isoAlpha2": "AX",
@@ -708,7 +764,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      60.238109,
+      20.365532
+    ]
   },
   {
     "isoAlpha2": "AZ",
@@ -758,7 +818,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      40.136582,
+      47.006964
+    ]
   },
   {
     "isoAlpha2": "BA",
@@ -808,7 +872,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      44.155385,
+      17.907097
+    ]
   },
   {
     "isoAlpha2": "BB",
@@ -858,7 +926,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.17338,
+      -59.54943
+    ]
   },
   {
     "isoAlpha2": "BD",
@@ -908,7 +980,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      23.502346,
+      90.451329
+    ]
   },
   {
     "isoAlpha2": "BE",
@@ -958,7 +1034,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      50.568724,
+      4.810686
+    ]
   },
   {
     "isoAlpha2": "BF",
@@ -1008,7 +1088,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      11.662678,
+      -2.306891
+    ]
   },
   {
     "isoAlpha2": "BG",
@@ -1058,7 +1142,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      42.62177,
+      25.079972
+    ]
   },
   {
     "isoAlpha2": "BH",
@@ -1108,7 +1196,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      25.91076,
+      50.660716
+    ]
   },
   {
     "isoAlpha2": "BI",
@@ -1158,7 +1250,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -3.147446,
+      29.96573
+    ]
   },
   {
     "isoAlpha2": "BJ",
@@ -1208,7 +1304,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      9.747318,
+      2.384507
+    ]
   },
   {
     "isoAlpha2": "BL",
@@ -1250,7 +1350,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      17.896378,
+      -62.83517
+    ]
   },
   {
     "isoAlpha2": "BM",
@@ -1300,7 +1404,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      32.303591,
+      -64.759337
+    ]
   },
   {
     "isoAlpha2": "BN",
@@ -1350,7 +1458,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      4.525177,
+      114.867902
+    ]
   },
   {
     "isoAlpha2": "BO",
@@ -1400,7 +1512,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -15.540959,
+      -65.152523
+    ]
   },
   {
     "isoAlpha2": "BQ",
@@ -1442,7 +1558,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      12.164177,
+      -68.251318
+    ]
   },
   {
     "isoAlpha2": "BR",
@@ -1492,7 +1612,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -9.73,
+      -52.05
+    ]
   },
   {
     "isoAlpha2": "BS",
@@ -1542,7 +1666,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      24.371414,
+      -76.598266
+    ]
   },
   {
     "isoAlpha2": "BT",
@@ -1592,7 +1720,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      27.471754,
+      90.462822
+    ]
   },
   {
     "isoAlpha2": "BV",
@@ -1634,7 +1766,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -54.427858,
+      3.416696
+    ]
   },
   {
     "isoAlpha2": "BW",
@@ -1684,7 +1820,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -22.975163,
+      24.687889
+    ]
   },
   {
     "isoAlpha2": "BY",
@@ -1734,7 +1874,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      53.454644,
+      28.343976
+    ]
   },
   {
     "isoAlpha2": "BZ",
@@ -1784,7 +1928,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      17.264814,
+      -88.321276
+    ]
   },
   {
     "isoAlpha2": "CA",
@@ -1834,7 +1982,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      59.209918,
+      -101.94573
+    ]
   },
   {
     "isoAlpha2": "CC",
@@ -1876,7 +2028,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -12.173615,
+      96.869083
+    ]
   },
   {
     "isoAlpha2": "CD",
@@ -1926,7 +2082,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -3.878197,
+      23.557852
+    ]
   },
   {
     "isoAlpha2": "CF",
@@ -1976,7 +2136,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      6.380845,
+      21.104015
+    ]
   },
   {
     "isoAlpha2": "CG",
@@ -2026,7 +2190,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      0.032966,
+      15.720801
+    ]
   },
   {
     "isoAlpha2": "CH",
@@ -2076,7 +2244,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      46.718074,
+      8.406399
+    ]
   },
   {
     "isoAlpha2": "CI",
@@ -2126,7 +2298,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.561217,
+      -5.7679
+    ]
   },
   {
     "isoAlpha2": "CK",
@@ -2168,7 +2344,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -16.522756,
+      -159.66415
+    ]
   },
   {
     "isoAlpha2": "CL",
@@ -2218,7 +2398,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -33.472423,
+      -70.769915
+    ]
   },
   {
     "isoAlpha2": "CM",
@@ -2268,7 +2452,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      6.793971,
+      12.989538
+    ]
   },
   {
     "isoAlpha2": "CN",
@@ -2318,7 +2506,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      34.986206,
+      102.838896
+    ]
   },
   {
     "isoAlpha2": "CO",
@@ -2368,7 +2560,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      4.118648,
+      -73.421321
+    ]
   },
   {
     "isoAlpha2": "CR",
@@ -2418,7 +2614,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      9.702284,
+      -84.217751
+    ]
   },
   {
     "isoAlpha2": "CU",
@@ -2468,7 +2668,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      21.860898,
+      -79.530738
+    ]
   },
   {
     "isoAlpha2": "CV",
@@ -2518,7 +2722,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      15.983792,
+      -23.951724
+    ]
   },
   {
     "isoAlpha2": "CW",
@@ -2568,7 +2776,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      12.214757,
+      -68.993385
+    ]
   },
   {
     "isoAlpha2": "CX",
@@ -2610,7 +2822,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -10.494757,
+      105.655721
+    ]
   },
   {
     "isoAlpha2": "CY",
@@ -2660,7 +2876,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      35.036293,
+      33.422368
+    ]
   },
   {
     "isoAlpha2": "CZ",
@@ -2710,7 +2930,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      49.883204,
+      15.049059
+    ]
   },
   {
     "isoAlpha2": "DE",
@@ -2760,7 +2984,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      51.493616,
+      10.631046
+    ]
   },
   {
     "isoAlpha2": "DJ",
@@ -2810,7 +3038,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      11.761509,
+      42.644279
+    ]
   },
   {
     "isoAlpha2": "DK",
@@ -2860,7 +3092,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      55.794859,
+      10.37716
+    ]
   },
   {
     "isoAlpha2": "DM",
@@ -2910,7 +3146,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      15.420674,
+      -61.374016
+    ]
   },
   {
     "isoAlpha2": "DO",
@@ -2960,7 +3200,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.82622,
+      -70.567424
+    ]
   },
   {
     "isoAlpha2": "DZ",
@@ -3010,7 +3254,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      30.395012,
+      2.3345
+    ]
   },
   {
     "isoAlpha2": "EC",
@@ -3060,7 +3308,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -1.706613,
+      -78.401584
+    ]
   },
   {
     "isoAlpha2": "EE",
@@ -3110,7 +3362,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      58.562741,
+      24.402439
+    ]
   },
   {
     "isoAlpha2": "EG",
@@ -3160,7 +3416,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      28.915098,
+      31.902439
+    ]
   },
   {
     "isoAlpha2": "EH",
@@ -3202,7 +3462,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      23.006535,
+      -14.501158
+    ]
   },
   {
     "isoAlpha2": "ER",
@@ -3252,7 +3516,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      14.947619,
+      39.808267
+    ]
   },
   {
     "isoAlpha2": "ES",
@@ -3302,7 +3570,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      39.293953,
+      -5.091326
+    ]
   },
   {
     "isoAlpha2": "ET",
@@ -3352,7 +3624,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      9.052991,
+      38.154576
+    ]
   },
   {
     "isoAlpha2": "FI",
@@ -3402,7 +3678,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      62.695179,
+      26.13955
+    ]
   },
   {
     "isoAlpha2": "FJ",
@@ -3452,7 +3732,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -17.466314,
+      119.996749
+    ]
   },
   {
     "isoAlpha2": "FK",
@@ -3494,7 +3778,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -51.762371,
+      -59.679791
+    ]
   },
   {
     "isoAlpha2": "FM",
@@ -3544,7 +3832,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      6.767336,
+      152.075427
+    ]
   },
   {
     "isoAlpha2": "FO",
@@ -3594,7 +3886,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      62.068631,
+      -6.818321
+    ]
   },
   {
     "isoAlpha2": "FR",
@@ -3644,7 +3940,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      46.243896,
+      2.412089
+    ]
   },
   {
     "isoAlpha2": "GA",
@@ -3694,7 +3994,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -0.815758,
+      11.805025
+    ]
   },
   {
     "isoAlpha2": "GB",
@@ -3746,7 +4050,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      52.467369,
+      -1.497321
+    ]
   },
   {
     "isoAlpha2": "GD",
@@ -3796,7 +4104,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      12.110181,
+      -61.688759
+    ]
   },
   {
     "isoAlpha2": "GE",
@@ -3846,7 +4158,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      42.228941,
+      43.707196
+    ]
   },
   {
     "isoAlpha2": "GF",
@@ -3888,7 +4204,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      3.501478,
+      -53.404736
+    ]
   },
   {
     "isoAlpha2": "GG",
@@ -3930,7 +4250,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      49.499047,
+      -2.442219
+    ]
   },
   {
     "isoAlpha2": "GH",
@@ -3980,7 +4304,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.398439,
+      -1.019127
+    ]
   },
   {
     "isoAlpha2": "GI",
@@ -4030,7 +4358,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      36.134323,
+      -5.348223
+    ]
   },
   {
     "isoAlpha2": "GL",
@@ -4080,7 +4412,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      70.05141,
+      -41.84338
+    ]
   },
   {
     "isoAlpha2": "GM",
@@ -4130,7 +4466,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.430912,
+      -15.480747
+    ]
   },
   {
     "isoAlpha2": "GN",
@@ -4180,7 +4520,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      10.197271,
+      -10.896582
+    ]
   },
   {
     "isoAlpha2": "GP",
@@ -4222,7 +4566,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      16.165856,
+      -61.473908
+    ]
   },
   {
     "isoAlpha2": "GQ",
@@ -4272,7 +4620,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      1.571672,
+      10.471059
+    ]
   },
   {
     "isoAlpha2": "GR",
@@ -4322,7 +4674,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      38.253384,
+      23.965321
+    ]
   },
   {
     "isoAlpha2": "GS",
@@ -4364,7 +4720,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -55.0496,
+      -34.922339
+    ]
   },
   {
     "isoAlpha2": "GT",
@@ -4414,7 +4774,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      15.580901,
+      -90.080279
+    ]
   },
   {
     "isoAlpha2": "GU",
@@ -4464,7 +4828,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.425533,
+      144.748774
+    ]
   },
   {
     "isoAlpha2": "GW",
@@ -4514,7 +4882,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      11.663845,
+      -15.413215
+    ]
   },
   {
     "isoAlpha2": "GY",
@@ -4564,7 +4936,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      4.374742,
+      -58.928342
+    ]
   },
   {
     "isoAlpha2": "HK",
@@ -4614,7 +4990,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      22.342113,
+      114.158427
+    ]
   },
   {
     "isoAlpha2": "HM",
@@ -4656,7 +5036,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -53.055116,
+      73.468919
+    ]
   },
   {
     "isoAlpha2": "HN",
@@ -4706,7 +5090,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      14.751182,
+      -85.835526
+    ]
   },
   {
     "isoAlpha2": "HR",
@@ -4756,7 +5144,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      45.82758,
+      16.314097
+    ]
   },
   {
     "isoAlpha2": "HT",
@@ -4806,7 +5198,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.923258,
+      -72.787987
+    ]
   },
   {
     "isoAlpha2": "HU",
@@ -4856,7 +5252,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      47.216688,
+      19.312548
+    ]
   },
   {
     "isoAlpha2": "ID",
@@ -4906,7 +5306,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -2.669966,
+      119.105896
+    ]
   },
   {
     "isoAlpha2": "IE",
@@ -4956,7 +5360,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      53.340023,
+      -8.637892
+    ]
   },
   {
     "isoAlpha2": "IL",
@@ -5006,7 +5414,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      31.64236,
+      35.14034
+    ]
   },
   {
     "isoAlpha2": "IM",
@@ -5056,7 +5468,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      54.189634,
+      -4.569062
+    ]
   },
   {
     "isoAlpha2": "IN",
@@ -5106,7 +5522,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      23.062731,
+      78.989057
+    ]
   },
   {
     "isoAlpha2": "IO",
@@ -5148,7 +5568,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -7.224456,
+      72.230327
+    ]
   },
   {
     "isoAlpha2": "IQ",
@@ -5198,7 +5622,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      34.153094,
+      45.238801
+    ]
   },
   {
     "isoAlpha2": "IR",
@@ -5248,7 +5676,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      33.066624,
+      52.930408
+    ]
   },
   {
     "isoAlpha2": "IS",
@@ -5298,7 +5730,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      64.769658,
+      -18.547678
+    ]
   },
   {
     "isoAlpha2": "IT",
@@ -5348,7 +5784,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      42.479613,
+      12.853627
+    ]
   },
   {
     "isoAlpha2": "JE",
@@ -5390,7 +5830,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      49.216131,
+      -2.135251
+    ]
   },
   {
     "isoAlpha2": "JM",
@@ -5440,7 +5884,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.108447,
+      -77.255438
+    ]
   },
   {
     "isoAlpha2": "JO",
@@ -5490,7 +5938,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      31.431827,
+      36.36121
+    ]
   },
   {
     "isoAlpha2": "JP",
@@ -5540,7 +5992,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      34.457979,
+      134.113695
+    ]
   },
   {
     "isoAlpha2": "KE",
@@ -5590,7 +6046,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      0.880663,
+      37.977411
+    ]
   },
   {
     "isoAlpha2": "KG",
@@ -5640,7 +6100,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      41.093131,
+      73.622367
+    ]
   },
   {
     "isoAlpha2": "KH",
@@ -5690,7 +6154,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      12.60841,
+      104.885442
+    ]
   },
   {
     "isoAlpha2": "KI",
@@ -5740,7 +6208,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -0.130177,
+      41.987917
+    ]
   },
   {
     "isoAlpha2": "KM",
@@ -5790,7 +6262,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -11.998472,
+      43.789485
+    ]
   },
   {
     "isoAlpha2": "KN",
@@ -5840,7 +6316,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      17.252084,
+      -62.65579
+    ]
   },
   {
     "isoAlpha2": "KP",
@@ -5890,7 +6370,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      39.994347,
+      126.813683
+    ]
   },
   {
     "isoAlpha2": "KR",
@@ -5940,7 +6424,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      35.459817,
+      126.949338
+    ]
   },
   {
     "isoAlpha2": "KW",
@@ -5990,7 +6478,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      29.435036,
+      47.796311
+    ]
   },
   {
     "isoAlpha2": "KY",
@@ -6040,7 +6532,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      19.329657,
+      -82.080375
+    ]
   },
   {
     "isoAlpha2": "KZ",
@@ -6090,7 +6586,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      48.206608,
+      66.798401
+    ]
   },
   {
     "isoAlpha2": "LA",
@@ -6140,7 +6640,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.408227,
+      103.873066
+    ]
   },
   {
     "isoAlpha2": "LB",
@@ -6190,7 +6694,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      33.88505,
+      35.932938
+    ]
   },
   {
     "isoAlpha2": "LC",
@@ -6240,7 +6748,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.906174,
+      -60.981584
+    ]
   },
   {
     "isoAlpha2": "LI",
@@ -6290,7 +6802,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      47.144536,
+      9.550924
+    ]
   },
   {
     "isoAlpha2": "LK",
@@ -6340,7 +6856,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.304124,
+      80.608685
+    ]
   },
   {
     "isoAlpha2": "LR",
@@ -6390,7 +6910,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      6.723859,
+      -9.044403
+    ]
   },
   {
     "isoAlpha2": "LS",
@@ -6440,7 +6964,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -29.56602,
+      28.2907
+    ]
   },
   {
     "isoAlpha2": "LT",
@@ -6490,7 +7018,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      55.26261,
+      23.944407
+    ]
   },
   {
     "isoAlpha2": "LU",
@@ -6540,7 +7072,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      49.841215,
+      6.141395
+    ]
   },
   {
     "isoAlpha2": "LV",
@@ -6590,7 +7126,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      56.774616,
+      24.970275
+    ]
   },
   {
     "isoAlpha2": "LY",
@@ -6640,7 +7180,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      28.691703,
+      16.569408
+    ]
   },
   {
     "isoAlpha2": "MA",
@@ -6690,7 +7234,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      31.978584,
+      -5.292539
+    ]
   },
   {
     "isoAlpha2": "MC",
@@ -6740,7 +7288,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      43.738453,
+      7.422101
+    ]
   },
   {
     "isoAlpha2": "MD",
@@ -6790,7 +7342,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      47.206872,
+      28.420831
+    ]
   },
   {
     "isoAlpha2": "ME",
@@ -6840,7 +7396,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      42.77099,
+      19.267319
+    ]
   },
   {
     "isoAlpha2": "MF",
@@ -6890,7 +7450,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.069563,
+      -63.076146
+    ]
   },
   {
     "isoAlpha2": "MG",
@@ -6940,7 +7504,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -16.574114,
+      47.370041
+    ]
   },
   {
     "isoAlpha2": "MH",
@@ -6990,7 +7558,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.395219,
+      168.736163
+    ]
   },
   {
     "isoAlpha2": "MK",
@@ -7040,7 +7612,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      41.622574,
+      21.700573
+    ]
   },
   {
     "isoAlpha2": "ML",
@@ -7090,7 +7666,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      14.128765,
+      -6.134194
+    ]
   },
   {
     "isoAlpha2": "MM",
@@ -7140,7 +7720,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.562061,
+      97.136352
+    ]
   },
   {
     "isoAlpha2": "MN",
@@ -7190,7 +7774,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      48.153932,
+      102.067775
+    ]
   },
   {
     "isoAlpha2": "MO",
@@ -7240,7 +7828,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      22.160796,
+      113.55778
+    ]
   },
   {
     "isoAlpha2": "MP",
@@ -7290,7 +7882,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      15.0625,
+      145.631166
+    ]
   },
   {
     "isoAlpha2": "MQ",
@@ -7332,7 +7928,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      14.625005,
+      -60.979539
+    ]
   },
   {
     "isoAlpha2": "MR",
@@ -7382,7 +7982,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      19.083406,
+      -13.480035
+    ]
   },
   {
     "isoAlpha2": "MS",
@@ -7424,7 +8028,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      16.739071,
+      -62.194413
+    ]
   },
   {
     "isoAlpha2": "MT",
@@ -7474,7 +8082,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      35.922358,
+      14.378269
+    ]
   },
   {
     "isoAlpha2": "MU",
@@ -7524,7 +8136,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -18.81185,
+      58.554431
+    ]
   },
   {
     "isoAlpha2": "MV",
@@ -7574,7 +8190,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      1.914679,
+      73.348283
+    ]
   },
   {
     "isoAlpha2": "MW",
@@ -7624,7 +8244,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -13.063801,
+      34.065571
+    ]
   },
   {
     "isoAlpha2": "MX",
@@ -7674,7 +8298,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      24.698715,
+      -104.786071
+    ]
   },
   {
     "isoAlpha2": "MY",
@@ -7724,7 +8352,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      3.924052,
+      110.955755
+    ]
   },
   {
     "isoAlpha2": "MZ",
@@ -7774,7 +8406,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -16.756562,
+      35.629948
+    ]
   },
   {
     "isoAlpha2": "NA",
@@ -7824,7 +8460,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -21.704402,
+      18.362442
+    ]
   },
   {
     "isoAlpha2": "NC",
@@ -7874,7 +8514,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -21.34787,
+      165.980258
+    ]
   },
   {
     "isoAlpha2": "NE",
@@ -7924,7 +8568,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      15.007506,
+      7.183894
+    ]
   },
   {
     "isoAlpha2": "NF",
@@ -7966,7 +8614,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -29.033033,
+      167.953551
+    ]
   },
   {
     "isoAlpha2": "NG",
@@ -8016,7 +8668,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.149722,
+      8.483917
+    ]
   },
   {
     "isoAlpha2": "NI",
@@ -8066,7 +8722,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.533942,
+      -84.289561
+    ]
   },
   {
     "isoAlpha2": "NL",
@@ -8116,7 +8776,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      51.923929,
+      5.390022
+    ]
   },
   {
     "isoAlpha2": "NO",
@@ -8166,7 +8830,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      61.046,
+      8.63
+    ]
   },
   {
     "isoAlpha2": "NP",
@@ -8216,7 +8884,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      28.277163,
+      84.268086
+    ]
   },
   {
     "isoAlpha2": "NR",
@@ -8266,7 +8938,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -0.527202,
+      166.931766
+    ]
   },
   {
     "isoAlpha2": "NU",
@@ -8308,7 +8984,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -19.052765,
+      -169.859997
+    ]
   },
   {
     "isoAlpha2": "NZ",
@@ -8358,7 +9038,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -42.517277,
+      171.936703
+    ]
   },
   {
     "isoAlpha2": "OM",
@@ -8408,7 +9092,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      22.181704,
+      56.664096
+    ]
   },
   {
     "isoAlpha2": "PA",
@@ -8458,7 +9146,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.450565,
+      -80.120834
+    ]
   },
   {
     "isoAlpha2": "PE",
@@ -8508,7 +9200,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -7.223983,
+      -73.939249
+    ]
   },
   {
     "isoAlpha2": "PF",
@@ -8558,7 +9254,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -16.496409,
+      -143.965334
+    ]
   },
   {
     "isoAlpha2": "PG",
@@ -8608,7 +9308,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -6.150321,
+      143.645505
+    ]
   },
   {
     "isoAlpha2": "PH",
@@ -8658,7 +9362,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      10.999992,
+      122.387073
+    ]
   },
   {
     "isoAlpha2": "PK",
@@ -8708,7 +9416,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      32.122345,
+      71.820651
+    ]
   },
   {
     "isoAlpha2": "PL",
@@ -8758,7 +9470,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      51.402107,
+      18.921958
+    ]
   },
   {
     "isoAlpha2": "PM",
@@ -8800,7 +9516,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      46.982719,
+      -56.32806
+    ]
   },
   {
     "isoAlpha2": "PN",
@@ -8842,7 +9562,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -24.375776,
+      -128.324717
+    ]
   },
   {
     "isoAlpha2": "PR",
@@ -8892,7 +9616,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.178675,
+      -66.346559
+    ]
   },
   {
     "isoAlpha2": "PS",
@@ -8942,7 +9670,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      31.853791,
+      35.055346
+    ]
   },
   {
     "isoAlpha2": "PT",
@@ -8992,7 +9724,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      39.908633,
+      -7.928998
+    ]
   },
   {
     "isoAlpha2": "PW",
@@ -9042,7 +9778,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.505611,
+      134.571553
+    ]
   },
   {
     "isoAlpha2": "PY",
@@ -9092,7 +9832,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -24.356253,
+      -57.542035
+    ]
   },
   {
     "isoAlpha2": "QA",
@@ -9142,7 +9886,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      25.319462,
+      51.181646
+    ]
   },
   {
     "isoAlpha2": "RE",
@@ -9184,7 +9932,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -21.111129,
+      55.54521
+    ]
   },
   {
     "isoAlpha2": "RO",
@@ -9234,7 +9986,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      45.841025,
+      25.077195
+    ]
   },
   {
     "isoAlpha2": "RS",
@@ -9284,7 +10040,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      44.091391,
+      20.672604
+    ]
   },
   {
     "isoAlpha2": "RU",
@@ -9334,7 +10094,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      62.171629,
+      85.909666
+    ]
   },
   {
     "isoAlpha2": "RW",
@@ -9384,7 +10148,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -2.069624,
+      29.891764
+    ]
   },
   {
     "isoAlpha2": "SA",
@@ -9434,7 +10202,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      23.917564,
+      42.243821
+    ]
   },
   {
     "isoAlpha2": "SB",
@@ -9484,7 +10256,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -8.87344,
+      159.639383
+    ]
   },
   {
     "isoAlpha2": "SC",
@@ -9534,7 +10310,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -4.669705,
+      55.464079
+    ]
   },
   {
     "isoAlpha2": "SD",
@@ -9584,7 +10364,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.418613,
+      28.783126
+    ]
   },
   {
     "isoAlpha2": "SE",
@@ -9634,7 +10418,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      61.309695,
+      18.340785
+    ]
   },
   {
     "isoAlpha2": "SG",
@@ -9684,7 +10472,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      1.387348,
+      103.812796
+    ]
   },
   {
     "isoAlpha2": "SH",
@@ -9726,7 +10518,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -15.973146,
+      -5.711153
+    ]
   },
   {
     "isoAlpha2": "SI",
@@ -9776,7 +10572,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      46.100659,
+      14.917202
+    ]
   },
   {
     "isoAlpha2": "SJ",
@@ -9818,7 +10618,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      78.756906,
+      17.684638
+    ]
   },
   {
     "isoAlpha2": "SK",
@@ -9868,7 +10672,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      48.756574,
+      19.637664
+    ]
   },
   {
     "isoAlpha2": "SL",
@@ -9918,7 +10726,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.444177,
+      -11.954274
+    ]
   },
   {
     "isoAlpha2": "SM",
@@ -9968,7 +10780,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      43.939906,
+      12.460432
+    ]
   },
   {
     "isoAlpha2": "SN",
@@ -10018,7 +10834,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      14.076239,
+      -14.460748
+    ]
   },
   {
     "isoAlpha2": "SO",
@@ -10068,7 +10888,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.375032,
+      45.995038
+    ]
   },
   {
     "isoAlpha2": "SR",
@@ -10118,7 +10942,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      3.874575,
+      -56.031836
+    ]
   },
   {
     "isoAlpha2": "SS",
@@ -10168,7 +10996,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.366136,
+      28.686348
+    ]
   },
   {
     "isoAlpha2": "ST",
@@ -10218,7 +11050,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      0.77373,
+      6.929072
+    ]
   },
   {
     "isoAlpha2": "SV",
@@ -10268,7 +11104,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.800142,
+      -88.742226
+    ]
   },
   {
     "isoAlpha2": "SX",
@@ -10318,7 +11158,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.048178,
+      -63.054183
+    ]
   },
   {
     "isoAlpha2": "SY",
@@ -10368,7 +11212,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      35.168935,
+      37.71954
+    ]
   },
   {
     "isoAlpha2": "SZ",
@@ -10418,7 +11266,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -26.593769,
+      31.458737
+    ]
   },
   {
     "isoAlpha2": "TC",
@@ -10468,7 +11320,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      21.734068,
+      -71.891779
+    ]
   },
   {
     "isoAlpha2": "TD",
@@ -10518,7 +11374,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      11.756047,
+      18.6043
+    ]
   },
   {
     "isoAlpha2": "TF",
@@ -10560,7 +11420,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -46.455454,
+      66.497483
+    ]
   },
   {
     "isoAlpha2": "TG",
@@ -10610,7 +11474,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      8.648479,
+      0.776852
+    ]
   },
   {
     "isoAlpha2": "TH",
@@ -10660,7 +11528,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      16.156765,
+      101.093815
+    ]
   },
   {
     "isoAlpha2": "TJ",
@@ -10710,7 +11582,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      38.758763,
+      70.82384
+    ]
   },
   {
     "isoAlpha2": "TK",
@@ -10752,7 +11628,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -9.171183,
+      -171.820766
+    ]
   },
   {
     "isoAlpha2": "TL",
@@ -10802,7 +11682,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -8.936091,
+      125.398598
+    ]
   },
   {
     "isoAlpha2": "TM",
@@ -10852,7 +11736,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      39.391663,
+      57.972754
+    ]
   },
   {
     "isoAlpha2": "TN",
@@ -10902,7 +11790,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      34.672423,
+      9.784598
+    ]
   },
   {
     "isoAlpha2": "TO",
@@ -10952,7 +11844,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -21.159555,
+      -175.206461
+    ]
   },
   {
     "isoAlpha2": "TR",
@@ -11002,7 +11898,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      38.706046,
+      33.246824
+    ]
   },
   {
     "isoAlpha2": "TT",
@@ -11052,7 +11952,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      10.615101,
+      -61.314341
+    ]
   },
   {
     "isoAlpha2": "TV",
@@ -11102,7 +12006,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -8.52117,
+      179.114855
+    ]
   },
   {
     "isoAlpha2": "TW",
@@ -11148,7 +12056,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      23.710412,
+      120.282177
+    ]
   },
   {
     "isoAlpha2": "TZ",
@@ -11198,7 +12110,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -7.427215,
+      35.932081
+    ]
   },
   {
     "isoAlpha2": "UA",
@@ -11248,7 +12164,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      48.524556,
+      31.231102
+    ]
   },
   {
     "isoAlpha2": "UG",
@@ -11298,7 +12218,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      1.513929,
+      31.871944
+    ]
   },
   {
     "isoAlpha2": "UM",
@@ -11340,7 +12264,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      13.477124,
+      -120.830975
+    ]
   },
   {
     "isoAlpha2": "US",
@@ -11392,7 +12320,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      39.729977,
+      -101.170936
+    ]
   },
   {
     "isoAlpha2": "UY",
@@ -11442,7 +12374,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -32.123061,
+      -56.071152
+    ]
   },
   {
     "isoAlpha2": "UZ",
@@ -11492,7 +12428,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      40.640961,
+      67.279319
+    ]
   },
   {
     "isoAlpha2": "VA",
@@ -11534,7 +12474,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      41.903824,
+      12.447673
+    ]
   },
   {
     "isoAlpha2": "VC",
@@ -11584,7 +12528,11 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.261437,
+      -61.190859
+    ]
   },
   {
     "isoAlpha2": "VE",
@@ -11634,7 +12582,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      7.391404,
+      -65.574167
+    ]
   },
   {
     "isoAlpha2": "VG",
@@ -11684,7 +12636,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      18.434094,
+      -64.626885
+    ]
   },
   {
     "isoAlpha2": "VI",
@@ -11734,7 +12690,11 @@
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      17.740192,
+      -64.78241
+    ]
   },
   {
     "isoAlpha2": "VN",
@@ -11784,7 +12744,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      13.008984,
+      108.461409
+    ]
   },
   {
     "isoAlpha2": "VU",
@@ -11834,7 +12798,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -16.188447,
+      167.842474
+    ]
   },
   {
     "isoAlpha2": "WF",
@@ -11876,7 +12844,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -14.28139,
+      -178.139641
+    ]
   },
   {
     "isoAlpha2": "WS",
@@ -11926,7 +12898,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -13.773461,
+      -172.162722
+    ]
   },
   {
     "isoAlpha2": "YE",
@@ -11976,7 +12952,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      14.809783,
+      46.638886
+    ]
   },
   {
     "isoAlpha2": "YT",
@@ -12018,7 +12998,11 @@
     "dataProfile": {
       "population": null,
       "income": null
-    }
+    },
+    "coordinates": [
+      -12.829256,
+      45.138516
+    ]
   },
   {
     "isoAlpha2": "ZA",
@@ -12068,7 +13052,11 @@
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -28.310608,
+      24.503106
+    ]
   },
   {
     "isoAlpha2": "ZM",
@@ -12118,7 +13106,11 @@
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -12.763231,
+      28.49213
+    ]
   },
   {
     "isoAlpha2": "ZW",
@@ -12168,6 +13160,10 @@
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    }
+    },
+    "coordinates": [
+      -18.939701,
+      29.574399
+    ]
   }
 ]

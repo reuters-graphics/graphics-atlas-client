@@ -28,6 +28,17 @@ describe('Metadata client', function() {
     assert.match(country.dataProfile.population.year, /^\d{4}$/);
   });
 
+  it('Should return country coordinates as [lat, lon]', function() {
+    const country = client.getCountry('DE');
+    assert.ok(Array.isArray(country.coordinates));
+    assert.equal(country.coordinates.length, 2);
+    const [lat, lon] = country.coordinates;
+    assert.ok(lat >= -90 && lat <= 90, 'lat in range');
+    assert.ok(lon >= -180 && lon <= 180, 'lon in range');
+    // every country has coordinates
+    assert.ok(client.countries.every(c => Array.isArray(c.coordinates) && c.coordinates.length === 2));
+  });
+
   it('Should have countries without pop', function() {
     const nopops = client.countries.filter(c => c.dataProfile.population === null);
     assert.ok(nopops.length > 0);
