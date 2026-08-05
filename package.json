@@ -21,7 +21,8 @@
     "build": "rollup --config rollup.config.mjs",
     "prepare": "rollup --config rollup.config.mjs",
     "test": "mocha",
-    "test:integration": "mocha test/integration --recursive"
+    "test:integration": "mocha test/integration --recursive",
+    "docs": "npm run build && python3 -m http.server 8000"
   },
   "engines": {
     "node": ">=18"

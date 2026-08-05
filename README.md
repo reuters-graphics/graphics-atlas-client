@@ -6,7 +6,7 @@
 
 Global country metadata client, based on the [International Organization for Standardization 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html). Includes translations for country and UN region names in German, French, Italian, Spanish, Portuguese, Japanese, Chinese and Persian/Fārsī.
 
-Also includes a complete repository of topojson files for countries and UN regions and sub-regions.
+TopoJSON geometry (country **polygons** and border **lines**, at `low`/`medium`/`high` detail) is published separately as [`@reuters-graphics/graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson) and fetched on demand from the CDN via this client's `fetch*` methods — so installing the client stays lightweight.
 
 ### Install
 
@@ -142,19 +142,11 @@ client.getCountryName('IRL'); // Country slug or code
 
 #### Import
 
-```javascript
-// Use a country's ISO alpha 2 code
-// Germany
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/DE.json';
+TopoJSON is no longer bundled in this package — it lives in [`@reuters-graphics/graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson). Use the `fetch*` methods below, or read files directly from that package/CDN. Layout:
 
-// Use a UN region or sub-region's slug to get a collection of countries
-// Africa
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/africa.json';
-// Central America
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/central-america.json';
-
-// World includes all countries and disputed boundaries
-import topology from '@reuters-graphics/graphics-atlas-client/topojson/world.json';
+```
+topojson/polygons/{low,medium,high}/{world,<region-slug>,<subregion-slug>,<ISO2>}.json
+topojson/lines/{low,medium,high}/{world,<un-region-slug>}.json   # border lines w/ `disputed` flag
 ```
 
 #### Fetch from client
@@ -164,23 +156,22 @@ import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
 
 const client = new AtlasMetadataClient();
 
-// Use a country's name, slug or ISO code
-client.fetchCountryTopojson('germany')
-  .then((topojson) => { ... });
+// Country / region / subregion / world POLYGONS, at an optional detail level
+// ('low' | 'medium' | 'high', default 'medium').
+client.fetchCountryTopojson('germany', 'high').then((topojson) => { ... });
+client.fetchRegionTopojson('Africa').then((topojson) => { ... });
+client.fetchSubregionTopojson('Western Europe').then((topojson) => { ... });
+client.fetchGlobalTopojson('low').then((topojson) => { ... });
 
-// Use a UN region or sub-region's name or slug to get a collection of countries
-client.fetchRegionTopojson('Africa')
-  .then((topojson) => { ... });
-
-// Get the world topojson
-client.fetchGlobalTopojson()
-  .then((topojson) => { ... });
+// Border LINES (carry a `disputed` flag) — world + UN region only.
+client.fetchGlobalLines().then((topojson) => { ... });
+client.fetchRegionLines('Europe', 'high').then((topojson) => { ... });
 ```
 
 #### Fetch from CDN
 
 ```javascript
-fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@latest/topojson/world.json')
+fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-topojson@latest/topojson/polygons/medium/world.json')
   .then(res => res.json())
   .then((topology) => {
     console.log(topology);
@@ -190,19 +181,27 @@ fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@late
 ### Building data
 
 ```
-$ yarn build:metadata
-$ yarn build
-$ yarn build:maps
-$ yarn build:maps:custom
+$ yarn build:metadata   # regenerate lib/data/metadata.json
+$ yarn build            # bundle the client (CJS + ESM)
 ```
+
+TopoJSON map generation lives in the separate [`graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson) repo.
 
 ### Centroids
 
-Centroids for each country are automatically calculated and added to the properties of each country's topojson. You can override the default calculation by adding a custom centroid to the `data/custom_centroids.csv` file and rebuilding the maps.
+Each country carries a `coordinates` field — `[longitude, latitude]` (GeoJSON order) — on its metadata (not on the geometry). Values are editable in `data/centroids.csv` and applied by `yarn build:metadata`.
+
+### Docs & live test
+
+A self-contained page at [`docs/index.html`](docs/index.html) loads the built client, runs a set of smoke-test assertions, and renders live maps (country polygons + world borders with disputed styling) fetched from the CDN — handy for manually verifying a build.
+
+```
+$ yarn docs      # builds, then serves at http://localhost:8000 — open /docs/
+```
 
 ### Data sources
 
-- [GADM](https://gadm.org/index.html)
-- [Stanford World Boundaries of Disputed Areas](https://purl.stanford.edu/tq310nc7616)
-- [Umpirsky country list](https://github.com/umpirsky/country-list)
-- [World Bank Classification](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
+- Country/border geometry: [`graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson), built from [`country-borders`](https://github.com/reuters-graphics/country-borders) ([Overture Maps](https://overturemaps.org/), ODbL — © OpenStreetMap contributors, Overture Maps Foundation)
+- Population: [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL) (SP.POP.TOTL)
+- Income classification: [World Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
+- Translations: [Umpirsky country list](https://github.com/umpirsky/country-list)

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>graphics-atlas-client — docs &amp; live test</title>
+<style>
+  :root {
+    --bg: #0f1216; --panel: #171b21; --border: #2a313a; --text: #e6e9ee;
+    --muted: #9aa4b2; --accent: #4c8dff; --ok: #35c88a; --bad: #ff5c6c; --line: #d0d7e2;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.5; }
+  header { padding: 24px 28px; border-bottom: 1px solid var(--border); }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  header p { margin: 0; color: var(--muted); font-size: 14px; }
+  code { background: #0b0e12; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  main { display: grid; grid-template-columns: 360px 1fr; gap: 0; min-height: calc(100vh - 78px); }
+  .side { border-right: 1px solid var(--border); padding: 20px; overflow: auto; }
+  .stage { padding: 20px 28px; }
+  section { margin-bottom: 22px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
+  label { font-size: 13px; color: var(--muted); }
+  select, button { background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 7px 10px; font-size: 13px; }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  #tests { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+  #tests li { padding: 5px 0; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: baseline; }
+  .tag { flex: none; width: 16px; text-align: center; font-weight: 700; }
+  .tag.ok { color: var(--ok); } .tag.bad { color: var(--bad); } .tag.run { color: var(--muted); }
+  .t-name { flex: 1; } .t-ms { color: var(--muted); font-size: 11px; }
+  .summary { margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-size: 13px; }
+  .card h3 { margin: 0 0 8px; font-size: 15px; }
+  .kv { display: grid; grid-template-columns: 120px 1fr; gap: 2px 10px; }
+  .kv div:nth-child(odd) { color: var(--muted); }
+  svg { width: 100%; height: auto; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; display: block; }
+  .country { fill: #24303f; stroke: #0b0e12; stroke-width: .3px; }
+  .country.hi { fill: var(--accent); }
+  .border { fill: none; stroke: var(--line); stroke-width: .6px; }
+  .border.disputed { stroke-dasharray: 3 2; stroke: #ffb020; }
+  .centroid { fill: var(--bad); }
+  .err { color: var(--bad); font-size: 13px; white-space: pre-wrap; }
+  .muted { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>graphics-atlas-client — docs &amp; live test</h1>
+  <p>Loads the built ESM client from <code>../dist/index.mjs</code> and fetches geometry from the live jsDelivr CDN. Doubles as a manual smoke test.</p>
+</header>
+<main>
+  <div class="side">
+    <section>
+      <h2>Smoke tests</h2>
+      <ul id="tests"></ul>
+      <div class="summary" id="summary">running…</div>
+    </section>
+    <section>
+      <h2>Explore</h2>
+      <div class="row">
+        <label for="detail">Detail</label>
+        <select id="detail">
+          <option>low</option><option selected>medium</option><option>high</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="country">Country</label>
+        <select id="country"></select>
+      </div>
+      <div class="row">
+        <button class="primary" id="renderWorld">Render world + borders</button>
+      </div>
+      <div id="meta"></div>
+    </section>
+  </div>
+  <div class="stage">
+    <div id="status" class="muted"></div>
+    <svg id="map" viewBox="0 0 960 500" preserveAspectRatio="xMidYMid meet" role="img"></svg>
+  </div>
+</main>
+
+<script type="module">
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
+import * as topojson from 'https://cdn.jsdelivr.net/npm/topojson-client@3/+esm';
+import AtlasMetadataClient from '../dist/index.mjs';
+
+const client = new AtlasMetadataClient();
+const $ = (id) => document.getElementById(id);
+const svg = d3.select('#map');
+const status = $('status');
+
+// ---------- Smoke tests ----------
+const tests = [
+  ['regions === 6', () => assert(client.regions.length === 6)],
+  ['subregions === 22', () => assert(client.subregions.length === 22)],
+  ['getCountry("DE") → Germany', () => assert(client.getCountry('DE').name === 'Germany')],
+  ['case-insensitive lookup', () => assert(client.getCountry('france').name === 'France')],
+  ['numeric ISO lookup', () => assert(client.getCountry(250).name === 'France')],
+  ['coordinates are [lon, lat]', () => {
+    const [lon, lat] = client.getCountry('DE').coordinates;
+    assert(lon > 5 && lon < 16 && lat > 47 && lat < 55);
+  }],
+  ['population year is 4 digits', () => assert(/^\d{4}$/.test(client.getCountry('DE').dataProfile.population.year))],
+  ['region-less country → null', () => assert(client.getRegionByCountry('AQ') === null)],
+  ['fetch country polygons (DE, medium)', async () => {
+    const t = await client.fetchCountryTopojson('DE', 'medium');
+    assert(t.type === 'Topology' && t.objects.countries);
+  }],
+  ['fetch global lines (low)', async () => {
+    const t = await client.fetchGlobalLines('low');
+    assert(t.type === 'Topology' && t.objects.lines);
+  }],
+  ['invalid detail rejects', async () => {
+    let threw = false;
+    try { await client.fetchCountryTopojson('DE', 'ultra'); } catch { threw = true; }
+    assert(threw);
+  }],
+];
+function assert(v) { if (!v) throw new Error('assertion failed'); }
+
+async function runTests() {
+  const ul = $('tests');
+  let pass = 0;
+  for (const [name, fn] of tests) {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="tag run">…</span><span class="t-name">${name}</span><span class="t-ms"></span>`;
+    ul.appendChild(li);
+    const t0 = performance.now();
+    try {
+      await fn();
+      li.querySelector('.tag').className = 'tag ok'; li.querySelector('.tag').textContent = '✓';
+      pass++;
+    } catch (e) {
+      li.querySelector('.tag').className = 'tag bad'; li.querySelector('.tag').textContent = '✗';
+      li.querySelector('.t-name').innerHTML += ` <span class="err">— ${e.message}</span>`;
+    }
+    li.querySelector('.t-ms').textContent = `${Math.round(performance.now() - t0)}ms`;
+  }
+  $('summary').textContent = `${pass}/${tests.length} passing`;
+  $('summary').style.color = pass === tests.length ? 'var(--ok)' : 'var(--bad)';
+}
+
+// ---------- Rendering ----------
+function draw(objects, projection, highlightIso) {
+  svg.selectAll('*').remove();
+  const path = d3.geoPath(projection);
+  for (const o of objects) {
+    svg.append('g').selectAll('path').data(o.features).join('path')
+      .attr('d', path)
+      .attr('class', d => {
+        if (o.kind === 'line') return 'border' + (d.properties.disputed ? ' disputed' : '');
+        return 'country' + (highlightIso && d.properties.isoAlpha2 === highlightIso ? ' hi' : '');
+      });
+  }
+}
+
+async function showCountry(iso, detail) {
+  const country = client.getCountry(iso);
+  status.textContent = `fetching ${country.name} polygons (${detail})…`;
+  renderMeta(country);
+  try {
+    const topo = await client.fetchCountryTopojson(iso, detail);
+    const fc = topojson.feature(topo, topo.objects.countries);
+    const projection = d3.geoMercator().fitExtent([[20, 20], [940, 480]], fc);
+    draw([{ kind: 'poly', features: fc.features }], projection, iso);
+    // centroid marker (coordinates are [lon, lat])
+    if (country.coordinates) {
+      const [x, y] = projection(country.coordinates);
+      svg.append('circle').attr('class', 'centroid').attr('cx', x).attr('cy', y).attr('r', 4);
+    }
+    status.textContent = `${country.name} — ${detail} polygons`;
+  } catch (e) {
+    status.innerHTML = `<span class="err">${country.name}: ${e.message} (this scale may omit tiny geographies)</span>`;
+  }
+}
+
+async function showWorld(detail) {
+  status.textContent = `fetching world polygons + lines (${detail})…`;
+  try {
+    const [polyT, lineT] = await Promise.all([
+      client.fetchGlobalTopojson(detail),
+      client.fetchGlobalLines(detail),
+    ]);
+    const poly = topojson.feature(polyT, polyT.objects.countries);
+    const lines = topojson.feature(lineT, lineT.objects.lines);
+    const projection = d3.geoNaturalEarth1().fitExtent([[10, 10], [950, 490]], poly);
+    draw([
+      { kind: 'poly', features: poly.features },
+      { kind: 'line', features: lines.features },
+    ], projection);
+    const disputed = lines.features.filter(f => f.properties.disputed).length;
+    status.textContent = `World — ${poly.features.length} countries, ${lines.features.length} border segments (${disputed} disputed, dashed amber)`;
+  } catch (e) {
+    status.innerHTML = `<span class="err">${e.message}</span>`;
+  }
+}
+
+function renderMeta(c) {
+  const p = c.dataProfile && c.dataProfile.population;
+  $('meta').innerHTML = `
+    <div class="card">
+      <h3>${c.name}</h3>
+      <div class="kv">
+        <div>slug</div><div>${c.slug}</div>
+        <div>ISO</div><div>${c.isoAlpha2} · ${c.isoAlpha3} · ${c.isoNumeric}</div>
+        <div>coordinates</div><div>[${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'}] <span class="muted">[lon, lat]</span></div>
+        <div>region</div><div>${c.region ? c.region.name : '—'}</div>
+        <div>subregion</div><div>${c.subregion ? c.subregion.name : '—'}</div>
+        <div>population</div><div>${p ? p.d.toLocaleString() + ' (' + p.year + ')' : '—'}</div>
+        <div>translations</div><div>${Object.entries(c.translations || {}).slice(0, 6).map(([k, v]) => `${k}: ${v}`).join(' · ')}</div>
+      </div>
+    </div>`;
+}
+
+// ---------- Wire up ----------
+try {
+  const sel = $('country');
+  for (const c of [...client.countries].sort((a, b) => a.name.localeCompare(b.name))) {
+    const o = document.createElement('option');
+    o.value = c.isoAlpha2; o.textContent = c.name;
+    sel.appendChild(o);
+  }
+  sel.value = 'DE';
+  const detail = () => $('detail').value;
+  sel.addEventListener('change', () => showCountry(sel.value, detail()));
+  $('detail').addEventListener('change', () => showCountry(sel.value, detail()));
+  $('renderWorld').addEventListener('click', () => showWorld(detail()));
+
+  runTests();
+  showCountry('DE', 'medium');
+} catch (e) {
+  status.innerHTML = `<span class="err">Failed to load client: ${e.message}\n\nBuild it first: yarn build — then serve the repo root and open /docs/.</span>`;
+}
+</script>
+</body>
+</html>
