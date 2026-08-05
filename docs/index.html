@@ -1,240 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>graphics-atlas-client — docs &amp; live test</title>
+<title>Graphics Atlas — country data &amp; maps</title>
+<meta name="description" content="Explore country metadata and download TopoJSON map shapes from the Reuters Graphics Atlas." />
 <style>
   :root {
-    --bg: #0f1216; --panel: #171b21; --border: #2a313a; --text: #e6e9ee;
-    --muted: #9aa4b2; --accent: #4c8dff; --ok: #35c88a; --bad: #ff5c6c; --line: #d0d7e2;
+    --radius: 12px;
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  [data-theme="dark"] {
+    --bg: #0e1116; --bg2: #161b22; --panel: #1b222c; --border: #2a323d;
+    --text: #e8ecf1; --muted: #9aa5b1; --accent: #4c8dff; --accent-ink: #fff;
+    --land: #2b3542; --land-hi: #4c8dff; --stroke: #0e1116; --border-line: #c9d3e0;
+    --disputed: #ffb020; --shadow: 0 6px 24px rgba(0,0,0,.35);
+  }
+  [data-theme="light"] {
+    --bg: #f6f8fb; --bg2: #fff; --panel: #fff; --border: #e2e8f0;
+    --text: #1a2230; --muted: #5c6b7a; --accent: #2563eb; --accent-ink: #fff;
+    --land: #dbe4ee; --land-hi: #2563eb; --stroke: #fff; --border-line: #334155;
+    --disputed: #c2740a; --shadow: 0 6px 20px rgba(20,40,80,.08);
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.5; }
-  header { padding: 24px 28px; border-bottom: 1px solid var(--border); }
-  h1 { margin: 0 0 4px; font-size: 20px; }
-  header p { margin: 0; color: var(--muted); font-size: 14px; }
-  code { background: #0b0e12; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
-  main { display: grid; grid-template-columns: 360px 1fr; gap: 0; min-height: calc(100vh - 78px); }
-  .side { border-right: 1px solid var(--border); padding: 20px; overflow: auto; }
-  .stage { padding: 20px 28px; }
-  section { margin-bottom: 22px; }
-  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
-  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
-  label { font-size: 13px; color: var(--muted); }
-  select, button { background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 7px 10px; font-size: 13px; }
-  button { cursor: pointer; }
-  button:hover { border-color: var(--accent); }
-  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  #tests { list-style: none; margin: 0; padding: 0; font-size: 13px; }
-  #tests li { padding: 5px 0; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: baseline; }
-  .tag { flex: none; width: 16px; text-align: center; font-weight: 700; }
-  .tag.ok { color: var(--ok); } .tag.bad { color: var(--bad); } .tag.run { color: var(--muted); }
-  .t-name { flex: 1; } .t-ms { color: var(--muted); font-size: 11px; }
-  .summary { margin-top: 8px; font-size: 13px; color: var(--muted); }
-  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-size: 13px; }
-  .card h3 { margin: 0 0 8px; font-size: 15px; }
-  .kv { display: grid; grid-template-columns: 120px 1fr; gap: 2px 10px; }
-  .kv div:nth-child(odd) { color: var(--muted); }
-  svg { width: 100%; height: auto; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; display: block; }
-  .country { fill: #24303f; stroke: #0b0e12; stroke-width: .3px; }
-  .country.hi { fill: var(--accent); }
-  .border { fill: none; stroke: var(--line); stroke-width: .6px; }
-  .border.disputed { stroke-dasharray: 3 2; stroke: #ffb020; }
-  .centroid { fill: var(--bad); }
-  .err { color: var(--bad); font-size: 13px; white-space: pre-wrap; }
-  .muted { color: var(--muted); font-size: 12px; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 14px 24px; background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand b { font-size: 17px; letter-spacing: -.01em; }
+  .brand span { color: var(--muted); font-size: 13px; }
+  .hactions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn {
+    display: inline-flex; align-items: center; gap: 7px; background: var(--panel); color: var(--text);
+    border: 1px solid var(--border); border-radius: 999px; padding: 7px 13px; font-size: 13px; cursor: pointer;
+  }
+  .icon-btn:hover { border-color: var(--accent); text-decoration: none; }
+
+  main { max-width: 1180px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 340px 1fr; gap: 24px; }
+  @media (max-width: 820px) { main { grid-template-columns: 1fr; } }
+
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+  .controls { padding: 18px; }
+  .field { margin-bottom: 18px; }
+  .field:last-child { margin-bottom: 0; }
+  label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 7px; }
+  select {
+    width: 100%; background: var(--bg2); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 12px; font-size: 14px; font-family: var(--font);
+  }
+  /* slider */
+  .slider-wrap { padding: 2px 2px 0; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .ticks { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .ticks span { cursor: pointer; }
+  .ticks span.on { color: var(--accent); font-weight: 600; }
+
+  /* data card */
+  .card { padding: 20px; }
+  .card .name { font-size: 24px; font-weight: 650; letter-spacing: -.02em; margin: 0 0 2px; }
+  .card .place { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .chip {
+    font-family: var(--mono); font-size: 12px; background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 7px; padding: 4px 8px; cursor: copy; color: var(--text);
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip small { color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-right: 5px; font-family: var(--font); }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; font-size: 13.5px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; }
+  .cardfoot { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 7px; border-radius: 8px; padding: 8px 12px; font-size: 13px;
+    cursor: pointer; border: 1px solid var(--border); background: var(--bg2); color: var(--text);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn:hover { border-color: var(--accent); text-decoration: none; }
+
+  .mapwrap { position: relative; overflow: hidden; }
+  svg { width: 100%; height: auto; display: block; background: transparent; }
+  .land { fill: var(--land); stroke: var(--stroke); stroke-width: .3px; }
+  .land.hi { fill: var(--land-hi); }
+  .bline { fill: none; stroke: var(--border-line); stroke-width: .6px; opacity: .75; }
+  .bline.disputed { stroke: var(--disputed); stroke-dasharray: 3 2; }
+  .centroid { fill: var(--disputed); stroke: var(--stroke); stroke-width: 1px; }
+  .maptop { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .maptop .status { font-size: 13px; color: var(--muted); }
+  .toggle-row { display: flex; gap: 6px; }
+  .seg { border: 1px solid var(--border); background: var(--bg2); color: var(--muted); padding: 6px 12px; font-size: 13px; cursor: pointer; }
+  .seg:first-child { border-radius: 8px 0 0 8px; }
+  .seg:last-child { border-radius: 0 8px 8px 0; border-left: none; }
+  .seg.on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+  .err { color: var(--disputed); }
+
+  footer { max-width: 1180px; margin: 0 auto; padding: 8px 24px 40px; color: var(--muted); font-size: 12.5px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--text); color: var(--bg); padding: 8px 14px; border-radius: 999px; font-size: 13px; opacity: 0; transition: .2s; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
 <header>
-  <h1>graphics-atlas-client — docs &amp; live test</h1>
-  <p>Loads the built ESM client from <code>../dist/index.mjs</code> and fetches geometry from the live jsDelivr CDN. Doubles as a manual smoke test.</p>
+  <div class="brand">
+    <b>Graphics Atlas</b><span>country data &amp; maps</span>
+  </div>
+  <div class="hactions">
+    <button class="icon-btn" id="theme" title="Toggle theme"><span id="theme-i">🌙</span><span id="theme-t">Dark</span></button>
+    <a class="icon-btn" href="https://github.com/reuters-graphics/graphics-atlas-client" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
 </header>
+
 <main>
-  <div class="side">
-    <section>
-      <h2>Smoke tests</h2>
-      <ul id="tests"></ul>
-      <div class="summary" id="summary">running…</div>
-    </section>
-    <section>
-      <h2>Explore</h2>
-      <div class="row">
-        <label for="detail">Detail</label>
-        <select id="detail">
-          <option>low</option><option selected>medium</option><option>high</option>
-        </select>
+  <aside class="panel controls">
+    <div class="field">
+      <label for="view">Show</label>
+      <div class="toggle-row">
+        <button class="seg on" data-view="country">A country</button>
+        <button class="seg" data-view="world">The world</button>
       </div>
-      <div class="row">
-        <label for="country">Country</label>
-        <select id="country"></select>
+    </div>
+    <div class="field" id="countryField">
+      <label for="country">Country or territory</label>
+      <select id="country"></select>
+    </div>
+    <div class="field">
+      <label for="detail">Map detail</label>
+      <div class="slider-wrap">
+        <input type="range" id="detail" min="0" max="2" step="1" value="1" />
+        <div class="ticks">
+          <span data-d="0">Low</span><span data-d="1" class="on">Medium</span><span data-d="2">High</span>
+        </div>
       </div>
-      <div class="row">
-        <button class="primary" id="renderWorld">Render world + borders</button>
-      </div>
-      <div id="meta"></div>
-    </section>
-  </div>
-  <div class="stage">
-    <div id="status" class="muted"></div>
-    <svg id="map" viewBox="0 0 960 500" preserveAspectRatio="xMidYMid meet" role="img"></svg>
-  </div>
+    </div>
+    <div id="card" class="field"></div>
+  </aside>
+
+  <section class="panel mapwrap">
+    <div class="maptop">
+      <div class="status" id="status">Loading…</div>
+      <div id="dl"></div>
+    </div>
+    <svg id="map" viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map"></svg>
+  </section>
 </main>
+
+<footer>
+  <div>Map data © OpenStreetMap contributors, Overture Maps Foundation (ODbL) · Population: World Bank</div>
+  <div><a href="https://github.com/reuters-graphics/graphics-atlas-client" target="_blank" rel="noopener">graphics-atlas-client</a> · <a href="https://github.com/reuters-graphics/graphics-atlas-topojson" target="_blank" rel="noopener">graphics-atlas-topojson</a></div>
+</footer>
+<div class="toast" id="toast"></div>
 
 <script type="module">
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
 import * as topojson from 'https://cdn.jsdelivr.net/npm/topojson-client@3/+esm';
 import AtlasMetadataClient from '../dist/index.mjs';
 
+// Base for building downloadable/source URLs (mirrors the client's FETCH_BASE).
+const TOPO_BASE = 'https://cdn.jsdelivr.net/gh/reuters-graphics/graphics-atlas-topojson@v0.1.0';
+const DETAILS = ['low', 'medium', 'high'];
+
 const client = new AtlasMetadataClient();
-const $ = (id) => document.getElementById(id);
+const $ = (s) => document.querySelector(s);
 const svg = d3.select('#map');
-const status = $('status');
+let view = 'country';
+let currentBlobUrl = null;
 
-// ---------- Smoke tests ----------
-const tests = [
-  ['regions === 6', () => assert(client.regions.length === 6)],
-  ['subregions === 22', () => assert(client.subregions.length === 22)],
-  ['getCountry("DE") → Germany', () => assert(client.getCountry('DE').name === 'Germany')],
-  ['case-insensitive lookup', () => assert(client.getCountry('france').name === 'France')],
-  ['numeric ISO lookup', () => assert(client.getCountry(250).name === 'France')],
-  ['coordinates are [lon, lat]', () => {
-    const [lon, lat] = client.getCountry('DE').coordinates;
-    assert(lon > 5 && lon < 16 && lat > 47 && lat < 55);
-  }],
-  ['population year is 4 digits', () => assert(/^\d{4}$/.test(client.getCountry('DE').dataProfile.population.year))],
-  ['region-less country → null', () => assert(client.getRegionByCountry('AQ') === null)],
-  ['fetch country polygons (DE, medium)', async () => {
-    const t = await client.fetchCountryTopojson('DE', 'medium');
-    assert(t.type === 'Topology' && t.objects.countries);
-  }],
-  ['fetch global lines (low)', async () => {
-    const t = await client.fetchGlobalLines('low');
-    assert(t.type === 'Topology' && t.objects.lines);
-  }],
-  ['invalid detail rejects', async () => {
-    let threw = false;
-    try { await client.fetchCountryTopojson('DE', 'ultra'); } catch { threw = true; }
-    assert(threw);
-  }],
-];
-function assert(v) { if (!v) throw new Error('assertion failed'); }
-
-async function runTests() {
-  const ul = $('tests');
-  let pass = 0;
-  for (const [name, fn] of tests) {
-    const li = document.createElement('li');
-    li.innerHTML = `<span class="tag run">…</span><span class="t-name">${name}</span><span class="t-ms"></span>`;
-    ul.appendChild(li);
-    const t0 = performance.now();
-    try {
-      await fn();
-      li.querySelector('.tag').className = 'tag ok'; li.querySelector('.tag').textContent = '✓';
-      pass++;
-    } catch (e) {
-      li.querySelector('.tag').className = 'tag bad'; li.querySelector('.tag').textContent = '✗';
-      li.querySelector('.t-name').innerHTML += ` <span class="err">— ${e.message}</span>`;
-    }
-    li.querySelector('.t-ms').textContent = `${Math.round(performance.now() - t0)}ms`;
-  }
-  $('summary').textContent = `${pass}/${tests.length} passing`;
-  $('summary').style.color = pass === tests.length ? 'var(--ok)' : 'var(--bad)';
+/* ---------- theme ---------- */
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('atlas-theme', t);
+  $('#theme-i').textContent = t === 'dark' ? '🌙' : '☀️';
+  $('#theme-t').textContent = t === 'dark' ? 'Dark' : 'Light';
 }
+setTheme(localStorage.getItem('atlas-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+$('#theme').addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
-// ---------- Rendering ----------
-function draw(objects, projection, highlightIso) {
-  svg.selectAll('*').remove();
-  const path = d3.geoPath(projection);
-  for (const o of objects) {
-    svg.append('g').selectAll('path').data(o.features).join('path')
-      .attr('d', path)
-      .attr('class', d => {
-        if (o.kind === 'line') return 'border' + (d.properties.disputed ? ' disputed' : '');
-        return 'country' + (highlightIso && d.properties.isoAlpha2 === highlightIso ? ' hi' : '');
-      });
-  }
+/* ---------- helpers ---------- */
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 1400);
 }
+function copy(text, label) { navigator.clipboard.writeText(text).then(() => toast((label || 'Copied') + ' copied')); }
+const detail = () => DETAILS[+$('#detail').value];
 
-async function showCountry(iso, detail) {
-  const country = client.getCountry(iso);
-  status.textContent = `fetching ${country.name} polygons (${detail})…`;
-  renderMeta(country);
-  try {
-    const topo = await client.fetchCountryTopojson(iso, detail);
-    const fc = topojson.feature(topo, topo.objects.countries);
-    const projection = d3.geoMercator().fitExtent([[20, 20], [940, 480]], fc);
-    draw([{ kind: 'poly', features: fc.features }], projection, iso);
-    // centroid marker (coordinates are [lon, lat])
-    if (country.coordinates) {
-      const [x, y] = projection(country.coordinates);
-      svg.append('circle').attr('class', 'centroid').attr('cx', x).attr('cy', y).attr('r', 4);
-    }
-    status.textContent = `${country.name} — ${detail} polygons`;
-  } catch (e) {
-    status.innerHTML = `<span class="err">${country.name}: ${e.message} (this scale may omit tiny geographies)</span>`;
-  }
-}
-
-async function showWorld(detail) {
-  status.textContent = `fetching world polygons + lines (${detail})…`;
-  try {
-    const [polyT, lineT] = await Promise.all([
-      client.fetchGlobalTopojson(detail),
-      client.fetchGlobalLines(detail),
-    ]);
-    const poly = topojson.feature(polyT, polyT.objects.countries);
-    const lines = topojson.feature(lineT, lineT.objects.lines);
-    const projection = d3.geoNaturalEarth1().fitExtent([[10, 10], [950, 490]], poly);
-    draw([
-      { kind: 'poly', features: poly.features },
-      { kind: 'line', features: lines.features },
-    ], projection);
-    const disputed = lines.features.filter(f => f.properties.disputed).length;
-    status.textContent = `World — ${poly.features.length} countries, ${lines.features.length} border segments (${disputed} disputed, dashed amber)`;
-  } catch (e) {
-    status.innerHTML = `<span class="err">${e.message}</span>`;
-  }
-}
-
-function renderMeta(c) {
+/* ---------- data card ---------- */
+function renderCard(c) {
   const p = c.dataProfile && c.dataProfile.population;
-  $('meta').innerHTML = `
-    <div class="card">
-      <h3>${c.name}</h3>
-      <div class="kv">
-        <div>slug</div><div>${c.slug}</div>
-        <div>ISO</div><div>${c.isoAlpha2} · ${c.isoAlpha3} · ${c.isoNumeric}</div>
-        <div>coordinates</div><div>[${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'}] <span class="muted">[lon, lat]</span></div>
-        <div>region</div><div>${c.region ? c.region.name : '—'}</div>
-        <div>subregion</div><div>${c.subregion ? c.subregion.name : '—'}</div>
-        <div>population</div><div>${p ? p.d.toLocaleString() + ' (' + p.year + ')' : '—'}</div>
-        <div>translations</div><div>${Object.entries(c.translations || {}).slice(0, 6).map(([k, v]) => `${k}: ${v}`).join(' · ')}</div>
+  const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en').slice(0, 5);
+  $('#card').innerHTML = `
+    <div class="panel card" style="box-shadow:none">
+      <h2 class="name">${c.name}</h2>
+      <div class="place">${c.region ? c.region.name : '—'}${c.subregion ? ' · ' + c.subregion.name : ''}</div>
+      <div class="chips">
+        <span class="chip" data-copy="${c.isoAlpha2}"><small>A2</small>${c.isoAlpha2}</span>
+        <span class="chip" data-copy="${c.isoAlpha3}"><small>A3</small>${c.isoAlpha3}</span>
+        <span class="chip" data-copy="${c.isoNumeric}"><small>Num</small>${c.isoNumeric}</span>
+        <span class="chip" data-copy="${c.slug}"><small>Slug</small>${c.slug}</span>
       </div>
+      <dl class="facts">
+        <dt>Population</dt><dd>${p ? p.d.toLocaleString() + ' <span style="color:var(--muted)">(' + p.year + ', ' + p.source + ')</span>' : '—'}</dd>
+        <dt>Coordinates</dt><dd class="chip" data-copy="${c.coordinates || ''}" style="cursor:copy">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small style="text-transform:none">[lon, lat]</small></dd>
+        <dt>Names</dt><dd>${tr.map(([k, v]) => `<span title="${k}">${v}</span>`).join(' · ') || '—'}</dd>
+      </dl>
+      <div class="cardfoot">
+        <button class="btn primary" id="copyjson">Copy JSON</button>
+      </div>
+    </div>`;
+  $('#card').querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', () => copy(el.getAttribute('data-copy'), 'Value')));
+  $('#copyjson').addEventListener('click', () => copy(JSON.stringify(c, null, 2), 'JSON'));
+}
+function renderWorldCard() {
+  $('#card').innerHTML = `
+    <div class="panel card" style="box-shadow:none">
+      <h2 class="name">The world</h2>
+      <div class="place">${client.countries.length} countries · ${client.regions.length} UN regions · ${client.subregions.length} subregions</div>
+      <dl class="facts">
+        <dt>Polygons</dt><dd>land fill for every country</dd>
+        <dt>Lines</dt><dd>borders with a <span style="color:var(--disputed)">disputed</span> flag (dashed)</dd>
+      </dl>
     </div>`;
 }
 
-// ---------- Wire up ----------
-try {
-  const sel = $('country');
-  for (const c of [...client.countries].sort((a, b) => a.name.localeCompare(b.name))) {
-    const o = document.createElement('option');
-    o.value = c.isoAlpha2; o.textContent = c.name;
-    sel.appendChild(o);
-  }
-  sel.value = 'DE';
-  const detail = () => $('detail').value;
-  sel.addEventListener('change', () => showCountry(sel.value, detail()));
-  $('detail').addEventListener('change', () => showCountry(sel.value, detail()));
-  $('renderWorld').addEventListener('click', () => showWorld(detail()));
-
-  runTests();
-  showCountry('DE', 'medium');
-} catch (e) {
-  status.innerHTML = `<span class="err">Failed to load client: ${e.message}\n\nBuild it first: yarn build — then serve the repo root and open /docs/.</span>`;
+/* ---------- download links ---------- */
+function setDownload(topojsonObj, filename, sourceUrl) {
+  if (currentBlobUrl) URL.revokeObjectURL(currentBlobUrl);
+  currentBlobUrl = URL.createObjectURL(new Blob([JSON.stringify(topojsonObj)], { type: 'application/json' }));
+  $('#dl').innerHTML = `
+    <a class="btn primary" href="${currentBlobUrl}" download="${filename}">↓ TopoJSON</a>
+    <a class="btn" href="${sourceUrl}" target="_blank" rel="noopener" title="${sourceUrl}">Source ↗</a>`;
 }
+
+/* ---------- render ---------- */
+async function render() {
+  const d = detail();
+  svg.selectAll('*').remove();
+  try {
+    if (view === 'world') {
+      renderWorldCard();
+      $('#status').textContent = `Fetching world + borders (${d})…`;
+      const [polyT, lineT] = await Promise.all([client.fetchGlobalTopojson(d), client.fetchGlobalLines(d)]);
+      const poly = topojson.feature(polyT, polyT.objects.countries);
+      const lines = topojson.feature(lineT, lineT.objects.lines);
+      const proj = d3.geoNaturalEarth1().fitExtent([[12, 12], [948, 508]], poly);
+      const path = d3.geoPath(proj);
+      svg.append('g').selectAll('path').data(poly.features).join('path').attr('class', 'land').attr('d', path);
+      svg.append('g').selectAll('path').data(lines.features).join('path')
+        .attr('class', f => 'bline' + (f.properties.disputed ? ' disputed' : '')).attr('d', path);
+      const disputed = lines.features.filter(f => f.properties.disputed).length;
+      $('#status').textContent = `World · ${poly.features.length} countries · ${lines.features.length} border segments (${disputed} disputed)`;
+      setDownload(polyT, `world-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/world.json`);
+    } else {
+      const iso = $('#country').value;
+      const c = client.getCountry(iso);
+      renderCard(c);
+      $('#status').textContent = `Fetching ${c.name} (${d})…`;
+      const topo = await client.fetchCountryTopojson(iso, d);
+      const fc = topojson.feature(topo, topo.objects.countries);
+      const proj = d3.geoMercator().fitExtent([[24, 24], [936, 496]], fc);
+      const path = d3.geoPath(proj);
+      svg.append('g').selectAll('path').data(fc.features).join('path').attr('class', 'land hi').attr('d', path);
+      if (c.coordinates) {
+        const pt = proj(c.coordinates);
+        if (pt) svg.append('circle').attr('class', 'centroid').attr('cx', pt[0]).attr('cy', pt[1]).attr('r', 4.5);
+      }
+      $('#status').textContent = `${c.name} · ${d} detail`;
+      setDownload(topo, `${iso}-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/${iso}.json`);
+    }
+  } catch (e) {
+    $('#status').innerHTML = `<span class="err">Not available at “${d}” detail — try a higher level.</span>`;
+    $('#dl').innerHTML = '';
+  }
+}
+
+/* ---------- wire up ---------- */
+const sel = $('#country');
+for (const c of [...client.countries].sort((a, b) => a.name.localeCompare(b.name))) {
+  const o = document.createElement('option'); o.value = c.isoAlpha2; o.textContent = c.name; sel.appendChild(o);
+}
+sel.value = 'FR';
+sel.addEventListener('change', render);
+$('#detail').addEventListener('input', () => {
+  document.querySelectorAll('.ticks span').forEach(s => s.classList.toggle('on', +s.dataset.d === +$('#detail').value));
+  render();
+});
+document.querySelectorAll('.ticks span').forEach(s => s.addEventListener('click', () => { $('#detail').value = s.dataset.d; $('#detail').dispatchEvent(new Event('input')); }));
+document.querySelectorAll('.seg[data-view]').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.seg[data-view]').forEach(x => x.classList.toggle('on', x === b));
+  view = b.dataset.view;
+  $('#countryField').style.display = view === 'world' ? 'none' : '';
+  render();
+}));
+
+render();
 </script>
 </body>
 </html>

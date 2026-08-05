@@ -206,9 +206,9 @@ TopoJSON map generation lives in the separate [`graphics-atlas-topojson`](https:
 
 Each country carries a `coordinates` field — `[longitude, latitude]` (GeoJSON order) — on its metadata (not on the geometry). Values are editable in `data/centroids.csv` and applied by `pnpm build:metadata`.
 
-### Docs & live test
+### Docs &amp; demo
 
-A self-contained page at [`docs/index.html`](docs/index.html) loads the built client, runs a set of smoke-test assertions, and renders live maps (country polygons + world borders with disputed styling) fetched from the CDN — handy for manually verifying a build.
+An interactive demo lives at [`docs/index.html`](docs/index.html) (published to [GitHub Pages](https://reuters-graphics.github.io/graphics-atlas-client/)). Pick a country or the world, slide the detail level (low/medium/high), inspect and copy the metadata, and download the TopoJSON shapes. Light &amp; dark themes. It loads the built client and fetches geometry live from the CDN.
 
 ```
 $ pnpm docs      # builds, then serves at http://localhost:8000 — open /docs/
