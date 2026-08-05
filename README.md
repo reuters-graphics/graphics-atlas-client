@@ -11,7 +11,7 @@ TopoJSON geometry (country **polygons** and border **lines**, at `low`/`medium`/
 ### Install
 
 ```
-$ yarn add @reuters-graphics/graphics-atlas-client
+$ pnpm add @reuters-graphics/graphics-atlas-client
 ```
 
 ### Use the metadata client
@@ -181,22 +181,22 @@ fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-topojson@la
 ### Building data
 
 ```
-$ yarn build:metadata   # regenerate lib/data/metadata.json
-$ yarn build            # bundle the client (CJS + ESM)
+$ pnpm build:metadata   # regenerate lib/data/metadata.json
+$ pnpm build            # bundle the client (CJS + ESM)
 ```
 
 TopoJSON map generation lives in the separate [`graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson) repo.
 
 ### Centroids
 
-Each country carries a `coordinates` field — `[longitude, latitude]` (GeoJSON order) — on its metadata (not on the geometry). Values are editable in `data/centroids.csv` and applied by `yarn build:metadata`.
+Each country carries a `coordinates` field — `[longitude, latitude]` (GeoJSON order) — on its metadata (not on the geometry). Values are editable in `data/centroids.csv` and applied by `pnpm build:metadata`.
 
 ### Docs & live test
 
 A self-contained page at [`docs/index.html`](docs/index.html) loads the built client, runs a set of smoke-test assertions, and renders live maps (country polygons + world borders with disputed styling) fetched from the CDN — handy for manually verifying a build.
 
 ```
-$ yarn docs      # builds, then serves at http://localhost:8000 — open /docs/
+$ pnpm docs      # builds, then serves at http://localhost:8000 — open /docs/
 ```
 
 ### Data sources
