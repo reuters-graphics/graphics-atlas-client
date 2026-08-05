@@ -3,7 +3,7 @@
 // atlas client (linked local package), d3-geo and topojson-client for the browser.
 ---
 <div class="atlas-explorer">
-  <aside class="panel">
+  <div class="panel controls">
     <div class="field">
       <label>Show</label>
       <div class="toggle-row">
@@ -20,15 +20,15 @@
       <input type="range" id="ax-detail" min="0" max="2" step="1" value="1" />
       <div class="ticks"><span data-d="0">Low</span><span data-d="1" class="on">Medium</span><span data-d="2">High</span></div>
     </div>
-    <div id="ax-card"></div>
-  </aside>
-  <section class="panel">
+  </div>
+  <section class="panel map">
     <div class="maptop">
       <div class="status" id="ax-status">Loading…</div>
       <div id="ax-dl"></div>
     </div>
     <svg id="ax-map" viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map"></svg>
   </section>
+  <div class="panel" id="ax-card"></div>
 </div>
 
 <script>
@@ -63,7 +63,7 @@
 
   function renderCard(c) {
     const p = c.dataProfile && c.dataProfile.population;
-    const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en').slice(0, 5);
+    const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en');
     $('#ax-card').innerHTML = `
       <h2 class="name">${c.name}</h2>
       <div class="place">${c.region ? c.region.name : '—'}${c.subregion ? ' · ' + c.subregion.name : ''}</div>
@@ -76,7 +76,7 @@
       <dl class="facts">
         <dt>Population</dt><dd>${p ? p.d.toLocaleString() + ' (' + p.year + ')' : '—'}</dd>
         <dt>Coordinates</dt><dd class="chip" data-copy="${c.coordinates || ''}">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small style="text-transform:none">[lon, lat]</small></dd>
-        <dt>Names</dt><dd>${tr.map(([k, v]) => `<span title="${k}">${v}</span>`).join(' · ') || '—'}</dd>
+        <dt>Names</dt><dd class="names">${tr.map(([k, v]) => `<span><small>${k}</small>${v}</span>`).join('') || '—'}</dd>
       </dl>
       <div class="cardfoot"><button class="btn primary" id="ax-json">Copy JSON</button></div>`;
     $('#ax-card').querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', () => copy(el.getAttribute('data-copy'), 'Value')));
