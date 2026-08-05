@@ -178,6 +178,21 @@ fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-topojson@la
   });
 ```
 
+### Development
+
+Development uses **Node 22** (see `.nvmrc`) and **pnpm** (via Corepack). CI runs on every push.
+
+```
+$ nvm use            # Node 22, from .nvmrc
+$ corepack enable    # activates the pinned pnpm
+$ pnpm install
+$ pnpm build         # bundle (CJS + ESM)
+$ pnpm lint
+$ pnpm test          # unit tests (network-free)
+```
+
+The published package targets Node `>=18`; Node 22 is a dev/CI baseline only.
+
 ### Building data
 
 ```

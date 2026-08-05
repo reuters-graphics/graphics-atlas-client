@@ -20,6 +20,7 @@
     "build:metadata": "npx ./bin/buildMetadata/index.js",
     "build": "rollup --config rollup.config.mjs",
     "prepare": "rollup --config rollup.config.mjs",
+    "lint": "eslint lib/ bin/",
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive",
     "docs": "rollup --config rollup.config.mjs && python3 -m http.server 8000"
