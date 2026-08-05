@@ -1,7 +1,7 @@
-name: Deploy demo to Pages
+name: Deploy docs to Pages
 
-# Rebuilds docs/ (with a fresh client build) and republishes to the gh-pages
-# branch on every push to master. Manual runs via workflow_dispatch too.
+# Builds the Starlight docs site (docs/) with a fresh client build and
+# republishes it to the gh-pages branch on every push to master.
 on:
   push:
     branches: [master]
@@ -26,25 +26,25 @@ jobs:
 
       - run: corepack enable
 
-      - name: Install (runs prepare -> builds dist)
+      # Build the client so its dist/ exists for the docs' link: dependency.
+      - name: Build client
         run: pnpm install --frozen-lockfile
 
-      - name: Assemble site
+      - name: Build docs site
+        working-directory: docs
         run: |
-          rm -rf _site && mkdir -p _site/docs _site/dist
-          cp docs/index.html _site/docs/index.html
-          cp dist/index.mjs dist/index.js _site/dist/
-          touch _site/.nojekyll
-          printf '<!doctype html><meta charset=utf-8><title>Graphics Atlas demo</title><meta http-equiv="refresh" content="0; url=./docs/">Redirecting to <a href="./docs/">the demo</a>.\n' > _site/index.html
+          pnpm install --frozen-lockfile
+          pnpm build
 
       - name: Publish to gh-pages
         run: |
-          cd _site
+          cd docs/dist
+          touch .nojekyll
           git init -q
           git checkout -q -b gh-pages
           git add -A
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-            commit -q -m "deploy demo from ${GITHUB_SHA}"
+            commit -q -m "deploy docs from ${GITHUB_SHA}"
           git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

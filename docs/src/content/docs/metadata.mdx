@@ -1,0 +1,55 @@
+---
+title: Metadata client
+description: Look up countries, regions and subregions and read their metadata.
+---
+
+```js
+import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
+const client = new AtlasMetadataClient();
+```
+
+## Lookups
+
+Lookups accept a name, slug or ISO code (alpha-2 / alpha-3 / numeric) and are **case-insensitive**.
+
+```js
+client.getCountry('DE');        // by ISO alpha-2
+client.getCountry('france');    // by name (case-insensitive)
+client.getCountry(250);         // by numeric ISO code
+client.getCountry('deu');       // by ISO alpha-3
+
+client.getRegion('Europe');
+client.getSubregion('Western Europe');
+client.getRegionByCountry('DE');      // → Europe
+client.getCountriesByRegion('Africa');
+```
+
+Not-found lookups return `null`.
+
+## A country object
+
+```js
+client.getCountry('DE');
+// {
+//   name: 'Germany',
+//   slug: 'germany',
+//   isoAlpha2: 'DE', isoAlpha3: 'DEU', isoNumeric: '276',
+//   translations: { de: 'Deutschland', fr: 'Allemagne', … },
+//   abbreviations: { … },
+//   coordinates: [10.63, 51.49],   // [lon, lat] (GeoJSON order)
+//   dataProfile: {
+//     population: { d: 83491249, year: '2025', source: 'World Bank' },
+//     income: { IncomeGroup: 'High income', … },
+//   },
+//   region: { name: 'Europe', slug: 'europe', … },
+//   subregion: { name: 'Western Europe', slug: 'western-europe' },
+// }
+```
+
+## Collections
+
+```js
+client.countries;    // all 249
+client.regions;      // 6 UN regions (each with .countries and .subregions)
+client.subregions;   // 22 subregions
+```

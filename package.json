@@ -23,7 +23,8 @@
     "lint": "eslint lib/ bin/",
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive",
-    "docs": "rollup --config rollup.config.mjs && python3 -m http.server 8000"
+    "docs:dev": "pnpm -C docs install && pnpm -C docs dev",
+    "docs:build": "pnpm build && pnpm -C docs install && pnpm -C docs build"
   },
   "packageManager": "pnpm@11.20.0",
   "engines": {

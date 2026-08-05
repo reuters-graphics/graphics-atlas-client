@@ -208,10 +208,11 @@ Each country carries a `coordinates` field — `[longitude, latitude]` (GeoJSON 
 
 ### Docs &amp; demo
 
-An interactive demo lives at [`docs/index.html`](docs/index.html) (published to [GitHub Pages](https://reuters-graphics.github.io/graphics-atlas-client/)). Pick a country or the world, slide the detail level (low/medium/high), inspect and copy the metadata, and download the TopoJSON shapes. Light &amp; dark themes. It loads the built client and fetches geometry live from the CDN.
+Documentation is an [Astro Starlight](https://starlight.astro.build/) site in [`docs/`](docs/), published to [**GitHub Pages**](https://reuters-graphics.github.io/graphics-atlas-client/) (auto-deployed on push to `master`). It includes an interactive **Explorer** — pick a country or the world, slide the detail level, inspect and copy the metadata, and download the TopoJSON shapes.
 
 ```
-$ pnpm docs      # builds, then serves at http://localhost:8000 — open /docs/
+$ pnpm docs:dev      # run the docs site locally (astro dev)
+$ pnpm docs:build    # build the client + docs site
 ```
 
 ### Data sources

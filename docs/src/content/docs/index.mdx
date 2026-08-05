@@ -1,0 +1,36 @@
+---
+title: Graphics Atlas
+description: Country metadata (ISO 3166) with translations, population and centroids, plus TopoJSON country + border maps.
+template: splash
+hero:
+  tagline: Global country metadata — ISO codes, translations, population, centroids — plus TopoJSON country &amp; border maps, fetched on demand.
+  actions:
+    - text: Overview
+      link: overview/
+      icon: right-arrow
+      variant: primary
+    - text: Open the explorer
+      link: explorer/
+      icon: external
+    - text: View on GitHub
+      link: https://github.com/reuters-graphics/graphics-atlas-client
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Metadata" icon="information">
+    Countries, UN regions and subregions by ISO code / name / slug — with translations, population, income group and `[lon, lat]` centroids.
+  </Card>
+  <Card title="Maps" icon="map">
+    Country **polygons** and border **lines** (with a `disputed` flag) at three detail levels, fetched from the CDN.
+  </Card>
+  <Card title="Dependency-free" icon="rocket">
+    The client ships zero runtime dependencies, as dual ESM + CommonJS.
+  </Card>
+  <Card title="Open data" icon="approve-check">
+    Geometry from Overture Maps (ODbL); population from the World Bank.
+  </Card>
+</CardGrid>

@@ -1,0 +1,152 @@
+---
+// Interactive country/map explorer. Client-only script; Astro/Vite bundles the
+// atlas client (linked local package), d3-geo and topojson-client for the browser.
+---
+<div class="atlas-explorer">
+  <aside class="panel">
+    <div class="field">
+      <label>Show</label>
+      <div class="toggle-row">
+        <button class="seg on" data-view="country">A country</button>
+        <button class="seg" data-view="world">The world</button>
+      </div>
+    </div>
+    <div class="field" id="ax-countryField">
+      <label for="ax-country">Country or territory</label>
+      <select id="ax-country"></select>
+    </div>
+    <div class="field">
+      <label for="ax-detail">Map detail</label>
+      <input type="range" id="ax-detail" min="0" max="2" step="1" value="1" />
+      <div class="ticks"><span data-d="0">Low</span><span data-d="1" class="on">Medium</span><span data-d="2">High</span></div>
+    </div>
+    <div id="ax-card"></div>
+  </aside>
+  <section class="panel">
+    <div class="maptop">
+      <div class="status" id="ax-status">Loading…</div>
+      <div id="ax-dl"></div>
+    </div>
+    <svg id="ax-map" viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map"></svg>
+  </section>
+</div>
+
+<script>
+  import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
+  import { geoPath, geoMercator, geoNaturalEarth1 } from 'd3-geo';
+  import { feature } from 'topojson-client';
+
+  const TOPO_BASE = 'https://cdn.jsdelivr.net/gh/reuters-graphics/graphics-atlas-topojson@v0.1.0';
+  const DETAILS = ['low', 'medium', 'high'];
+  const client = new AtlasMetadataClient();
+  const $ = (s) => document.querySelector(s);
+  const svg = $('#ax-map');
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  let view = 'country';
+  let blobUrl = null;
+
+  const detail = () => DETAILS[+$('#ax-detail').value];
+  const clear = () => { while (svg.firstChild) svg.removeChild(svg.firstChild); };
+  function addPaths(features, cls, path) {
+    const g = document.createElementNS(SVGNS, 'g');
+    for (const f of features) {
+      const p = document.createElementNS(SVGNS, 'path');
+      const d = path(f); if (!d) continue;
+      p.setAttribute('d', d);
+      p.setAttribute('class', typeof cls === 'function' ? cls(f) : cls);
+      g.appendChild(p);
+    }
+    svg.appendChild(g);
+  }
+  function toast(msg) { const s = $('#ax-status'); const prev = s.textContent; s.textContent = msg; setTimeout(() => { s.textContent = prev; }, 1200); }
+  function copy(t, l) { navigator.clipboard.writeText(t).then(() => toast((l || 'Copied') + ' copied')); }
+
+  function renderCard(c) {
+    const p = c.dataProfile && c.dataProfile.population;
+    const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en').slice(0, 5);
+    $('#ax-card').innerHTML = `
+      <h2 class="name">${c.name}</h2>
+      <div class="place">${c.region ? c.region.name : '—'}${c.subregion ? ' · ' + c.subregion.name : ''}</div>
+      <div class="chips">
+        <span class="chip" data-copy="${c.isoAlpha2}"><small>A2</small>${c.isoAlpha2}</span>
+        <span class="chip" data-copy="${c.isoAlpha3}"><small>A3</small>${c.isoAlpha3}</span>
+        <span class="chip" data-copy="${c.isoNumeric}"><small>Num</small>${c.isoNumeric}</span>
+        <span class="chip" data-copy="${c.slug}"><small>Slug</small>${c.slug}</span>
+      </div>
+      <dl class="facts">
+        <dt>Population</dt><dd>${p ? p.d.toLocaleString() + ' (' + p.year + ')' : '—'}</dd>
+        <dt>Coordinates</dt><dd class="chip" data-copy="${c.coordinates || ''}">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small style="text-transform:none">[lon, lat]</small></dd>
+        <dt>Names</dt><dd>${tr.map(([k, v]) => `<span title="${k}">${v}</span>`).join(' · ') || '—'}</dd>
+      </dl>
+      <div class="cardfoot"><button class="btn primary" id="ax-json">Copy JSON</button></div>`;
+    $('#ax-card').querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', () => copy(el.getAttribute('data-copy'), 'Value')));
+    $('#ax-json').addEventListener('click', () => copy(JSON.stringify(c, null, 2), 'JSON'));
+  }
+  function renderWorldCard() {
+    $('#ax-card').innerHTML = `
+      <h2 class="name">The world</h2>
+      <div class="place">${client.countries.length} countries · ${client.regions.length} regions · ${client.subregions.length} subregions</div>
+      <dl class="facts"><dt>Polygons</dt><dd>land fill per country</dd><dt>Lines</dt><dd>borders, <span style="color:#e0a100">disputed</span> dashed</dd></dl>`;
+  }
+  function setDownload(obj, filename, source) {
+    if (blobUrl) URL.revokeObjectURL(blobUrl);
+    blobUrl = URL.createObjectURL(new Blob([JSON.stringify(obj)], { type: 'application/json' }));
+    $('#ax-dl').innerHTML = `<a class="btn primary" href="${blobUrl}" download="${filename}">↓ TopoJSON</a> <a class="btn" href="${source}" target="_blank" rel="noopener">Source ↗</a>`;
+  }
+
+  async function render() {
+    const d = detail(); clear();
+    try {
+      if (view === 'world') {
+        renderWorldCard();
+        $('#ax-status').textContent = `Fetching world + borders (${d})…`;
+        const [polyT, lineT] = await Promise.all([client.fetchGlobalTopojson(d), client.fetchGlobalLines(d)]);
+        const poly = feature(polyT, polyT.objects.countries);
+        const lines = feature(lineT, lineT.objects.lines);
+        const path = geoPath(geoNaturalEarth1().fitExtent([[12, 12], [948, 508]], poly));
+        addPaths(poly.features, 'land', path);
+        addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), path);
+        const disp = lines.features.filter(f => f.properties.disputed).length;
+        $('#ax-status').textContent = `World · ${poly.features.length} countries · ${lines.features.length} segments (${disp} disputed)`;
+        setDownload(polyT, `world-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/world.json`);
+      } else {
+        const iso = $('#ax-country').value;
+        const c = client.getCountry(iso);
+        renderCard(c);
+        $('#ax-status').textContent = `Fetching ${c.name} (${d})…`;
+        const topo = await client.fetchCountryTopojson(iso, d);
+        const fc = feature(topo, topo.objects.countries);
+        const proj = geoMercator().fitExtent([[24, 24], [936, 496]], fc);
+        addPaths(fc.features, 'land hi', geoPath(proj));
+        if (c.coordinates) {
+          const pt = proj(c.coordinates);
+          if (pt) { const dot = document.createElementNS(SVGNS, 'circle'); dot.setAttribute('cx', pt[0]); dot.setAttribute('cy', pt[1]); dot.setAttribute('r', '4.5'); dot.setAttribute('class', 'centroid'); svg.appendChild(dot); }
+        }
+        $('#ax-status').textContent = `${c.name} · ${d} detail`;
+        setDownload(topo, `${iso}-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/${iso}.json`);
+      }
+    } catch (e) {
+      $('#ax-status').innerHTML = `<span class="err">Not available at “${d}” detail — try higher.</span>`;
+      $('#ax-dl').innerHTML = '';
+    }
+  }
+
+  const sel = $('#ax-country');
+  for (const c of [...client.countries].sort((a, b) => a.name.localeCompare(b.name))) {
+    const o = document.createElement('option'); o.value = c.isoAlpha2; o.textContent = c.name; sel.appendChild(o);
+  }
+  sel.value = 'FR';
+  sel.addEventListener('change', render);
+  $('#ax-detail').addEventListener('input', () => {
+    document.querySelectorAll('.atlas-explorer .ticks span').forEach(s => s.classList.toggle('on', +s.dataset.d === +$('#ax-detail').value));
+    render();
+  });
+  document.querySelectorAll('.atlas-explorer .ticks span').forEach(s => s.addEventListener('click', () => { $('#ax-detail').value = s.dataset.d; $('#ax-detail').dispatchEvent(new Event('input')); }));
+  document.querySelectorAll('.atlas-explorer .seg[data-view]').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.atlas-explorer .seg[data-view]').forEach(x => x.classList.toggle('on', x === b));
+    view = b.dataset.view;
+    $('#ax-countryField').style.display = view === 'world' ? 'none' : '';
+    render();
+  }));
+  render();
+</script>
