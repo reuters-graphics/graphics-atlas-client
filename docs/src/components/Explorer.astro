@@ -1,24 +1,20 @@
 ---
-// Interactive country/map explorer. Client-only script; Astro/Vite bundles the
+// Interactive geography explorer. Client-only script; Astro/Vite bundles the
 // atlas client (linked local package), d3-geo and topojson-client for the browser.
 ---
 <div class="atlas-explorer">
   <div class="panel controls">
     <div class="field">
-      <label>Show</label>
-      <div class="toggle-row">
-        <button class="seg on" data-view="country">A country</button>
-        <button class="seg" data-view="world">The world</button>
+      <label for="ax-geo">Geography</label>
+      <select id="ax-geo"></select>
+    </div>
+    <div class="field field-detail">
+      <label>Map detail</label>
+      <div class="segmented" id="ax-detail" role="group" aria-label="Map detail">
+        <button class="seg" data-d="0">Low</button>
+        <button class="seg on" data-d="1">Medium</button>
+        <button class="seg" data-d="2">High</button>
       </div>
-    </div>
-    <div class="field" id="ax-countryField">
-      <label for="ax-country">Country or territory</label>
-      <select id="ax-country"></select>
-    </div>
-    <div class="field">
-      <label for="ax-detail">Map detail</label>
-      <input type="range" id="ax-detail" min="0" max="2" step="1" value="1" />
-      <div class="ticks"><span data-d="0">Low</span><span data-d="1" class="on">Medium</span><span data-d="2">High</span></div>
     </div>
   </div>
   <section class="panel map">
@@ -42,13 +38,15 @@
   const $ = (s) => document.querySelector(s);
   const svg = $('#ax-map');
   const SVGNS = 'http://www.w3.org/2000/svg';
-  let view = 'country';
   let blobUrl = null;
+  let detailIdx = 1;
+  let renderSeq = 0; // guards against stale async renders drawing over a newer one
 
-  const detail = () => DETAILS[+$('#ax-detail').value];
+  const detail = () => DETAILS[detailIdx];
   const clear = () => { while (svg.firstChild) svg.removeChild(svg.firstChild); };
-  function addPaths(features, cls, path) {
+  function addPaths(features, cls, path, groupClass) {
     const g = document.createElementNS(SVGNS, 'g');
+    if (groupClass) g.setAttribute('class', groupClass);
     for (const f of features) {
       const p = document.createElementNS(SVGNS, 'path');
       const d = path(f); if (!d) continue;
@@ -60,8 +58,12 @@
   }
   function toast(msg) { const s = $('#ax-status'); const prev = s.textContent; s.textContent = msg; setTimeout(() => { s.textContent = prev; }, 1200); }
   function copy(t, l) { navigator.clipboard.writeText(t).then(() => toast((l || 'Copied') + ' copied')); }
+  function wireCopy() {
+    $('#ax-card').querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', () => copy(el.getAttribute('data-copy'), 'Value')));
+    const j = $('#ax-json'); if (j) j.addEventListener('click', () => copy(j._json, 'JSON'));
+  }
 
-  function renderCard(c) {
+  function renderCountryCard(c) {
     const p = c.dataProfile && c.dataProfile.population;
     const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en');
     $('#ax-card').innerHTML = `
@@ -73,14 +75,27 @@
         <span class="chip" data-copy="${c.isoNumeric}"><small>ISO&nbsp;Numeric</small>${c.isoNumeric}</span>
         <span class="chip" data-copy="${c.slug}"><small>Slug</small>${c.slug}</span>
       </div>
-      <dl class="facts">
-        <dt>Population</dt><dd>${p ? p.d.toLocaleString() + ' (' + p.year + ')' : '—'}</dd>
-        <dt>Coordinates</dt><dd class="chip" data-copy="${c.coordinates || ''}">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small style="text-transform:none">[lon, lat]</small></dd>
-        <dt>Names</dt><dd class="names">${tr.map(([k, v]) => `<span><small>${k}</small>${v}</span>`).join('') || '—'}</dd>
-      </dl>
+      <div class="fact"><div class="field-label">Names</div>
+        <div class="chips">${tr.map(([k, v]) => `<span class="chip" data-copy="${v}"><small>${k}</small>${v}</span>`).join('') || '—'}</div></div>
+      <div class="fact"><div class="field-label">Coordinates</div>
+        <div class="chips"><span class="chip" data-copy="${c.coordinates || ''}">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small class="hint">[lon, lat]</small></span></div></div>
+      <div class="fact"><div class="field-label">Population</div>
+        <div class="value">${p ? p.d.toLocaleString() + ' <span class="muted">(' + p.year + ' · ' + p.source + ')</span>' : '—'}</div></div>
       <div class="cardfoot"><button class="btn primary" id="ax-json">Copy JSON</button></div>`;
-    $('#ax-card').querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', () => copy(el.getAttribute('data-copy'), 'Value')));
-    $('#ax-json').addEventListener('click', () => copy(JSON.stringify(c, null, 2), 'JSON'));
+    $('#ax-json')._json = JSON.stringify(c, null, 2);
+    wireCopy();
+  }
+  function renderGroupCard(obj, type) {
+    const list = obj.countries.map(c => c.name).join(' · ');
+    $('#ax-card').innerHTML = `
+      <h2 class="name">${obj.name}</h2>
+      <div class="place">${type}${obj.region ? ' of ' + obj.region.name : ''}</div>
+      <div class="chips"><span class="chip" data-copy="${obj.slug}"><small>Slug</small>${obj.slug}</span></div>
+      <dl class="facts">
+        <dt>Countries</dt><dd>${obj.countries.length}</dd>
+      </dl>
+      <div class="members">${list}</div>`;
+    wireCopy();
   }
   function renderWorldCard() {
     $('#ax-card').innerHTML = `
@@ -93,60 +108,91 @@
     blobUrl = URL.createObjectURL(new Blob([JSON.stringify(obj)], { type: 'application/json' }));
     $('#ax-dl').innerHTML = `<a class="btn primary" href="${blobUrl}" download="${filename}">↓ TopoJSON</a> <a class="btn" href="${source}" target="_blank" rel="noopener">Source ↗</a>`;
   }
+  const polyUrl = (d, key) => `${TOPO_BASE}/topojson/polygons/${d}/${key}.json`;
 
   async function render() {
-    const d = detail(); clear();
+    const d = detail();
+    const [kind, key] = $('#ax-geo').value.split(':');
+    const seq = ++renderSeq;
+    const stale = () => seq !== renderSeq;
+    clear();
     try {
-      if (view === 'world') {
+      if (kind === 'world') {
         renderWorldCard();
         $('#ax-status').textContent = `Fetching world + borders (${d})…`;
         const [polyT, lineT] = await Promise.all([client.fetchGlobalTopojson(d), client.fetchGlobalLines(d)]);
+        if (stale()) return;
         const poly = feature(polyT, polyT.objects.countries);
         const lines = feature(lineT, lineT.objects.lines);
         const path = geoPath(geoNaturalEarth1().fitExtent([[12, 12], [948, 508]], poly));
-        addPaths(poly.features, 'land', path);
+        addPaths(poly.features, 'land', path, 'land-layer');
         addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), path);
         const disp = lines.features.filter(f => f.properties.disputed).length;
         $('#ax-status').textContent = `World · ${poly.features.length} countries · ${lines.features.length} segments (${disp} disputed)`;
-        setDownload(polyT, `world-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/world.json`);
+        setDownload(polyT, `world-${d}-polygons.json`, polyUrl(d, 'world'));
+      } else if (kind === 'region' || kind === 'subregion') {
+        const obj = kind === 'region' ? client.getRegion(key) : client.getSubregion(key);
+        renderGroupCard(obj, kind === 'region' ? 'UN region' : 'UN subregion');
+        $('#ax-status').textContent = `Fetching ${obj.name} (${d})…`;
+        const polyT = kind === 'region'
+          ? await client.fetchRegionTopojson(key, d)
+          : await client.fetchSubregionTopojson(key, d);
+        if (stale()) return;
+        const poly = feature(polyT, polyT.objects.countries);
+        const proj = geoMercator().fitExtent([[16, 16], [944, 504]], poly);
+        addPaths(poly.features, 'land', geoPath(proj), 'land-layer');
+        // regions have border-line files; overlay them
+        if (kind === 'region') {
+          try {
+            const lineT = await client.fetchRegionLines(key, d);
+            if (stale()) return;
+            const lines = feature(lineT, lineT.objects.lines);
+            addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), geoPath(proj));
+          } catch { /* no lines at this scale */ }
+        }
+        $('#ax-status').textContent = `${obj.name} · ${poly.features.length} countries · ${d} detail`;
+        setDownload(polyT, `${key}-${d}-polygons.json`, polyUrl(d, key));
       } else {
-        const iso = $('#ax-country').value;
-        const c = client.getCountry(iso);
-        renderCard(c);
+        const c = client.getCountry(key);
+        renderCountryCard(c);
         $('#ax-status').textContent = `Fetching ${c.name} (${d})…`;
-        const topo = await client.fetchCountryTopojson(iso, d);
+        const topo = await client.fetchCountryTopojson(key, d);
+        if (stale()) return;
         const fc = feature(topo, topo.objects.countries);
         const proj = geoMercator().fitExtent([[24, 24], [936, 496]], fc);
-        addPaths(fc.features, 'land hi', geoPath(proj));
+        addPaths(fc.features, 'land hi', geoPath(proj), 'land-layer');
         if (c.coordinates) {
           const pt = proj(c.coordinates);
           if (pt) { const dot = document.createElementNS(SVGNS, 'circle'); dot.setAttribute('cx', pt[0]); dot.setAttribute('cy', pt[1]); dot.setAttribute('r', '4.5'); dot.setAttribute('class', 'centroid'); svg.appendChild(dot); }
         }
         $('#ax-status').textContent = `${c.name} · ${d} detail`;
-        setDownload(topo, `${iso}-${d}-polygons.json`, `${TOPO_BASE}/topojson/polygons/${d}/${iso}.json`);
+        setDownload(topo, `${c.isoAlpha2}-${d}-polygons.json`, polyUrl(d, c.isoAlpha2));
       }
     } catch (e) {
+      if (stale()) return;
       $('#ax-status').innerHTML = `<span class="err">Not available at “${d}” detail — try higher.</span>`;
       $('#ax-dl').innerHTML = '';
     }
   }
 
-  const sel = $('#ax-country');
-  for (const c of [...client.countries].sort((a, b) => a.name.localeCompare(b.name))) {
-    const o = document.createElement('option'); o.value = c.isoAlpha2; o.textContent = c.name; sel.appendChild(o);
-  }
-  sel.value = 'FR';
+  // Build the unified selector: World → Regions → Subregions → Countries.
+  const sel = $('#ax-geo');
+  const opt = (value, label) => { const o = document.createElement('option'); o.value = value; o.textContent = label; return o; };
+  const group = (label, opts) => { const g = document.createElement('optgroup'); g.label = label; opts.forEach(o => g.appendChild(o)); return g; };
+  const byName = (a, b) => a.name.localeCompare(b.name);
+
+  sel.appendChild(opt('world', 'World'));
+  sel.appendChild(group('Regions', [...client.regions].sort(byName).map(r => opt('region:' + r.slug, r.name))));
+  sel.appendChild(group('Subregions', [...client.subregions].sort(byName).map(s => opt('subregion:' + s.slug, s.name))));
+  sel.appendChild(group('Countries', [...client.countries].sort(byName).map(c => opt('country:' + c.isoAlpha2, c.name))));
+  sel.value = 'country:FR';
   sel.addEventListener('change', render);
-  $('#ax-detail').addEventListener('input', () => {
-    document.querySelectorAll('.atlas-explorer .ticks span').forEach(s => s.classList.toggle('on', +s.dataset.d === +$('#ax-detail').value));
-    render();
-  });
-  document.querySelectorAll('.atlas-explorer .ticks span').forEach(s => s.addEventListener('click', () => { $('#ax-detail').value = s.dataset.d; $('#ax-detail').dispatchEvent(new Event('input')); }));
-  document.querySelectorAll('.atlas-explorer .seg[data-view]').forEach(b => b.addEventListener('click', () => {
-    document.querySelectorAll('.atlas-explorer .seg[data-view]').forEach(x => x.classList.toggle('on', x === b));
-    view = b.dataset.view;
-    $('#ax-countryField').style.display = view === 'world' ? 'none' : '';
+
+  document.querySelectorAll('.atlas-explorer #ax-detail .seg').forEach(b => b.addEventListener('click', () => {
+    detailIdx = +b.dataset.d;
+    document.querySelectorAll('.atlas-explorer #ax-detail .seg').forEach(x => x.classList.toggle('on', x === b));
     render();
   }));
+
   render();
 </script>
