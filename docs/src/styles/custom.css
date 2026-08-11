@@ -36,10 +36,10 @@ starlight-file-tree {
 .atlas-explorer .ticks span { cursor: pointer; }
 .atlas-explorer .ticks span.on { color: var(--sl-color-accent-high); font-weight: 600; }
 .atlas-explorer .toggle-row { display: flex; }
-.atlas-explorer .seg { border: 1px solid var(--sl-color-hairline); background: var(--sl-color-bg); color: var(--sl-color-gray-2); padding: 7px 12px; font-size: 13px; cursor: pointer; }
-.atlas-explorer .seg:first-child { border-radius: 8px 0 0 8px; }
-.atlas-explorer .seg:last-child { border-radius: 0 8px 8px 0; border-left: none; }
-.atlas-explorer .seg.on { background: var(--sl-color-accent); color: var(--sl-color-black); border-color: var(--sl-color-accent); }
+.atlas-explorer .toggle-row { display: inline-flex; border: 1px solid var(--sl-color-hairline); border-radius: 8px; overflow: hidden; }
+.atlas-explorer .seg { appearance: none; -webkit-appearance: none; margin: 0; border: 0; border-radius: 0; background: var(--sl-color-bg); color: var(--sl-color-gray-2); padding: 8px 16px; font: inherit; font-size: 13px; line-height: 1.2; cursor: pointer; }
+.atlas-explorer .seg + .seg { border-left: 1px solid var(--sl-color-hairline); }
+.atlas-explorer .seg.on { background: var(--sl-color-accent); color: var(--sl-color-white); }
 
 .atlas-explorer .name { font-size: 22px; font-weight: 650; margin: 0 0 2px; }
 .atlas-explorer .place { color: var(--sl-color-gray-3); font-size: 13px; margin-bottom: 12px; }
