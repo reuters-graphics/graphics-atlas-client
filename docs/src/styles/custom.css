@@ -45,7 +45,7 @@ starlight-file-tree {
 .atlas-explorer .place { color: var(--sl-color-gray-3); font-size: 13px; margin-bottom: 12px; }
 .atlas-explorer .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .atlas-explorer .chip { font-family: var(--__sl-font-mono, monospace); font-size: 12px; background: var(--sl-color-bg); border: 1px solid var(--sl-color-hairline); border-radius: 7px; padding: 4px 8px; cursor: copy; color: var(--sl-color-white); }
-.atlas-explorer .chip small { color: var(--sl-color-gray-3); text-transform: uppercase; margin-right: 5px; }
+.atlas-explorer .chip small { color: var(--sl-color-gray-3); text-transform: uppercase; font-size: 10px; letter-spacing: .04em; margin-right: 7px; padding-right: 7px; border-right: 1px solid var(--sl-color-hairline); }
 .atlas-explorer .facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 13.5px; margin: 0; }
 .atlas-explorer .facts dt { color: var(--sl-color-gray-3); }
 .atlas-explorer .facts dd { margin: 0; }
