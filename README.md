@@ -178,6 +178,51 @@ fetch('https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-topojson@la
   });
 ```
 
+### Flags
+
+Country flags come from [`flag-icons`](https://github.com/lipis/flag-icons) (pure SVG + CSS, keyed on ISO 3166-1 alpha-2). The client only generates URLs/class names — it doesn't bundle the flags — so there's nothing extra to install for the SVG approach.
+
+```javascript
+client.getCountryFlag('Germany');
+// {
+//   code: 'de',
+//   className: 'fi fi-de',            // for a <span> with flag-icons CSS
+//   squareClassName: 'fi fi-de fis',
+//   svg: {
+//     '4x3': 'https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.5.0/flags/4x3/de.svg',
+//     '1x1': 'https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.5.0/flags/1x1/de.svg',
+//   },
+// }
+```
+
+Zero-dependency SVG (just an `<img>`):
+
+```javascript
+const { svg } = client.getCountryFlag('DE');
+// <img src={svg['4x3']} alt="Germany flag" />
+```
+
+CSS-class approach (install `flag-icons` — an optional peer dependency — or link its CDN CSS):
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.5.0/css/flag-icons.min.css" />
+<span class="fi fi-de"></span>
+```
+
+#### Non-country flags
+
+`flag-icons` also ships flags that aren't ISO countries — organizations (`eu`, `un`), UK nations (`gb-sct`, `gb-eng`…), Spanish regions, territories and specials (`xk` Kosovo, `xx` unknown). These are kept in a maintained list and resolved via `getFlag()` by code, slug or name (case-insensitive):
+
+```javascript
+client.getFlag('scotland');        // { code: 'gb-sct', className: 'fi fi-gb-sct', ... }
+client.getFlag('european-union');  // { code: 'eu', ... }
+client.getFlag('Germany');         // ISO countries resolve too -> { code: 'de', ... }
+
+client.customFlags;                // the full maintained list [{ code, name, slug, category }, …]
+```
+
+`getCountryFlag()` / `getFlag()` return `null` for unrecognized input.
+
 ### Development
 
 Development uses **Node 22** (see `.nvmrc`) and **pnpm** (via Corepack). CI runs on every push.

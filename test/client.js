@@ -108,4 +108,34 @@ describe('Metadata client', function() {
     assert.equal(fresh.countries.length, 5);
     assert.notEqual(fresh.countries.length, before);
   });
+
+  it('Should return a country flag (flag-icons)', function() {
+    const flag = client.getCountryFlag('Germany');
+    assert.equal(flag.code, 'de');
+    assert.equal(flag.className, 'fi fi-de');
+    assert.equal(flag.squareClassName, 'fi fi-de fis');
+    assert.match(flag.svg['4x3'], /\/flags\/4x3\/de\.svg$/);
+    assert.match(flag.svg['1x1'], /\/flags\/1x1\/de\.svg$/);
+    // resolves by name, slug or code
+    assert.equal(client.getCountryFlag('fr').code, 'fr');
+    assert.equal(client.getCountryFlag('france').code, 'fr');
+    assert.equal(client.getCountryFlag('not-a-country'), null);
+  });
+
+  it('Should resolve flags for every country', function() {
+    assert.ok(client.countries.every(c => client.getCountryFlag(c.isoAlpha2) !== null));
+  });
+
+  it('Should expose custom (non-country) flags and resolve them via getFlag', function() {
+    assert.equal(client.customFlags.length, 22);
+    // by custom code, slug and name (case-insensitive)
+    assert.equal(client.getFlag('gb-sct').code, 'gb-sct');
+    assert.equal(client.getFlag('scotland').code, 'gb-sct');
+    assert.equal(client.getFlag('GB-SCT').code, 'gb-sct');
+    assert.equal(client.getFlag('european-union').code, 'eu');
+    assert.equal(client.getFlag('Kosovo').code, 'xk');
+    // getFlag still resolves ISO countries
+    assert.equal(client.getFlag('Germany').code, 'de');
+    assert.equal(client.getFlag('nope'), null);
+  });
 });
