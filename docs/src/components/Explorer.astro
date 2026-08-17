@@ -16,25 +16,37 @@
         <button class="seg" data-d="2">High</button>
       </div>
     </div>
+    <div class="field field-layers">
+      <label>Layers</label>
+      <div class="segmented" id="ax-layers" role="group" aria-label="Layers">
+        <button class="seg on" data-layer="polygons" aria-pressed="true">Country polygons</button>
+        <button class="seg on" data-layer="lines" aria-pressed="true">Country borders</button>
+        <button class="seg on" data-layer="disputed" aria-pressed="true">Disputed borders</button>
+      </div>
+    </div>
   </div>
-  <section class="panel map">
+  <section class="panel stage">
     <div class="maptop">
-      <div class="status" id="ax-status">Loading…</div>
+      <div class="status" id="ax-status"></div>
       <div id="ax-dl"></div>
     </div>
     <svg id="ax-map" viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map"></svg>
+    <div id="ax-card"></div>
   </section>
-  <div class="panel" id="ax-card"></div>
 </div>
 
 <script>
   import AtlasMetadataClient from '@reuters-graphics/graphics-atlas-client';
-  import { geoPath, geoMercator, geoNaturalEarth1 } from 'd3-geo';
+  import { geoPath, geoMercator, geoNaturalEarth1, geoBounds } from 'd3-geo';
   import { feature } from 'topojson-client';
 
-  const TOPO_BASE = 'https://cdn.jsdelivr.net/gh/reuters-graphics/graphics-atlas-topojson@v0.1.0';
+  // Dev: fetch the freshly-built geometry served locally from docs/public/topojson
+  // (symlink to ../../topojson), under the site base path. Prod: this package's
+  // published assets on jsDelivr.
+  const LOCAL_BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. /graphics-atlas-client
+  const TOPO_BASE = import.meta.env.DEV ? LOCAL_BASE : 'https://cdn.jsdelivr.net/npm/@reuters-graphics/graphics-atlas-client@latest';
   const DETAILS = ['low', 'medium', 'high'];
-  const client = new AtlasMetadataClient();
+  const client = new AtlasMetadataClient(import.meta.env.DEV ? { topojsonBase: LOCAL_BASE } : {});
   const $ = (s) => document.querySelector(s);
   const svg = $('#ax-map');
   const SVGNS = 'http://www.w3.org/2000/svg';
@@ -65,10 +77,24 @@
 
   function renderCountryCard(c) {
     const p = c.dataProfile && c.dataProfile.population;
+    const gdp = c.dataProfile && c.dataProfile.gdp;
+    const inc = c.dataProfile && c.dataProfile.income;
+    const fmtGDP = (n) => {
+      const abs = Math.abs(n);
+      if (abs >= 1e12) return '$' + (n / 1e12).toFixed(2) + 'T';
+      if (abs >= 1e9) return '$' + (n / 1e9).toFixed(1) + 'B';
+      if (abs >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+      return '$' + n.toLocaleString();
+    };
     const tr = Object.entries(c.translations || {}).filter(([k]) => k !== 'en');
+    const flag = client.getCountryFlag(c.isoAlpha2);
     $('#ax-card').innerHTML = `
-      <h2 class="name">${c.name}</h2>
-      <div class="place">${c.region ? c.region.name : '—'}${c.subregion ? ' · ' + c.subregion.name : ''}</div>
+      <button class="btn primary json-top" id="ax-json">Copy JSON</button>
+      <div class="c-head" style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+        ${flag ? `<img class="flag" src="${flag.svg['4x3']}" alt="Flag of ${c.name}" loading="lazy" onerror="this.remove()" style="flex:0 0 auto;width:53px;height:40px;object-fit:cover;border-radius:5px;box-shadow:0 1px 3px rgba(15,23,42,.3)" />` : ''}
+        <div style="min-width:0"><h2 class="name" style="margin:0;line-height:1.05">${c.name}</h2>
+        <div class="place" style="margin:3px 0 0;line-height:1.2">${c.region ? c.region.name : '—'}${c.subregion ? ' · ' + c.subregion.name : ''}</div></div>
+      </div>
       <div class="chips">
         <span class="chip" data-copy="${c.isoAlpha2}"><small>ISO2</small>${c.isoAlpha2}</span>
         <span class="chip" data-copy="${c.isoAlpha3}"><small>ISO3</small>${c.isoAlpha3}</span>
@@ -81,12 +107,19 @@
         <div class="chips"><span class="chip" data-copy="${c.coordinates || ''}">${c.coordinates ? c.coordinates.map(n => n.toFixed(3)).join(', ') : '—'} <small class="hint">[lon, lat]</small></span></div></div>
       <div class="fact"><div class="field-label">Population</div>
         <div class="value">${p ? p.d.toLocaleString() + ' <span class="muted">(' + p.year + ' · ' + p.source + ')</span>' : '—'}</div></div>
-      <div class="cardfoot"><button class="btn primary" id="ax-json">Copy JSON</button></div>`;
+      <div class="fact"><div class="field-label">GDP <span class="muted">(current US$)</span></div>
+        <div class="value">${gdp ? fmtGDP(gdp.d) + ' <span class="muted">(' + gdp.year + ' · ' + gdp.source + ')</span>' : '—'}</div></div>
+      <div class="fact"><div class="field-label">Income group</div>
+        <div class="value">${inc && inc.IncomeGroup && inc.IncomeGroup !== '..' ? inc.IncomeGroup + ' <span class="muted">(' + inc.source + ')</span>' : '—'}</div></div>`;
     $('#ax-json')._json = JSON.stringify(c, null, 2);
     wireCopy();
   }
   function renderGroupCard(obj, type) {
-    const list = obj.countries.map(c => c.name).join(' · ');
+    const list = obj.countries.map(c => {
+      const f = client.getCountryFlag(c.isoAlpha2);
+      const img = f ? `<img class="flag-xs" src="${f.svg['4x3']}" alt="" loading="lazy" onerror="this.remove()" style="flex:none;width:19px;height:14px;object-fit:cover;border-radius:2px;margin-right:6px" />` : '';
+      return `<span class="mem" style="white-space:nowrap">${img}${c.name}</span>`;
+    }).join('<span class="sep">·</span>');
     $('#ax-card').innerHTML = `
       <h2 class="name">${obj.name}</h2>
       <div class="place">${type}${obj.region ? ' of ' + obj.region.name : ''}</div>
@@ -101,7 +134,7 @@
     $('#ax-card').innerHTML = `
       <h2 class="name">The world</h2>
       <div class="place">${client.countries.length} countries · ${client.regions.length} regions · ${client.subregions.length} subregions</div>
-      <dl class="facts"><dt>Polygons</dt><dd>land fill per country</dd><dt>Lines</dt><dd>borders, <span style="color:#e0a100">disputed</span> dashed</dd></dl>`;
+      <dl class="facts"><dt>Country polygons</dt><dd>land fill per country</dd><dt>Country borders</dt><dd>borders, <span style="color:var(--map-disputed)">disputed</span> dashed</dd></dl>`;
   }
   function setDownload(obj, filename, source) {
     if (blobUrl) URL.revokeObjectURL(blobUrl);
@@ -126,9 +159,9 @@
         const lines = feature(lineT, lineT.objects.lines);
         const path = geoPath(geoNaturalEarth1().fitExtent([[12, 12], [948, 508]], poly));
         addPaths(poly.features, 'land', path, 'land-layer');
-        addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), path);
+        addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), path, 'lines-layer');
         const disp = lines.features.filter(f => f.properties.disputed).length;
-        $('#ax-status').textContent = `World · ${poly.features.length} countries · ${lines.features.length} segments (${disp} disputed)`;
+        $('#ax-status').textContent = '';
         setDownload(polyT, `world-${d}-polygons.json`, polyUrl(d, 'world'));
       } else if (kind === 'region' || kind === 'subregion') {
         const obj = kind === 'region' ? client.getRegion(key) : client.getSubregion(key);
@@ -147,10 +180,10 @@
             const lineT = await client.fetchRegionLines(key, d);
             if (stale()) return;
             const lines = feature(lineT, lineT.objects.lines);
-            addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), geoPath(proj));
+            addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), geoPath(proj), 'lines-layer');
           } catch { /* no lines at this scale */ }
         }
-        $('#ax-status').textContent = `${obj.name} · ${poly.features.length} countries · ${d} detail`;
+        $('#ax-status').textContent = '';
         setDownload(polyT, `${key}-${d}-polygons.json`, polyUrl(d, key));
       } else {
         const c = client.getCountry(key);
@@ -159,13 +192,40 @@
         const topo = await client.fetchCountryTopojson(key, d);
         if (stale()) return;
         const fc = feature(topo, topo.objects.countries);
-        const proj = geoMercator().fitExtent([[24, 24], [936, 496]], fc);
+
+        // Borders (incl. disputed) aren't published per-country — only at world
+        // + UN-region level. Fetch the country's region lines to overlay.
+        let rlines = null;
+        const region = client.getRegionByCountry(c.isoAlpha2);
+        if (region) {
+          try {
+            const lineT = await client.fetchRegionLines(region.slug, d);
+            if (stale()) return;
+            rlines = feature(lineT, lineT.objects.lines);
+          } catch { /* region has no lines at this scale */ }
+        }
+
+        // Fit the projection to the country PLUS any disputed lines that overhang
+        // it (e.g. the Kashmir boundary sits ~1.3° north of India's polygon), so
+        // the full boundary shows instead of being clipped at the viewBox edge.
+        const [[cw, cs], [ce, cn]] = geoBounds(fc);
+        const fitFeatures = [...fc.features];
+        if (rlines) {
+          for (const f of rlines.features) {
+            if (!f.properties.disputed) continue;
+            const [[w, s], [e, n]] = geoBounds(f);
+            if (e >= cw && w <= ce && n >= cs && s <= cn) fitFeatures.push(f); // overlaps the country
+          }
+        }
+        const proj = geoMercator().fitExtent([[24, 24], [936, 496]], { type: 'FeatureCollection', features: fitFeatures });
+
         addPaths(fc.features, 'land hi', geoPath(proj), 'land-layer');
+        if (rlines) addPaths(rlines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), geoPath(proj), 'lines-layer');
         if (c.coordinates) {
           const pt = proj(c.coordinates);
           if (pt) { const dot = document.createElementNS(SVGNS, 'circle'); dot.setAttribute('cx', pt[0]); dot.setAttribute('cy', pt[1]); dot.setAttribute('r', '4.5'); dot.setAttribute('class', 'centroid'); svg.appendChild(dot); }
         }
-        $('#ax-status').textContent = `${c.name} · ${d} detail`;
+        $('#ax-status').textContent = '';
         setDownload(topo, `${c.isoAlpha2}-${d}-polygons.json`, polyUrl(d, c.isoAlpha2));
       }
     } catch (e) {
@@ -193,6 +253,24 @@
     document.querySelectorAll('.atlas-explorer #ax-detail .seg').forEach(x => x.classList.toggle('on', x === b));
     render();
   }));
+
+  // Layer visibility toggles (polygons / lines / disputed). Purely CSS-class
+  // driven on the persistent <svg>, so they apply across every geography and
+  // detail level without refetching or re-rendering.
+  const layerState = { polygons: true, lines: true, disputed: true };
+  function applyLayers() {
+    svg.classList.toggle('hide-polygons', !layerState.polygons);
+    svg.classList.toggle('hide-lines', !layerState.lines);
+    svg.classList.toggle('hide-disputed', !layerState.disputed);
+  }
+  document.querySelectorAll('.atlas-explorer #ax-layers .seg').forEach(b => b.addEventListener('click', () => {
+    const layer = b.dataset.layer;
+    layerState[layer] = !layerState[layer];
+    b.classList.toggle('on', layerState[layer]);
+    b.setAttribute('aria-pressed', String(layerState[layer]));
+    applyLayers();
+  }));
+  applyLayers();
 
   render();
 </script>
