@@ -1,9 +1,10 @@
 // Integration tests — these hit the live jsDelivr CDN and are excluded from the
-// default `yarn test` run. Run explicitly with `yarn test:integration`.
+// default `pnpm test` run. Run explicitly with `pnpm test:integration`.
 //
-// Served from the public graphics-atlas-topojson repo via jsDelivr /gh at the
-// pinned tag in lib/index.js (FETCH_BASE). When the assets move to npm, keep
-// these running and just repoint FETCH_BASE.
+// The topojson assets now ship inside this package; the client's FETCH_BASE
+// (lib/index.js) points at this package's own version-pinned npm URL on
+// jsDelivr. These pass only once a version carrying the `topojson/` assets has
+// been published to npm (i.e. after the first release post-merge).
 const assert = require('node:assert/strict');
 const AtlasMetadataClient = require('../../dist');
 
