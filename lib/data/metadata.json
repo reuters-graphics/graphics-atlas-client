@@ -17,6 +17,10 @@
       "zh": "安道尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      1.565842,
+      42.549486
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -42,16 +46,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3380612573,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      1.565842,
-      42.549486
-    ]
+    }
   },
   {
     "isoAlpha2": "AE",
@@ -73,6 +78,10 @@
     "abbreviations": {
       "en": "U.A.E."
     },
+    "coordinates": [
+      54.981409,
+      25.020213
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -98,16 +107,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 511403404642,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      54.981409,
-      25.020213
-    ]
+    }
   },
   {
     "isoAlpha2": "AF",
@@ -127,6 +137,10 @@
       "zh": "阿富汗"
     },
     "abbreviations": {},
+    "coordinates": [
+      65.571937,
+      33.471209
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -152,16 +166,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 14497243872,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      65.571937,
-      33.471209
-    ]
+    }
   },
   {
     "isoAlpha2": "AG",
@@ -181,6 +196,10 @@
       "zh": "安提瓜和巴布达"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.882997,
+      17.067326
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -206,16 +225,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1857114815,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -61.882997,
-      17.067326
-    ]
+    }
   },
   {
     "isoAlpha2": "AI",
@@ -235,6 +255,10 @@
       "zh": "安圭拉"
     },
     "abbreviations": {},
+    "coordinates": [
+      -63.039909,
+      18.227156
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -256,12 +280,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -63.039909,
-      18.227156
-    ]
+    }
   },
   {
     "isoAlpha2": "AL",
@@ -281,6 +302,10 @@
       "zh": "阿尔巴尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      20.045658,
+      41.044667
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -306,16 +331,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 19017247014,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      20.045658,
-      41.044667
-    ]
+    }
   },
   {
     "isoAlpha2": "AM",
@@ -335,6 +361,10 @@
       "zh": "亚美尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      45.217891,
+      40.128375
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -360,16 +390,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 19513506553,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      45.217891,
-      40.128375
-    ]
+    }
   },
   {
     "isoAlpha2": "AO",
@@ -389,6 +420,10 @@
       "zh": "安哥拉"
     },
     "abbreviations": {},
+    "coordinates": [
+      17.661375,
+      -11.037595
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -414,16 +449,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 128233959333,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      17.661375,
-      -11.037595
-    ]
+    }
   },
   {
     "isoAlpha2": "AQ",
@@ -443,16 +479,17 @@
       "zh": "南极洲"
     },
     "abbreviations": {},
+    "coordinates": [
+      -11.140184,
+      -72.459863
+    ],
     "unRegion": null,
     "unSubregion": null,
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -11.140184,
-      -72.459863
-    ]
+    }
   },
   {
     "isoAlpha2": "AR",
@@ -472,6 +509,10 @@
       "zh": "阿根廷"
     },
     "abbreviations": {},
+    "coordinates": [
+      -66.49349,
+      -35.601774
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -497,16 +538,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 633993756301,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -66.49349,
-      -35.601774
-    ]
+    }
   },
   {
     "isoAlpha2": "AS",
@@ -526,6 +568,10 @@
       "zh": "美属萨摩亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -170.712168,
+      -14.289858
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -551,16 +597,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 871000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -170.712168,
-      -14.289858
-    ]
+    }
   },
   {
     "isoAlpha2": "AT",
@@ -580,6 +627,10 @@
       "zh": "奥地利"
     },
     "abbreviations": {},
+    "coordinates": [
+      13.461103,
+      47.60306
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -605,16 +656,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 473221298968,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      13.461103,
-      47.60306
-    ]
+    }
   },
   {
     "isoAlpha2": "AU",
@@ -634,6 +686,10 @@
       "zh": "澳大利亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      133.500693,
+      -24.599416
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -659,16 +715,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1695627535476,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      133.500693,
-      -24.599416
-    ]
+    }
   },
   {
     "isoAlpha2": "AW",
@@ -688,6 +745,10 @@
       "zh": "阿鲁巴"
     },
     "abbreviations": {},
+    "coordinates": [
+      -69.97401,
+      12.506928
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -713,16 +774,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3326671315,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -69.97401,
-      12.506928
-    ]
+    }
   },
   {
     "isoAlpha2": "AX",
@@ -742,6 +804,10 @@
       "zh": "奥兰群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      20.365532,
+      60.238109
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -763,12 +829,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      20.365532,
-      60.238109
-    ]
+    }
   },
   {
     "isoAlpha2": "AZ",
@@ -788,6 +851,10 @@
       "zh": "阿塞拜疆"
     },
     "abbreviations": {},
+    "coordinates": [
+      47.006964,
+      40.136582
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -813,16 +880,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 78807470588,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      47.006964,
-      40.136582
-    ]
+    }
   },
   {
     "isoAlpha2": "BA",
@@ -842,6 +910,10 @@
       "zh": "波斯尼亚和黑塞哥维那"
     },
     "abbreviations": {},
+    "coordinates": [
+      17.907097,
+      44.155385
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -867,16 +939,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 24534663636,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      17.907097,
-      44.155385
-    ]
+    }
   },
   {
     "isoAlpha2": "BB",
@@ -896,6 +969,10 @@
       "zh": "巴巴多斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      -59.54943,
+      13.17338
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -921,16 +998,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 6886644900,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -59.54943,
-      13.17338
-    ]
+    }
   },
   {
     "isoAlpha2": "BD",
@@ -950,6 +1028,10 @@
       "zh": "孟加拉国"
     },
     "abbreviations": {},
+    "coordinates": [
+      90.451329,
+      23.502346
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -975,16 +1057,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 460131689083,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      90.451329,
-      23.502346
-    ]
+    }
   },
   {
     "isoAlpha2": "BE",
@@ -1004,6 +1087,10 @@
       "zh": "比利时"
     },
     "abbreviations": {},
+    "coordinates": [
+      4.810686,
+      50.568724
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -1029,16 +1116,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 591474463579,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      4.810686,
-      50.568724
-    ]
+    }
   },
   {
     "isoAlpha2": "BF",
@@ -1058,6 +1146,10 @@
       "zh": "布基纳法索"
     },
     "abbreviations": {},
+    "coordinates": [
+      -2.306891,
+      11.662678
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -1083,16 +1175,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 18622421395,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -2.306891,
-      11.662678
-    ]
+    }
   },
   {
     "isoAlpha2": "BG",
@@ -1112,6 +1205,10 @@
       "zh": "保加利亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      25.079972,
+      42.62177
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -1137,16 +1234,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 90510784778,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      25.079972,
-      42.62177
-    ]
+    }
   },
   {
     "isoAlpha2": "BH",
@@ -1166,6 +1264,10 @@
       "zh": "巴林"
     },
     "abbreviations": {},
+    "coordinates": [
+      50.660716,
+      25.91076
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -1191,16 +1293,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 46458191489,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      50.660716,
-      25.91076
-    ]
+    }
   },
   {
     "isoAlpha2": "BI",
@@ -1220,6 +1323,10 @@
       "zh": "布隆迪"
     },
     "abbreviations": {},
+    "coordinates": [
+      29.96573,
+      -3.147446
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -1245,16 +1352,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4020736757,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      29.96573,
-      -3.147446
-    ]
+    }
   },
   {
     "isoAlpha2": "BJ",
@@ -1274,6 +1382,10 @@
       "zh": "贝宁"
     },
     "abbreviations": {},
+    "coordinates": [
+      2.384507,
+      9.747318
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -1299,16 +1411,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 17425405091,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      2.384507,
-      9.747318
-    ]
+    }
   },
   {
     "isoAlpha2": "BL",
@@ -1328,6 +1441,10 @@
       "zh": "圣巴泰勒米"
     },
     "abbreviations": {},
+    "coordinates": [
+      -62.83517,
+      17.896378
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1349,12 +1466,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -62.83517,
-      17.896378
-    ]
+    }
   },
   {
     "isoAlpha2": "BM",
@@ -1374,6 +1488,10 @@
       "zh": "百慕大"
     },
     "abbreviations": {},
+    "coordinates": [
+      -64.759337,
+      32.303591
+    ],
     "unRegion": {
       "name": "Northern America",
       "slug": "northern-america",
@@ -1399,16 +1517,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 7767884000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -64.759337,
-      32.303591
-    ]
+    }
   },
   {
     "isoAlpha2": "BN",
@@ -1428,6 +1547,10 @@
       "zh": "文莱"
     },
     "abbreviations": {},
+    "coordinates": [
+      114.867902,
+      4.525177
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -1453,16 +1576,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 16681536467,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      114.867902,
-      4.525177
-    ]
+    }
   },
   {
     "isoAlpha2": "BO",
@@ -1482,6 +1606,10 @@
       "zh": "玻利维亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -65.152523,
+      -15.540959
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1507,16 +1635,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 50959081954,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -65.152523,
-      -15.540959
-    ]
+    }
   },
   {
     "isoAlpha2": "BQ",
@@ -1536,6 +1665,10 @@
       "zh": "荷属加勒比区"
     },
     "abbreviations": {},
+    "coordinates": [
+      -68.251318,
+      12.164177
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1557,12 +1690,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -68.251318,
-      12.164177
-    ]
+    }
   },
   {
     "isoAlpha2": "BR",
@@ -1582,6 +1712,10 @@
       "zh": "巴西"
     },
     "abbreviations": {},
+    "coordinates": [
+      -52.05,
+      -9.73
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1607,16 +1741,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1951923942083,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -52.05,
-      -9.73
-    ]
+    }
   },
   {
     "isoAlpha2": "BS",
@@ -1636,6 +1771,10 @@
       "zh": "巴哈马"
     },
     "abbreviations": {},
+    "coordinates": [
+      -76.598266,
+      24.371414
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1661,16 +1800,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 13896800000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -76.598266,
-      24.371414
-    ]
+    }
   },
   {
     "isoAlpha2": "BT",
@@ -1690,6 +1830,10 @@
       "zh": "不丹"
     },
     "abbreviations": {},
+    "coordinates": [
+      90.462822,
+      27.471754
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -1715,16 +1859,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2898227744,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      90.462822,
-      27.471754
-    ]
+    }
   },
   {
     "isoAlpha2": "BV",
@@ -1744,6 +1889,10 @@
       "zh": "布韦岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      3.416696,
+      -54.427858
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1765,12 +1914,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      3.416696,
-      -54.427858
-    ]
+    }
   },
   {
     "isoAlpha2": "BW",
@@ -1790,6 +1936,10 @@
       "zh": "博茨瓦纳"
     },
     "abbreviations": {},
+    "coordinates": [
+      24.687889,
+      -22.975163
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -1815,16 +1965,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 20321150599,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      24.687889,
-      -22.975163
-    ]
+    }
   },
   {
     "isoAlpha2": "BY",
@@ -1844,6 +1995,10 @@
       "zh": "白俄罗斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.343976,
+      53.454644
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -1869,16 +2024,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 73775179925,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.343976,
-      53.454644
-    ]
+    }
   },
   {
     "isoAlpha2": "BZ",
@@ -1898,6 +2054,10 @@
       "zh": "伯利兹"
     },
     "abbreviations": {},
+    "coordinates": [
+      -88.321276,
+      17.264814
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -1923,16 +2083,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2846604350,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -88.321276,
-      17.264814
-    ]
+    }
   },
   {
     "isoAlpha2": "CA",
@@ -1952,6 +2113,10 @@
       "zh": "加拿大"
     },
     "abbreviations": {},
+    "coordinates": [
+      -101.94573,
+      59.209918
+    ],
     "unRegion": {
       "name": "Northern America",
       "slug": "northern-america",
@@ -1977,16 +2142,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2200562785046,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -101.94573,
-      59.209918
-    ]
+    }
   },
   {
     "isoAlpha2": "CC",
@@ -2006,6 +2172,10 @@
       "zh": "科科斯（基林）群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      96.869083,
+      -12.173615
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -2027,12 +2197,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      96.869083,
-      -12.173615
-    ]
+    }
   },
   {
     "isoAlpha2": "CD",
@@ -2052,6 +2219,10 @@
       "zh": "刚果（金）"
     },
     "abbreviations": {},
+    "coordinates": [
+      23.557852,
+      -3.878197
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2077,16 +2248,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 70422346142,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      23.557852,
-      -3.878197
-    ]
+    }
   },
   {
     "isoAlpha2": "CF",
@@ -2106,6 +2278,10 @@
       "zh": "中非共和国"
     },
     "abbreviations": {},
+    "coordinates": [
+      21.104015,
+      6.380845
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2131,16 +2307,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2382618615,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      21.104015,
-      6.380845
-    ]
+    }
   },
   {
     "isoAlpha2": "CG",
@@ -2160,6 +2337,10 @@
       "zh": "刚果（布）"
     },
     "abbreviations": {},
+    "coordinates": [
+      15.720801,
+      0.032966
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2185,16 +2366,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 15817030155,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      15.720801,
-      0.032966
-    ]
+    }
   },
   {
     "isoAlpha2": "CH",
@@ -2214,6 +2396,10 @@
       "zh": "瑞士"
     },
     "abbreviations": {},
+    "coordinates": [
+      8.406399,
+      46.718074
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -2239,16 +2425,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 858479038994,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      8.406399,
-      46.718074
-    ]
+    }
   },
   {
     "isoAlpha2": "CI",
@@ -2268,6 +2455,10 @@
       "zh": "科特迪瓦"
     },
     "abbreviations": {},
+    "coordinates": [
+      -5.7679,
+      7.561217
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2293,16 +2484,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 70922824814,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -5.7679,
-      7.561217
-    ]
+    }
   },
   {
     "isoAlpha2": "CK",
@@ -2322,6 +2514,10 @@
       "zh": "库克群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -159.66415,
+      -16.522756
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -2343,12 +2539,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -159.66415,
-      -16.522756
-    ]
+    }
   },
   {
     "isoAlpha2": "CL",
@@ -2368,6 +2561,10 @@
       "zh": "智利"
     },
     "abbreviations": {},
+    "coordinates": [
+      -70.769915,
+      -33.472423
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -2393,16 +2590,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 301099244104,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -70.769915,
-      -33.472423
-    ]
+    }
   },
   {
     "isoAlpha2": "CM",
@@ -2422,6 +2620,10 @@
       "zh": "喀麦隆"
     },
     "abbreviations": {},
+    "coordinates": [
+      12.989538,
+      6.793971
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2447,16 +2649,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 44347206073,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      12.989538,
-      6.793971
-    ]
+    }
   },
   {
     "isoAlpha2": "CN",
@@ -2476,6 +2679,10 @@
       "zh": "中国"
     },
     "abbreviations": {},
+    "coordinates": [
+      102.838896,
+      34.986206
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -2501,16 +2708,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 18316765021690,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      102.838896,
-      34.986206
-    ]
+    }
   },
   {
     "isoAlpha2": "CO",
@@ -2530,6 +2738,10 @@
       "zh": "哥伦比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -73.421321,
+      4.118648
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -2555,16 +2767,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 345632492851,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -73.421321,
-      4.118648
-    ]
+    }
   },
   {
     "isoAlpha2": "CR",
@@ -2584,6 +2797,10 @@
       "zh": "哥斯达黎加"
     },
     "abbreviations": {},
+    "coordinates": [
+      -84.217751,
+      9.702284
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -2609,16 +2826,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 71001226361,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -84.217751,
-      9.702284
-    ]
+    }
   },
   {
     "isoAlpha2": "CU",
@@ -2638,6 +2856,10 @@
       "zh": "古巴"
     },
     "abbreviations": {},
+    "coordinates": [
+      -79.530738,
+      21.860898
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -2663,16 +2885,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -79.530738,
-      21.860898
-    ]
+    }
   },
   {
     "isoAlpha2": "CV",
@@ -2692,6 +2911,10 @@
       "zh": "佛得角"
     },
     "abbreviations": {},
+    "coordinates": [
+      -23.951724,
+      15.983792
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -2717,16 +2940,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2247003344,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -23.951724,
-      15.983792
-    ]
+    }
   },
   {
     "isoAlpha2": "CW",
@@ -2746,6 +2970,10 @@
       "zh": "库拉索"
     },
     "abbreviations": {},
+    "coordinates": [
+      -68.993385,
+      12.214757
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -2771,16 +2999,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3075180838,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -68.993385,
-      12.214757
-    ]
+    }
   },
   {
     "isoAlpha2": "CX",
@@ -2800,6 +3029,10 @@
       "zh": "圣诞岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      105.655721,
+      -10.494757
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -2821,12 +3054,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      105.655721,
-      -10.494757
-    ]
+    }
   },
   {
     "isoAlpha2": "CY",
@@ -2846,6 +3076,10 @@
       "zh": "塞浦路斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      33.422368,
+      35.036293
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -2871,16 +3105,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 31218047044,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      33.422368,
-      35.036293
-    ]
+    }
   },
   {
     "isoAlpha2": "CZ",
@@ -2900,6 +3135,10 @@
       "zh": "捷克"
     },
     "abbreviations": {},
+    "coordinates": [
+      15.049059,
+      49.883204
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -2925,16 +3164,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 301831228326,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      15.049059,
-      49.883204
-    ]
+    }
   },
   {
     "isoAlpha2": "DE",
@@ -2954,6 +3194,10 @@
       "zh": "德国"
     },
     "abbreviations": {},
+    "coordinates": [
+      10.631046,
+      51.493616
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -2979,16 +3223,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4201021706479,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      10.631046,
-      51.493616
-    ]
+    }
   },
   {
     "isoAlpha2": "DJ",
@@ -3008,6 +3253,10 @@
       "zh": "吉布提"
     },
     "abbreviations": {},
+    "coordinates": [
+      42.644279,
+      11.761509
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3033,16 +3282,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3562814909,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      42.644279,
-      11.761509
-    ]
+    }
   },
   {
     "isoAlpha2": "DK",
@@ -3062,6 +3312,10 @@
       "zh": "丹麦"
     },
     "abbreviations": {},
+    "coordinates": [
+      10.37716,
+      55.794859
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3087,16 +3341,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 400114306337,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      10.37716,
-      55.794859
-    ]
+    }
   },
   {
     "isoAlpha2": "DM",
@@ -3116,6 +3371,10 @@
       "zh": "多米尼克"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.374016,
+      15.420674
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -3141,16 +3400,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 623062963,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -61.374016,
-      15.420674
-    ]
+    }
   },
   {
     "isoAlpha2": "DO",
@@ -3170,6 +3430,10 @@
       "zh": "多米尼加共和国"
     },
     "abbreviations": {},
+    "coordinates": [
+      -70.567424,
+      18.82622
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -3195,16 +3459,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 113478103598,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -70.567424,
-      18.82622
-    ]
+    }
   },
   {
     "isoAlpha2": "DZ",
@@ -3224,6 +3489,10 @@
       "zh": "阿尔及利亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      2.3345,
+      30.395012
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3249,16 +3518,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 225581644703,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      2.3345,
-      30.395012
-    ]
+    }
   },
   {
     "isoAlpha2": "EC",
@@ -3278,6 +3548,10 @@
       "zh": "厄瓜多尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      -78.401584,
+      -1.706613
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -3303,16 +3577,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 116133121000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -78.401584,
-      -1.706613
-    ]
+    }
   },
   {
     "isoAlpha2": "EE",
@@ -3332,6 +3607,10 @@
       "zh": "爱沙尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      24.402439,
+      58.562741
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3357,16 +3636,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 38226641740,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      24.402439,
-      58.562741
-    ]
+    }
   },
   {
     "isoAlpha2": "EG",
@@ -3386,6 +3666,10 @@
       "zh": "埃及"
     },
     "abbreviations": {},
+    "coordinates": [
+      31.902439,
+      28.915098
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3411,16 +3695,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 476747720365,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      31.902439,
-      28.915098
-    ]
+    }
   },
   {
     "isoAlpha2": "EH",
@@ -3440,6 +3725,10 @@
       "zh": "西撒哈拉"
     },
     "abbreviations": {},
+    "coordinates": [
+      -14.501158,
+      23.006535
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3461,12 +3750,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -14.501158,
-      23.006535
-    ]
+    }
   },
   {
     "isoAlpha2": "ER",
@@ -3486,6 +3772,10 @@
       "zh": "厄立特里亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      39.808267,
+      14.947619
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3511,16 +3801,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      39.808267,
-      14.947619
-    ]
+    }
   },
   {
     "isoAlpha2": "ES",
@@ -3540,6 +3827,10 @@
       "zh": "西班牙"
     },
     "abbreviations": {},
+    "coordinates": [
+      -5.091326,
+      39.293953
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3565,16 +3856,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1448850658407,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -5.091326,
-      39.293953
-    ]
+    }
   },
   {
     "isoAlpha2": "ET",
@@ -3594,6 +3886,10 @@
       "zh": "埃塞俄比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      38.154576,
+      9.052991
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3619,16 +3915,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 123140304665,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      38.154576,
-      9.052991
-    ]
+    }
   },
   {
     "isoAlpha2": "FI",
@@ -3648,6 +3945,10 @@
       "zh": "芬兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      26.13955,
+      62.695179
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3673,16 +3974,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 280253099309,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      26.13955,
-      62.695179
-    ]
+    }
   },
   {
     "isoAlpha2": "FJ",
@@ -3702,6 +4004,10 @@
       "zh": "斐济"
     },
     "abbreviations": {},
+    "coordinates": [
+      119.996749,
+      -17.466314
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -3727,16 +4033,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4977861886,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      119.996749,
-      -17.466314
-    ]
+    }
   },
   {
     "isoAlpha2": "FK",
@@ -3756,6 +4063,10 @@
       "zh": "福克兰群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -59.679791,
+      -51.762371
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -3777,12 +4088,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -59.679791,
-      -51.762371
-    ]
+    }
   },
   {
     "isoAlpha2": "FM",
@@ -3802,6 +4110,10 @@
       "zh": "密克罗尼西亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      152.075427,
+      6.767336
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -3827,16 +4139,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 415232900,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      152.075427,
-      6.767336
-    ]
+    }
   },
   {
     "isoAlpha2": "FO",
@@ -3856,6 +4169,10 @@
       "zh": "法罗群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -6.818321,
+      62.068631
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3881,16 +4198,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3615241801,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -6.818321,
-      62.068631
-    ]
+    }
   },
   {
     "isoAlpha2": "FR",
@@ -3910,6 +4228,10 @@
       "zh": "法国"
     },
     "abbreviations": {},
+    "coordinates": [
+      2.412089,
+      46.243896
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -3935,16 +4257,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2794788137067,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      2.412089,
-      46.243896
-    ]
+    }
   },
   {
     "isoAlpha2": "GA",
@@ -3964,6 +4287,10 @@
       "zh": "加蓬"
     },
     "abbreviations": {},
+    "coordinates": [
+      11.805025,
+      -0.815758
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -3989,16 +4316,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 20440655695,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      11.805025,
-      -0.815758
-    ]
+    }
   },
   {
     "isoAlpha2": "GB",
@@ -4020,6 +4348,10 @@
     "abbreviations": {
       "en": "U.K."
     },
+    "coordinates": [
+      -1.497321,
+      52.467369
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -4045,16 +4377,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3181244350465,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -1.497321,
-      52.467369
-    ]
+    }
   },
   {
     "isoAlpha2": "GD",
@@ -4074,6 +4407,10 @@
       "zh": "格林纳达"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.688759,
+      12.110181
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4099,16 +4436,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1224007407,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -61.688759,
-      12.110181
-    ]
+    }
   },
   {
     "isoAlpha2": "GE",
@@ -4128,6 +4466,10 @@
       "zh": "格鲁吉亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      43.707196,
+      42.228941
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -4153,16 +4495,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 24984568960,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      43.707196,
-      42.228941
-    ]
+    }
   },
   {
     "isoAlpha2": "GF",
@@ -4182,6 +4525,10 @@
       "zh": "法属圭亚那"
     },
     "abbreviations": {},
+    "coordinates": [
+      -53.404736,
+      3.501478
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4203,12 +4550,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -53.404736,
-      3.501478
-    ]
+    }
   },
   {
     "isoAlpha2": "GG",
@@ -4228,6 +4572,10 @@
       "zh": "根西岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -2.442219,
+      49.499047
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -4249,12 +4597,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -2.442219,
-      49.499047
-    ]
+    }
   },
   {
     "isoAlpha2": "GH",
@@ -4274,6 +4619,10 @@
       "zh": "加纳"
     },
     "abbreviations": {},
+    "coordinates": [
+      -1.019127,
+      8.398439
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -4299,16 +4648,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 73919003212,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -1.019127,
-      8.398439
-    ]
+    }
   },
   {
     "isoAlpha2": "GI",
@@ -4328,6 +4678,10 @@
       "zh": "直布罗陀"
     },
     "abbreviations": {},
+    "coordinates": [
+      -5.348223,
+      36.134323
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -4353,16 +4707,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -5.348223,
-      36.134323
-    ]
+    }
   },
   {
     "isoAlpha2": "GL",
@@ -4382,6 +4733,10 @@
       "zh": "格陵兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      -41.84338,
+      70.05141
+    ],
     "unRegion": {
       "name": "Northern America",
       "slug": "northern-america",
@@ -4407,16 +4762,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3152334772,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -41.84338,
-      70.05141
-    ]
+    }
   },
   {
     "isoAlpha2": "GM",
@@ -4436,6 +4792,10 @@
       "zh": "冈比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -15.480747,
+      13.430912
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -4461,16 +4821,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2204734528,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -15.480747,
-      13.430912
-    ]
+    }
   },
   {
     "isoAlpha2": "GN",
@@ -4490,6 +4851,10 @@
       "zh": "几内亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -10.896582,
+      10.197271
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -4515,16 +4880,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 19910452542,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -10.896582,
-      10.197271
-    ]
+    }
   },
   {
     "isoAlpha2": "GP",
@@ -4544,6 +4910,10 @@
       "zh": "瓜德罗普"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.473908,
+      16.165856
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4565,12 +4935,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -61.473908,
-      16.165856
-    ]
+    }
   },
   {
     "isoAlpha2": "GQ",
@@ -4590,6 +4957,10 @@
       "zh": "赤道几内亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      10.471059,
+      1.571672
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -4615,16 +4986,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 13687643436,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      10.471059,
-      1.571672
-    ]
+    }
   },
   {
     "isoAlpha2": "GR",
@@ -4644,6 +5016,10 @@
       "zh": "希腊"
     },
     "abbreviations": {},
+    "coordinates": [
+      23.965321,
+      38.253384
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -4669,16 +5045,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 217990189601,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      23.965321,
-      38.253384
-    ]
+    }
   },
   {
     "isoAlpha2": "GS",
@@ -4698,6 +5075,10 @@
       "zh": "南乔治亚和南桑威奇群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -34.922339,
+      -55.0496
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4719,12 +5100,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -34.922339,
-      -55.0496
-    ]
+    }
   },
   {
     "isoAlpha2": "GT",
@@ -4744,6 +5122,10 @@
       "zh": "危地马拉"
     },
     "abbreviations": {},
+    "coordinates": [
+      -90.080279,
+      15.580901
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4769,16 +5151,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 95609727056,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -90.080279,
-      15.580901
-    ]
+    }
   },
   {
     "isoAlpha2": "GU",
@@ -4798,6 +5181,10 @@
       "zh": "关岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      144.748774,
+      13.425533
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -4823,16 +5210,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 6910000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      144.748774,
-      13.425533
-    ]
+    }
   },
   {
     "isoAlpha2": "GW",
@@ -4852,6 +5240,10 @@
       "zh": "几内亚比绍"
     },
     "abbreviations": {},
+    "coordinates": [
+      -15.413215,
+      11.663845
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -4877,16 +5269,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1856239955,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -15.413215,
-      11.663845
-    ]
+    }
   },
   {
     "isoAlpha2": "GY",
@@ -4906,6 +5299,10 @@
       "zh": "圭亚那"
     },
     "abbreviations": {},
+    "coordinates": [
+      -58.928342,
+      4.374742
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -4931,16 +5328,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 14718388489,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -58.928342,
-      4.374742
-    ]
+    }
   },
   {
     "isoAlpha2": "HK",
@@ -4960,6 +5358,10 @@
       "zh": "中国香港特别行政区"
     },
     "abbreviations": {},
+    "coordinates": [
+      114.158427,
+      22.342113
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -4985,16 +5387,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 358673532517,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      114.158427,
-      22.342113
-    ]
+    }
   },
   {
     "isoAlpha2": "HM",
@@ -5014,6 +5417,10 @@
       "zh": "赫德岛和麦克唐纳群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      73.468919,
+      -53.055116
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -5035,12 +5442,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      73.468919,
-      -53.055116
-    ]
+    }
   },
   {
     "isoAlpha2": "HN",
@@ -5060,6 +5464,10 @@
       "zh": "洪都拉斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      -85.835526,
+      14.751182
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -5085,16 +5493,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 31426041807,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -85.835526,
-      14.751182
-    ]
+    }
   },
   {
     "isoAlpha2": "HR",
@@ -5114,6 +5523,10 @@
       "zh": "克罗地亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      16.314097,
+      45.82758
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5139,16 +5552,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 71196460237,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      16.314097,
-      45.82758
-    ]
+    }
   },
   {
     "isoAlpha2": "HT",
@@ -5168,6 +5582,10 @@
       "zh": "海地"
     },
     "abbreviations": {},
+    "coordinates": [
+      -72.787987,
+      18.923258
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -5193,16 +5611,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 20113007126,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -72.787987,
-      18.923258
-    ]
+    }
   },
   {
     "isoAlpha2": "HU",
@@ -5222,6 +5641,10 @@
       "zh": "匈牙利"
     },
     "abbreviations": {},
+    "coordinates": [
+      19.312548,
+      47.216688
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5247,16 +5670,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 177002580544,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      19.312548,
-      47.216688
-    ]
+    }
   },
   {
     "isoAlpha2": "ID",
@@ -5276,6 +5700,10 @@
       "zh": "印度尼西亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      119.105896,
+      -2.669966
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5301,16 +5729,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1319101183380,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      119.105896,
-      -2.669966
-    ]
+    }
   },
   {
     "isoAlpha2": "IE",
@@ -5330,6 +5759,10 @@
       "zh": "爱尔兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      -8.637892,
+      53.340023
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5355,16 +5788,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 548341794599,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -8.637892,
-      53.340023
-    ]
+    }
   },
   {
     "isoAlpha2": "IL",
@@ -5384,6 +5818,10 @@
       "zh": "以色列"
     },
     "abbreviations": {},
+    "coordinates": [
+      35.14034,
+      31.64236
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5409,16 +5847,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 525157951213,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      35.14034,
-      31.64236
-    ]
+    }
   },
   {
     "isoAlpha2": "IM",
@@ -5438,6 +5877,10 @@
       "zh": "马恩岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -4.569062,
+      54.189634
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5463,16 +5906,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 7431257411,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -4.569062,
-      54.189634
-    ]
+    }
   },
   {
     "isoAlpha2": "IN",
@@ -5492,6 +5936,10 @@
       "zh": "印度"
     },
     "abbreviations": {},
+    "coordinates": [
+      78.989057,
+      23.062731
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5517,16 +5965,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3249938492013,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      78.989057,
-      23.062731
-    ]
+    }
   },
   {
     "isoAlpha2": "IO",
@@ -5546,6 +5995,10 @@
       "zh": "英属印度洋领地"
     },
     "abbreviations": {},
+    "coordinates": [
+      72.230327,
+      -7.224456
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -5567,12 +6020,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      72.230327,
-      -7.224456
-    ]
+    }
   },
   {
     "isoAlpha2": "IQ",
@@ -5592,6 +6042,10 @@
       "zh": "伊拉克"
     },
     "abbreviations": {},
+    "coordinates": [
+      45.238801,
+      34.153094
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5617,16 +6071,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 287372232138,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      45.238801,
-      34.153094
-    ]
+    }
   },
   {
     "isoAlpha2": "IR",
@@ -5646,6 +6101,10 @@
       "zh": "伊朗"
     },
     "abbreviations": {},
+    "coordinates": [
+      52.930408,
+      33.066624
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5671,16 +6130,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 422662261526,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      52.930408,
-      33.066624
-    ]
+    }
   },
   {
     "isoAlpha2": "IS",
@@ -5700,6 +6160,10 @@
       "zh": "冰岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -18.547678,
+      64.769658
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5725,16 +6189,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 29176227825,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -18.547678,
-      64.769658
-    ]
+    }
   },
   {
     "isoAlpha2": "IT",
@@ -5754,6 +6219,10 @@
       "zh": "意大利"
     },
     "abbreviations": {},
+    "coordinates": [
+      12.853627,
+      42.479613
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5779,16 +6248,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2104067630319,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      12.853627,
-      42.479613
-    ]
+    }
   },
   {
     "isoAlpha2": "JE",
@@ -5808,6 +6278,10 @@
       "zh": "泽西岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -2.135251,
+      49.216131
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -5829,12 +6303,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -2.135251,
-      49.216131
-    ]
+    }
   },
   {
     "isoAlpha2": "JM",
@@ -5854,6 +6325,10 @@
       "zh": "牙买加"
     },
     "abbreviations": {},
+    "coordinates": [
+      -77.255438,
+      18.108447
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -5879,16 +6354,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 18813516805,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -77.255438,
-      18.108447
-    ]
+    }
   },
   {
     "isoAlpha2": "JO",
@@ -5908,6 +6384,10 @@
       "zh": "约旦"
     },
     "abbreviations": {},
+    "coordinates": [
+      36.36121,
+      31.431827
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5933,16 +6413,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 53516930141,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      36.36121,
-      31.431827
-    ]
+    }
   },
   {
     "isoAlpha2": "JP",
@@ -5962,6 +6443,10 @@
       "zh": "日本"
     },
     "abbreviations": {},
+    "coordinates": [
+      134.113695,
+      34.457979
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -5987,16 +6472,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4447976207315,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      134.113695,
-      34.457979
-    ]
+    }
   },
   {
     "isoAlpha2": "KE",
@@ -6016,6 +6502,10 @@
       "zh": "肯尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      37.977411,
+      0.880663
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -6041,16 +6531,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 114448978153,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      37.977411,
-      0.880663
-    ]
+    }
   },
   {
     "isoAlpha2": "KG",
@@ -6070,6 +6561,10 @@
       "zh": "吉尔吉斯斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      73.622367,
+      41.093131
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6095,16 +6590,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 12134931018,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      73.622367,
-      41.093131
-    ]
+    }
   },
   {
     "isoAlpha2": "KH",
@@ -6124,6 +6620,10 @@
       "zh": "柬埔寨"
     },
     "abbreviations": {},
+    "coordinates": [
+      104.885442,
+      12.60841
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6149,16 +6649,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 39994532960,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      104.885442,
-      12.60841
-    ]
+    }
   },
   {
     "isoAlpha2": "KI",
@@ -6178,6 +6679,10 @@
       "zh": "基里巴斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      41.987917,
+      -0.130177
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -6203,16 +6708,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 271214375,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      41.987917,
-      -0.130177
-    ]
+    }
   },
   {
     "isoAlpha2": "KM",
@@ -6232,6 +6738,10 @@
       "zh": "科摩罗"
     },
     "abbreviations": {},
+    "coordinates": [
+      43.789485,
+      -11.998472
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -6257,16 +6767,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1279542249,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      43.789485,
-      -11.998472
-    ]
+    }
   },
   {
     "isoAlpha2": "KN",
@@ -6286,6 +6797,10 @@
       "zh": "圣基茨和尼维斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      -62.65579,
+      17.252084
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -6311,16 +6826,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 981429630,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -62.65579,
-      17.252084
-    ]
+    }
   },
   {
     "isoAlpha2": "KP",
@@ -6340,6 +6856,10 @@
       "zh": "朝鲜"
     },
     "abbreviations": {},
+    "coordinates": [
+      126.813683,
+      39.994347
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6365,16 +6885,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      126.813683,
-      39.994347
-    ]
+    }
   },
   {
     "isoAlpha2": "KR",
@@ -6394,6 +6911,10 @@
       "zh": "韩国"
     },
     "abbreviations": {},
+    "coordinates": [
+      126.949338,
+      35.459817
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6419,16 +6940,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1799363116867,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      126.949338,
-      35.459817
-    ]
+    }
   },
   {
     "isoAlpha2": "KW",
@@ -6448,6 +6970,10 @@
       "zh": "科威特"
     },
     "abbreviations": {},
+    "coordinates": [
+      47.796311,
+      29.435036
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6473,16 +6999,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 183502046694,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      47.796311,
-      29.435036
-    ]
+    }
   },
   {
     "isoAlpha2": "KY",
@@ -6502,6 +7029,10 @@
       "zh": "开曼群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -82.080375,
+      19.329657
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -6527,16 +7058,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 6653516041,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -82.080375,
-      19.329657
-    ]
+    }
   },
   {
     "isoAlpha2": "KZ",
@@ -6556,6 +7088,10 @@
       "zh": "哈萨克斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      66.798401,
+      48.206608
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6581,16 +7117,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 225496328925,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      66.798401,
-      48.206608
-    ]
+    }
   },
   {
     "isoAlpha2": "LA",
@@ -6610,6 +7147,10 @@
       "zh": "老挝"
     },
     "abbreviations": {},
+    "coordinates": [
+      103.873066,
+      18.408227
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6635,16 +7176,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 15468785204,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      103.873066,
-      18.408227
-    ]
+    }
   },
   {
     "isoAlpha2": "LB",
@@ -6664,6 +7206,10 @@
       "zh": "黎巴嫩"
     },
     "abbreviations": {},
+    "coordinates": [
+      35.932938,
+      33.88505
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6689,16 +7235,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 20992421949,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      35.932938,
-      33.88505
-    ]
+    }
   },
   {
     "isoAlpha2": "LC",
@@ -6718,6 +7265,10 @@
       "zh": "圣卢西亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -60.981584,
+      13.906174
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -6743,16 +7294,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2319888889,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -60.981584,
-      13.906174
-    ]
+    }
   },
   {
     "isoAlpha2": "LI",
@@ -6772,6 +7324,10 @@
       "zh": "列支敦士登"
     },
     "abbreviations": {},
+    "coordinates": [
+      9.550924,
+      47.144536
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -6797,16 +7353,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 7426856243,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      9.550924,
-      47.144536
-    ]
+    }
   },
   {
     "isoAlpha2": "LK",
@@ -6826,6 +7383,10 @@
       "zh": "斯里兰卡"
     },
     "abbreviations": {},
+    "coordinates": [
+      80.608685,
+      8.304124
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -6851,16 +7412,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 74143020304,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      80.608685,
-      8.304124
-    ]
+    }
   },
   {
     "isoAlpha2": "LR",
@@ -6880,6 +7442,10 @@
       "zh": "利比里亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -9.044403,
+      6.723859
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -6905,16 +7471,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4001047000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -9.044403,
-      6.723859
-    ]
+    }
   },
   {
     "isoAlpha2": "LS",
@@ -6934,6 +7501,10 @@
       "zh": "莱索托"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.2907,
+      -29.56602
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -6959,16 +7530,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2354980960,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.2907,
-      -29.56602
-    ]
+    }
   },
   {
     "isoAlpha2": "LT",
@@ -6988,6 +7560,10 @@
       "zh": "立陶宛"
     },
     "abbreviations": {},
+    "coordinates": [
+      23.944407,
+      55.26261
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7013,16 +7589,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 70639687326,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      23.944407,
-      55.26261
-    ]
+    }
   },
   {
     "isoAlpha2": "LU",
@@ -7042,6 +7619,10 @@
       "zh": "卢森堡"
     },
     "abbreviations": {},
+    "coordinates": [
+      6.141395,
+      49.841215
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7067,16 +7648,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 80801680397,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      6.141395,
-      49.841215
-    ]
+    }
   },
   {
     "isoAlpha2": "LV",
@@ -7096,6 +7678,10 @@
       "zh": "拉脱维亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      24.970275,
+      56.774616
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7121,16 +7707,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 38003198509,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      24.970275,
-      56.774616
-    ]
+    }
   },
   {
     "isoAlpha2": "LY",
@@ -7150,6 +7737,10 @@
       "zh": "利比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      16.569408,
+      28.691703
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -7175,16 +7766,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 43246297922,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      16.569408,
-      28.691703
-    ]
+    }
   },
   {
     "isoAlpha2": "MA",
@@ -7204,6 +7796,10 @@
       "zh": "摩洛哥"
     },
     "abbreviations": {},
+    "coordinates": [
+      -5.292539,
+      31.978584
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -7229,16 +7825,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 131245312804,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -5.292539,
-      31.978584
-    ]
+    }
   },
   {
     "isoAlpha2": "MC",
@@ -7258,6 +7855,10 @@
       "zh": "摩纳哥"
     },
     "abbreviations": {},
+    "coordinates": [
+      7.422101,
+      43.738453
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7283,16 +7884,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 8800432774,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      7.422101,
-      43.738453
-    ]
+    }
   },
   {
     "isoAlpha2": "MD",
@@ -7312,6 +7914,10 @@
       "zh": "摩尔多瓦"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.420831,
+      47.206872
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7337,16 +7943,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 14525337524,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.420831,
-      47.206872
-    ]
+    }
   },
   {
     "isoAlpha2": "ME",
@@ -7366,6 +7973,10 @@
       "zh": "黑山"
     },
     "abbreviations": {},
+    "coordinates": [
+      19.267319,
+      42.77099
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7391,16 +8002,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 6259721790,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      19.267319,
-      42.77099
-    ]
+    }
   },
   {
     "isoAlpha2": "MF",
@@ -7420,6 +8032,10 @@
       "zh": "法属圣马丁"
     },
     "abbreviations": {},
+    "coordinates": [
+      -63.076146,
+      18.069563
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -7445,16 +8061,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -63.076146,
-      18.069563
-    ]
+    }
   },
   {
     "isoAlpha2": "MG",
@@ -7474,6 +8087,10 @@
       "zh": "马达加斯加"
     },
     "abbreviations": {},
+    "coordinates": [
+      47.370041,
+      -16.574114
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -7499,16 +8116,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 15342178598,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      47.370041,
-      -16.574114
-    ]
+    }
   },
   {
     "isoAlpha2": "MH",
@@ -7528,6 +8146,10 @@
       "zh": "马绍尔群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      168.736163,
+      7.395219
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -7553,16 +8175,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 258723500,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      168.736163,
-      7.395219
-    ]
+    }
   },
   {
     "isoAlpha2": "MK",
@@ -7582,6 +8205,10 @@
       "zh": "北马其顿"
     },
     "abbreviations": {},
+    "coordinates": [
+      21.700573,
+      41.622574
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -7607,16 +8234,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 13932436550,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      21.700573,
-      41.622574
-    ]
+    }
   },
   {
     "isoAlpha2": "ML",
@@ -7636,6 +8264,10 @@
       "zh": "马里"
     },
     "abbreviations": {},
+    "coordinates": [
+      -6.134194,
+      14.128765
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -7661,16 +8293,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 22539987719,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -6.134194,
-      14.128765
-    ]
+    }
   },
   {
     "isoAlpha2": "MM",
@@ -7690,6 +8323,10 @@
       "zh": "缅甸"
     },
     "abbreviations": {},
+    "coordinates": [
+      97.136352,
+      18.562061
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -7715,16 +8352,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 62253049892,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      97.136352,
-      18.562061
-    ]
+    }
   },
   {
     "isoAlpha2": "MN",
@@ -7744,6 +8382,10 @@
       "zh": "蒙古"
     },
     "abbreviations": {},
+    "coordinates": [
+      102.067775,
+      48.153932
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -7769,16 +8411,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 17146471714,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      102.067775,
-      48.153932
-    ]
+    }
   },
   {
     "isoAlpha2": "MO",
@@ -7798,6 +8441,10 @@
       "zh": "中国澳门特别行政区"
     },
     "abbreviations": {},
+    "coordinates": [
+      113.55778,
+      22.160796
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -7823,16 +8470,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 24929307447,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      113.55778,
-      22.160796
-    ]
+    }
   },
   {
     "isoAlpha2": "MP",
@@ -7852,6 +8500,10 @@
       "zh": "北马里亚纳群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      145.631166,
+      15.0625
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -7877,16 +8529,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1096000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      145.631166,
-      15.0625
-    ]
+    }
   },
   {
     "isoAlpha2": "MQ",
@@ -7906,6 +8559,10 @@
       "zh": "马提尼克"
     },
     "abbreviations": {},
+    "coordinates": [
+      -60.979539,
+      14.625005
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -7927,12 +8584,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -60.979539,
-      14.625005
-    ]
+    }
   },
   {
     "isoAlpha2": "MR",
@@ -7952,6 +8606,10 @@
       "zh": "毛里塔尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -13.480035,
+      19.083406
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -7977,16 +8635,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 9562497461,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -13.480035,
-      19.083406
-    ]
+    }
   },
   {
     "isoAlpha2": "MS",
@@ -8006,6 +8665,10 @@
       "zh": "蒙特塞拉特"
     },
     "abbreviations": {},
+    "coordinates": [
+      -62.194413,
+      16.739071
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -8027,12 +8690,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -62.194413,
-      16.739071
-    ]
+    }
   },
   {
     "isoAlpha2": "MT",
@@ -8052,6 +8712,10 @@
       "zh": "马耳他"
     },
     "abbreviations": {},
+    "coordinates": [
+      14.378269,
+      35.922358
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -8077,16 +8741,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 18938869147,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      14.378269,
-      35.922358
-    ]
+    }
   },
   {
     "isoAlpha2": "MU",
@@ -8106,6 +8771,10 @@
       "zh": "毛里求斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      58.554431,
+      -18.81185
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8131,16 +8800,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 12936444123,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      58.554431,
-      -18.81185
-    ]
+    }
   },
   {
     "isoAlpha2": "MV",
@@ -8160,6 +8830,10 @@
       "zh": "马尔代夫"
     },
     "abbreviations": {},
+    "coordinates": [
+      73.348283,
+      1.914679
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -8185,16 +8859,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 6177123352,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      73.348283,
-      1.914679
-    ]
+    }
   },
   {
     "isoAlpha2": "MW",
@@ -8214,6 +8889,10 @@
       "zh": "马拉维"
     },
     "abbreviations": {},
+    "coordinates": [
+      34.065571,
+      -13.063801
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8239,16 +8918,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 12429059928,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      34.065571,
-      -13.063801
-    ]
+    }
   },
   {
     "isoAlpha2": "MX",
@@ -8268,6 +8948,10 @@
       "zh": "墨西哥"
     },
     "abbreviations": {},
+    "coordinates": [
+      -104.786071,
+      24.698715
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -8293,16 +8977,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1466934724243,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -104.786071,
-      24.698715
-    ]
+    }
   },
   {
     "isoAlpha2": "MY",
@@ -8322,6 +9007,10 @@
       "zh": "马来西亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      110.955755,
+      3.924052
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -8347,16 +9036,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 407830525990,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      110.955755,
-      3.924052
-    ]
+    }
   },
   {
     "isoAlpha2": "MZ",
@@ -8376,6 +9066,10 @@
       "zh": "莫桑比克"
     },
     "abbreviations": {},
+    "coordinates": [
+      35.629948,
+      -16.756562
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8401,16 +9095,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 18884232599,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      35.629948,
-      -16.756562
-    ]
+    }
   },
   {
     "isoAlpha2": "NA",
@@ -8430,6 +9125,10 @@
       "zh": "纳米比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      18.362442,
+      -21.704402
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8455,16 +9154,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 12569449123,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      18.362442,
-      -21.704402
-    ]
+    }
   },
   {
     "isoAlpha2": "NC",
@@ -8484,6 +9184,10 @@
       "zh": "新喀里多尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      165.980258,
+      -21.34787
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -8509,16 +9213,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 9623318718,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      165.980258,
-      -21.34787
-    ]
+    }
   },
   {
     "isoAlpha2": "NE",
@@ -8538,6 +9243,10 @@
       "zh": "尼日尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      7.183894,
+      15.007506
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8563,16 +9272,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 15531799641,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      7.183894,
-      15.007506
-    ]
+    }
   },
   {
     "isoAlpha2": "NF",
@@ -8592,6 +9302,10 @@
       "zh": "诺福克岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      167.953551,
+      -29.033033
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -8613,12 +9327,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      167.953551,
-      -29.033033
-    ]
+    }
   },
   {
     "isoAlpha2": "NG",
@@ -8638,6 +9349,10 @@
       "zh": "尼日利亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      8.483917,
+      8.149722
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -8663,16 +9378,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 646950257575,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      8.483917,
-      8.149722
-    ]
+    }
   },
   {
     "isoAlpha2": "NI",
@@ -8692,6 +9408,10 @@
       "zh": "尼加拉瓜"
     },
     "abbreviations": {},
+    "coordinates": [
+      -84.289561,
+      13.533942
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -8717,16 +9437,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 15634573556,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -84.289561,
-      13.533942
-    ]
+    }
   },
   {
     "isoAlpha2": "NL",
@@ -8746,6 +9467,10 @@
       "zh": "荷兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      5.390022,
+      51.923929
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -8771,16 +9496,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1046540797549,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      5.390022,
-      51.923929
-    ]
+    }
   },
   {
     "isoAlpha2": "NO",
@@ -8800,6 +9526,10 @@
       "zh": "挪威"
     },
     "abbreviations": {},
+    "coordinates": [
+      8.63,
+      61.046
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -8825,16 +9555,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 617321834099,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      8.63,
-      61.046
-    ]
+    }
   },
   {
     "isoAlpha2": "NP",
@@ -8854,6 +9585,10 @@
       "zh": "尼泊尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      84.268086,
+      28.277163
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -8879,16 +9614,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 41182939520,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      84.268086,
-      28.277163
-    ]
+    }
   },
   {
     "isoAlpha2": "NR",
@@ -8908,6 +9644,10 @@
       "zh": "瑙鲁"
     },
     "abbreviations": {},
+    "coordinates": [
+      166.931766,
+      -0.527202
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -8933,16 +9673,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 180671357,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      166.931766,
-      -0.527202
-    ]
+    }
   },
   {
     "isoAlpha2": "NU",
@@ -8962,6 +9703,10 @@
       "zh": "纽埃"
     },
     "abbreviations": {},
+    "coordinates": [
+      -169.859997,
+      -19.052765
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -8983,12 +9728,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -169.859997,
-      -19.052765
-    ]
+    }
   },
   {
     "isoAlpha2": "NZ",
@@ -9008,6 +9750,10 @@
       "zh": "新西兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      171.936703,
+      -42.517277
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -9033,16 +9779,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 249723029451,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      171.936703,
-      -42.517277
-    ]
+    }
   },
   {
     "isoAlpha2": "OM",
@@ -9062,6 +9809,10 @@
       "zh": "阿曼"
     },
     "abbreviations": {},
+    "coordinates": [
+      56.664096,
+      22.181704
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -9087,16 +9838,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 109852795839,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      56.664096,
-      22.181704
-    ]
+    }
   },
   {
     "isoAlpha2": "PA",
@@ -9116,6 +9868,10 @@
       "zh": "巴拿马"
     },
     "abbreviations": {},
+    "coordinates": [
+      -80.120834,
+      8.450565
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -9141,16 +9897,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 76479304500,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -80.120834,
-      8.450565
-    ]
+    }
   },
   {
     "isoAlpha2": "PE",
@@ -9170,6 +9927,10 @@
       "zh": "秘鲁"
     },
     "abbreviations": {},
+    "coordinates": [
+      -73.939249,
+      -7.223983
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -9195,16 +9956,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 246169867863,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -73.939249,
-      -7.223983
-    ]
+    }
   },
   {
     "isoAlpha2": "PF",
@@ -9224,6 +9986,10 @@
       "zh": "法属波利尼西亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -143.965334,
+      -16.496409
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -9249,16 +10015,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 5622688338,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -143.965334,
-      -16.496409
-    ]
+    }
   },
   {
     "isoAlpha2": "PG",
@@ -9278,6 +10045,10 @@
       "zh": "巴布亚新几内亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      143.645505,
+      -6.150321
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -9303,16 +10074,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 31653230962,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      143.645505,
-      -6.150321
-    ]
+    }
   },
   {
     "isoAlpha2": "PH",
@@ -9332,6 +10104,10 @@
       "zh": "菲律宾"
     },
     "abbreviations": {},
+    "coordinates": [
+      122.387073,
+      10.999992
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -9357,16 +10133,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 404353369605,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      122.387073,
-      10.999992
-    ]
+    }
   },
   {
     "isoAlpha2": "PK",
@@ -9386,6 +10163,10 @@
       "zh": "巴基斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      71.820651,
+      32.122345
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -9411,16 +10192,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 374890295667,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      71.820651,
-      32.122345
-    ]
+    }
   },
   {
     "isoAlpha2": "PL",
@@ -9440,6 +10222,10 @@
       "zh": "波兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      18.921958,
+      51.402107
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -9465,16 +10251,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 695607470875,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      18.921958,
-      51.402107
-    ]
+    }
   },
   {
     "isoAlpha2": "PM",
@@ -9494,6 +10281,10 @@
       "zh": "圣皮埃尔和密克隆群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -56.32806,
+      46.982719
+    ],
     "unRegion": {
       "name": "Northern America",
       "slug": "northern-america",
@@ -9515,12 +10306,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -56.32806,
-      46.982719
-    ]
+    }
   },
   {
     "isoAlpha2": "PN",
@@ -9540,6 +10328,10 @@
       "zh": "皮特凯恩群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -128.324717,
+      -24.375776
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -9561,12 +10353,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -128.324717,
-      -24.375776
-    ]
+    }
   },
   {
     "isoAlpha2": "PR",
@@ -9586,6 +10375,10 @@
       "zh": "波多黎各"
     },
     "abbreviations": {},
+    "coordinates": [
+      -66.346559,
+      18.178675
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -9611,16 +10404,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 113843700000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -66.346559,
-      18.178675
-    ]
+    }
   },
   {
     "isoAlpha2": "PS",
@@ -9640,6 +10434,10 @@
       "zh": "巴勒斯坦领土"
     },
     "abbreviations": {},
+    "coordinates": [
+      35.055346,
+      31.853791
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -9665,16 +10463,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 19165500000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      35.055346,
-      31.853791
-    ]
+    }
   },
   {
     "isoAlpha2": "PT",
@@ -9694,6 +10493,10 @@
       "zh": "葡萄牙"
     },
     "abbreviations": {},
+    "coordinates": [
+      -7.928998,
+      39.908633
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -9719,16 +10522,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 256898677175,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -7.928998,
-      39.908633
-    ]
+    }
   },
   {
     "isoAlpha2": "PW",
@@ -9748,6 +10552,10 @@
       "zh": "帕劳"
     },
     "abbreviations": {},
+    "coordinates": [
+      134.571553,
+      7.505611
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -9773,16 +10581,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 247470813,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      134.571553,
-      7.505611
-    ]
+    }
   },
   {
     "isoAlpha2": "PY",
@@ -9802,6 +10611,10 @@
       "zh": "巴拉圭"
     },
     "abbreviations": {},
+    "coordinates": [
+      -57.542035,
+      -24.356253
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -9827,16 +10640,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 41841201627,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -57.542035,
-      -24.356253
-    ]
+    }
   },
   {
     "isoAlpha2": "QA",
@@ -9856,6 +10670,10 @@
       "zh": "卡塔尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      51.181646,
+      25.319462
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -9881,16 +10699,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 235709325714,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      51.181646,
-      25.319462
-    ]
+    }
   },
   {
     "isoAlpha2": "RE",
@@ -9910,6 +10729,10 @@
       "zh": "留尼汪"
     },
     "abbreviations": {},
+    "coordinates": [
+      55.54521,
+      -21.111129
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -9931,12 +10754,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      55.54521,
-      -21.111129
-    ]
+    }
   },
   {
     "isoAlpha2": "RO",
@@ -9956,6 +10776,10 @@
       "zh": "罗马尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      25.077195,
+      45.841025
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -9981,16 +10805,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 295317862856,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      25.077195,
-      45.841025
-    ]
+    }
   },
   {
     "isoAlpha2": "RS",
@@ -10010,6 +10835,10 @@
       "zh": "塞尔维亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      20.672604,
+      44.091391
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10035,16 +10864,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 66809895701,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      20.672604,
-      44.091391
-    ]
+    }
   },
   {
     "isoAlpha2": "RU",
@@ -10064,6 +10894,10 @@
       "zh": "俄罗斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      85.909666,
+      62.171629
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10089,16 +10923,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 2292495097681,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      85.909666,
-      62.171629
-    ]
+    }
   },
   {
     "isoAlpha2": "RW",
@@ -10118,6 +10953,10 @@
       "zh": "卢旺达"
     },
     "abbreviations": {},
+    "coordinates": [
+      29.891764,
+      -2.069624
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10143,16 +10982,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 13747404814,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      29.891764,
-      -2.069624
-    ]
+    }
   },
   {
     "isoAlpha2": "SA",
@@ -10172,6 +11012,10 @@
       "zh": "沙特阿拉伯"
     },
     "abbreviations": {},
+    "coordinates": [
+      42.243821,
+      23.917564
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -10197,16 +11041,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1239075200000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      42.243821,
-      23.917564
-    ]
+    }
   },
   {
     "isoAlpha2": "SB",
@@ -10226,6 +11071,10 @@
       "zh": "所罗门群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      159.639383,
+      -8.87344
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -10251,16 +11100,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1466670930,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      159.639383,
-      -8.87344
-    ]
+    }
   },
   {
     "isoAlpha2": "SC",
@@ -10280,6 +11130,10 @@
       "zh": "塞舌尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      55.464079,
+      -4.669705
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10305,16 +11159,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1999888599,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      55.464079,
-      -4.669705
-    ]
+    }
   },
   {
     "isoAlpha2": "SD",
@@ -10334,6 +11189,10 @@
       "zh": "苏丹"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.783126,
+      13.418613
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10359,16 +11218,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 51666875363,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.783126,
-      13.418613
-    ]
+    }
   },
   {
     "isoAlpha2": "SE",
@@ -10388,6 +11248,10 @@
       "zh": "瑞典"
     },
     "abbreviations": {},
+    "coordinates": [
+      18.340785,
+      61.309695
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10413,16 +11277,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 575071237641,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      18.340785,
-      61.309695
-    ]
+    }
   },
   {
     "isoAlpha2": "SG",
@@ -10442,6 +11307,10 @@
       "zh": "新加坡"
     },
     "abbreviations": {},
+    "coordinates": [
+      103.812796,
+      1.387348
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -10467,16 +11336,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 514252535239,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      103.812796,
-      1.387348
-    ]
+    }
   },
   {
     "isoAlpha2": "SH",
@@ -10496,6 +11366,10 @@
       "zh": "圣赫勒拿"
     },
     "abbreviations": {},
+    "coordinates": [
+      -5.711153,
+      -15.973146
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10517,12 +11391,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -5.711153,
-      -15.973146
-    ]
+    }
   },
   {
     "isoAlpha2": "SI",
@@ -10542,6 +11413,10 @@
       "zh": "斯洛文尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      14.917202,
+      46.100659
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10567,16 +11442,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 59899117741,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      14.917202,
-      46.100659
-    ]
+    }
   },
   {
     "isoAlpha2": "SJ",
@@ -10596,6 +11472,10 @@
       "zh": "斯瓦尔巴和扬马延"
     },
     "abbreviations": {},
+    "coordinates": [
+      17.684638,
+      78.756906
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10617,12 +11497,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      17.684638,
-      78.756906
-    ]
+    }
   },
   {
     "isoAlpha2": "SK",
@@ -10642,6 +11519,10 @@
       "zh": "斯洛伐克"
     },
     "abbreviations": {},
+    "coordinates": [
+      19.637664,
+      48.756574
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10667,16 +11548,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 115792972358,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      19.637664,
-      48.756574
-    ]
+    }
   },
   {
     "isoAlpha2": "SL",
@@ -10696,6 +11578,10 @@
       "zh": "塞拉利昂"
     },
     "abbreviations": {},
+    "coordinates": [
+      -11.954274,
+      8.444177
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10721,16 +11607,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 7121125277,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -11.954274,
-      8.444177
-    ]
+    }
   },
   {
     "isoAlpha2": "SM",
@@ -10750,6 +11637,10 @@
       "zh": "圣马力诺"
     },
     "abbreviations": {},
+    "coordinates": [
+      12.460432,
+      43.939906
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -10775,16 +11666,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1831701023,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      12.460432,
-      43.939906
-    ]
+    }
   },
   {
     "isoAlpha2": "SN",
@@ -10804,6 +11696,10 @@
       "zh": "塞内加尔"
     },
     "abbreviations": {},
+    "coordinates": [
+      -14.460748,
+      14.076239
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10829,16 +11725,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 27783332223,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -14.460748,
-      14.076239
-    ]
+    }
   },
   {
     "isoAlpha2": "SO",
@@ -10858,6 +11755,10 @@
       "zh": "索马里"
     },
     "abbreviations": {},
+    "coordinates": [
+      45.995038,
+      7.375032
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10883,16 +11784,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 10203000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      45.995038,
-      7.375032
-    ]
+    }
   },
   {
     "isoAlpha2": "SR",
@@ -10912,6 +11814,10 @@
       "zh": "苏里南"
     },
     "abbreviations": {},
+    "coordinates": [
+      -56.031836,
+      3.874575
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -10937,16 +11843,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3791603200,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -56.031836,
-      3.874575
-    ]
+    }
   },
   {
     "isoAlpha2": "SS",
@@ -10966,6 +11873,10 @@
       "zh": "南苏丹"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.686348,
+      7.366136
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -10991,16 +11902,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.686348,
-      7.366136
-    ]
+    }
   },
   {
     "isoAlpha2": "ST",
@@ -11020,6 +11928,10 @@
       "zh": "圣多美和普林西比"
     },
     "abbreviations": {},
+    "coordinates": [
+      6.929072,
+      0.77373
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11045,16 +11957,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 540809499,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      6.929072,
-      0.77373
-    ]
+    }
   },
   {
     "isoAlpha2": "SV",
@@ -11074,6 +11987,10 @@
       "zh": "萨尔瓦多"
     },
     "abbreviations": {},
+    "coordinates": [
+      -88.742226,
+      13.800142
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -11099,16 +12016,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 31870110000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -88.742226,
-      13.800142
-    ]
+    }
   },
   {
     "isoAlpha2": "SX",
@@ -11128,6 +12046,10 @@
       "zh": "荷属圣马丁"
     },
     "abbreviations": {},
+    "coordinates": [
+      -63.054183,
+      18.048178
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -11153,16 +12075,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1592564637,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -63.054183,
-      18.048178
-    ]
+    }
   },
   {
     "isoAlpha2": "SY",
@@ -11182,6 +12105,10 @@
       "zh": "叙利亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      37.71954,
+      35.168935
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11207,16 +12134,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 23737634644,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      37.71954,
-      35.168935
-    ]
+    }
   },
   {
     "isoAlpha2": "SZ",
@@ -11236,6 +12164,10 @@
       "zh": "斯威士兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      31.458737,
+      -26.593769
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11261,16 +12193,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4746660274,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      31.458737,
-      -26.593769
-    ]
+    }
   },
   {
     "isoAlpha2": "TC",
@@ -11290,6 +12223,10 @@
       "zh": "特克斯和凯科斯群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -71.891779,
+      21.734068
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -11315,16 +12252,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1434119000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -71.891779,
-      21.734068
-    ]
+    }
   },
   {
     "isoAlpha2": "TD",
@@ -11344,6 +12282,10 @@
       "zh": "乍得"
     },
     "abbreviations": {},
+    "coordinates": [
+      18.6043,
+      11.756047
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11369,16 +12311,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 17828508290,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      18.6043,
-      11.756047
-    ]
+    }
   },
   {
     "isoAlpha2": "TF",
@@ -11398,6 +12341,10 @@
       "zh": "法属南部领地"
     },
     "abbreviations": {},
+    "coordinates": [
+      66.497483,
+      -46.455454
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11419,12 +12366,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      66.497483,
-      -46.455454
-    ]
+    }
   },
   {
     "isoAlpha2": "TG",
@@ -11444,6 +12388,10 @@
       "zh": "多哥"
     },
     "abbreviations": {},
+    "coordinates": [
+      0.776852,
+      8.648479
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11469,16 +12417,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 8646453099,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      0.776852,
-      8.648479
-    ]
+    }
   },
   {
     "isoAlpha2": "TH",
@@ -11498,6 +12447,10 @@
       "zh": "泰国"
     },
     "abbreviations": {},
+    "coordinates": [
+      101.093815,
+      16.156765
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11523,16 +12476,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 495691837308,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      101.093815,
-      16.156765
-    ]
+    }
   },
   {
     "isoAlpha2": "TJ",
@@ -11552,6 +12506,10 @@
       "zh": "塔吉克斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      70.82384,
+      38.758763
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11577,16 +12535,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 10713525200,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      70.82384,
-      38.758763
-    ]
+    }
   },
   {
     "isoAlpha2": "TK",
@@ -11606,6 +12565,10 @@
       "zh": "托克劳"
     },
     "abbreviations": {},
+    "coordinates": [
+      -171.820766,
+      -9.171183
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -11627,12 +12590,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -171.820766,
-      -9.171183
-    ]
+    }
   },
   {
     "isoAlpha2": "TL",
@@ -11652,6 +12612,10 @@
       "zh": "东帝汶"
     },
     "abbreviations": {},
+    "coordinates": [
+      125.398598,
+      -8.936091
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11677,16 +12641,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 3208599900,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      125.398598,
-      -8.936091
-    ]
+    }
   },
   {
     "isoAlpha2": "TM",
@@ -11706,6 +12671,10 @@
       "zh": "土库曼斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      57.972754,
+      39.391663
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11731,16 +12700,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 37583913148,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      57.972754,
-      39.391663
-    ]
+    }
   },
   {
     "isoAlpha2": "TN",
@@ -11760,6 +12730,10 @@
       "zh": "突尼斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      9.784598,
+      34.672423
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -11785,16 +12759,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 44929920093,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      9.784598,
-      34.672423
-    ]
+    }
   },
   {
     "isoAlpha2": "TO",
@@ -11814,6 +12789,10 @@
       "zh": "汤加"
     },
     "abbreviations": {},
+    "coordinates": [
+      -175.206461,
+      -21.159555
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -11839,16 +12818,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 556514556,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -175.206461,
-      -21.159555
-    ]
+    }
   },
   {
     "isoAlpha2": "TR",
@@ -11868,6 +12848,10 @@
       "zh": "土耳其"
     },
     "abbreviations": {},
+    "coordinates": [
+      33.246824,
+      38.706046
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -11893,16 +12877,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 926097476914,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      33.246824,
-      38.706046
-    ]
+    }
   },
   {
     "isoAlpha2": "TT",
@@ -11922,6 +12907,10 @@
       "zh": "特立尼达和多巴哥"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.314341,
+      10.615101
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -11947,16 +12936,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 28341164301,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -61.314341,
-      10.615101
-    ]
+    }
   },
   {
     "isoAlpha2": "TV",
@@ -11976,6 +12966,10 @@
       "zh": "图瓦卢"
     },
     "abbreviations": {},
+    "coordinates": [
+      179.114855,
+      -8.52117
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -12001,16 +12995,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 54104146,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      179.114855,
-      -8.52117
-    ]
+    }
   },
   {
     "isoAlpha2": "TW",
@@ -12030,6 +13025,10 @@
       "zh": "台湾"
     },
     "abbreviations": {},
+    "coordinates": [
+      120.282177,
+      23.710412
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -12051,16 +13050,13 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      120.282177,
-      23.710412
-    ]
+    }
   },
   {
     "isoAlpha2": "TZ",
@@ -12080,6 +13076,10 @@
       "zh": "坦桑尼亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      35.932081,
+      -7.427215
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -12105,16 +13105,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 75749121847,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      35.932081,
-      -7.427215
-    ]
+    }
   },
   {
     "isoAlpha2": "UA",
@@ -12134,6 +13135,10 @@
       "zh": "乌克兰"
     },
     "abbreviations": {},
+    "coordinates": [
+      31.231102,
+      48.524556
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -12159,16 +13164,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 161989520721,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      31.231102,
-      48.524556
-    ]
+    }
   },
   {
     "isoAlpha2": "UG",
@@ -12188,6 +13194,10 @@
       "zh": "乌干达"
     },
     "abbreviations": {},
+    "coordinates": [
+      31.871944,
+      1.513929
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -12213,16 +13223,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 45565333211,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      31.871944,
-      1.513929
-    ]
+    }
   },
   {
     "isoAlpha2": "UM",
@@ -12242,6 +13253,10 @@
       "zh": "美国本土外小岛屿"
     },
     "abbreviations": {},
+    "coordinates": [
+      -120.830975,
+      13.477124
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -12263,12 +13278,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -120.830975,
-      13.477124
-    ]
+    }
   },
   {
     "isoAlpha2": "US",
@@ -12290,6 +13302,10 @@
     "abbreviations": {
       "en": "U.S.A."
     },
+    "coordinates": [
+      -101.170936,
+      39.729977
+    ],
     "unRegion": {
       "name": "Northern America",
       "slug": "northern-america",
@@ -12315,16 +13331,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 26054614000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -101.170936,
-      39.729977
-    ]
+    }
   },
   {
     "isoAlpha2": "UY",
@@ -12344,6 +13361,10 @@
       "zh": "乌拉圭"
     },
     "abbreviations": {},
+    "coordinates": [
+      -56.071152,
+      -32.123061
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -12369,16 +13390,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 71240669088,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -56.071152,
-      -32.123061
-    ]
+    }
   },
   {
     "isoAlpha2": "UZ",
@@ -12398,6 +13420,10 @@
       "zh": "乌兹别克斯坦"
     },
     "abbreviations": {},
+    "coordinates": [
+      67.279319,
+      40.640961
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -12423,16 +13449,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 94286355836,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      67.279319,
-      40.640961
-    ]
+    }
   },
   {
     "isoAlpha2": "VA",
@@ -12452,6 +13479,10 @@
       "zh": "梵蒂冈"
     },
     "abbreviations": {},
+    "coordinates": [
+      12.447673,
+      41.903824
+    ],
     "unRegion": {
       "name": "Europe",
       "slug": "europe",
@@ -12473,12 +13504,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      12.447673,
-      41.903824
-    ]
+    }
   },
   {
     "isoAlpha2": "VC",
@@ -12498,6 +13526,10 @@
       "zh": "圣文森特和格林纳丁斯"
     },
     "abbreviations": {},
+    "coordinates": [
+      -61.190859,
+      13.261437
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -12523,16 +13555,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 989188889,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -61.190859,
-      13.261437
-    ]
+    }
   },
   {
     "isoAlpha2": "VE",
@@ -12552,6 +13585,10 @@
       "zh": "委内瑞拉"
     },
     "abbreviations": {},
+    "coordinates": [
+      -65.574167,
+      7.391404
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -12577,16 +13614,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 89013251021,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -65.574167,
-      7.391404
-    ]
+    }
   },
   {
     "isoAlpha2": "VG",
@@ -12606,6 +13644,10 @@
       "zh": "英属维尔京群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -64.626885,
+      18.434094
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -12631,16 +13673,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -64.626885,
-      18.434094
-    ]
+    }
   },
   {
     "isoAlpha2": "VI",
@@ -12660,6 +13699,10 @@
       "zh": "美属维尔京群岛"
     },
     "abbreviations": {},
+    "coordinates": [
+      -64.78241,
+      17.740192
+    ],
     "unRegion": {
       "name": "Latin America and the Caribbean",
       "slug": "latin-america-and-the-caribbean",
@@ -12685,16 +13728,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 4672000000,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "High income",
         "LendingCategory": "..",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -64.78241,
-      17.740192
-    ]
+    }
   },
   {
     "isoAlpha2": "VN",
@@ -12714,6 +13758,10 @@
       "zh": "越南"
     },
     "abbreviations": {},
+    "coordinates": [
+      108.461409,
+      13.008984
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -12739,16 +13787,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 413445230669,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      108.461409,
-      13.008984
-    ]
+    }
   },
   {
     "isoAlpha2": "VU",
@@ -12768,6 +13817,10 @@
       "zh": "瓦努阿图"
     },
     "abbreviations": {},
+    "coordinates": [
+      167.842474,
+      -16.188447
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -12793,16 +13846,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 1151863790,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      167.842474,
-      -16.188447
-    ]
+    }
   },
   {
     "isoAlpha2": "WF",
@@ -12822,6 +13876,10 @@
       "zh": "瓦利斯和富图纳"
     },
     "abbreviations": {},
+    "coordinates": [
+      -178.139641,
+      -14.28139
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -12843,12 +13901,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      -178.139641,
-      -14.28139
-    ]
+    }
   },
   {
     "isoAlpha2": "WS",
@@ -12868,6 +13923,10 @@
       "zh": "萨摩亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      -172.162722,
+      -13.773461
+    ],
     "unRegion": {
       "name": "Oceania",
       "slug": "oceania",
@@ -12893,16 +13952,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 889554712,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      -172.162722,
-      -13.773461
-    ]
+    }
   },
   {
     "isoAlpha2": "YE",
@@ -12922,6 +13982,10 @@
       "zh": "也门"
     },
     "abbreviations": {},
+    "coordinates": [
+      46.638886,
+      14.809783
+    ],
     "unRegion": {
       "name": "Asia and the Middle East",
       "slug": "asia-and-the-middle-east",
@@ -12947,16 +14011,13 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": null,
       "income": {
         "IncomeGroup": "Low income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      46.638886,
-      14.809783
-    ]
+    }
   },
   {
     "isoAlpha2": "YT",
@@ -12976,6 +14037,10 @@
       "zh": "马约特"
     },
     "abbreviations": {},
+    "coordinates": [
+      45.138516,
+      -12.829256
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -12997,12 +14062,9 @@
     },
     "dataProfile": {
       "population": null,
+      "gdp": null,
       "income": null
-    },
-    "coordinates": [
-      45.138516,
-      -12.829256
-    ]
+    }
   },
   {
     "isoAlpha2": "ZA",
@@ -13022,6 +14084,10 @@
       "zh": "南非"
     },
     "abbreviations": {},
+    "coordinates": [
+      24.503106,
+      -28.310608
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -13047,16 +14113,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 407596043068,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Upper middle income",
         "LendingCategory": "IBRD",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      24.503106,
-      -28.310608
-    ]
+    }
   },
   {
     "isoAlpha2": "ZM",
@@ -13076,6 +14143,10 @@
       "zh": "赞比亚"
     },
     "abbreviations": {},
+    "coordinates": [
+      28.49213,
+      -12.763231
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -13101,16 +14172,17 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 29163782140,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "IDA",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      28.49213,
-      -12.763231
-    ]
+    }
   },
   {
     "isoAlpha2": "ZW",
@@ -13130,6 +14202,10 @@
       "zh": "津巴布韦"
     },
     "abbreviations": {},
+    "coordinates": [
+      29.574399,
+      -18.939701
+    ],
     "unRegion": {
       "name": "Africa",
       "slug": "africa",
@@ -13155,15 +14231,16 @@
         "year": "2025",
         "source": "World Bank"
       },
+      "gdp": {
+        "d": 40757585309,
+        "year": "2022",
+        "source": "World Bank"
+      },
       "income": {
         "IncomeGroup": "Lower middle income",
         "LendingCategory": "Blend",
         "source": "World Bank"
       }
-    },
-    "coordinates": [
-      29.574399,
-      -18.939701
-    ]
+    }
   }
 ]

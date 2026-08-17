@@ -5,6 +5,7 @@ const buildTranslations = require('./buildTranslations');
 const buildAbbreviations = require('./buildAbbreviations');
 const slugify = require('@sindresorhus/slugify');
 const fetchPopulation = require('./fetchPopulation');
+const fetchGDP = require('./fetchGDP');
 const getCustomPopulation = require('./utils/getCustomPopulation');
 
 const customPopulation = getCustomPopulation();
@@ -12,7 +13,7 @@ const customPopulation = getCustomPopulation();
 // Pick the most recent year that has (near-)complete coverage across the World
 // Bank population rows, so the whole dataset shares one current year instead of
 // a hardcoded one. Falls back to the latest year present if none is "complete".
-const getLatestPopulationYear = (rows) => {
+const getLatestCompleteYear = (rows) => {
   const yearCols = Object.keys(rows[0] || {}).filter(k => /^\d{4}$/.test(k));
   if (!yearCols.length) return null;
   const count = y => rows.reduce((n, r) => n + (r[y] !== '' && r[y] != null ? 1 : 0), 0);
@@ -45,7 +46,10 @@ const getRegionTranslations = (enName) => unRegionTranslations.find(d => d.en ==
 
 const createMetadata = async() => {
   const population = await fetchPopulation();
-  const POPULATION_YEAR = getLatestPopulationYear(population);
+  const POPULATION_YEAR = getLatestCompleteYear(population);
+
+  const gdp = await fetchGDP();
+  const GDP_YEAR = getLatestCompleteYear(gdp);
 
   const metadataPath = path.join(DATA_DIR, 'base_metadata.csv');
   const metadataFile = fs.readFileSync(metadataPath, 'utf-8');
@@ -76,6 +80,15 @@ const createMetadata = async() => {
     return pop ? {
       d: parseInt(pop[POPULATION_YEAR]),
       year: POPULATION_YEAR,
+      source: 'World Bank',
+    } : null;
+  };
+
+  const getGDP = (d) => {
+    const row = gdp.find(g => g['Country Code'] === d.iso_alpha_3);
+    return row && row[GDP_YEAR] !== '' && row[GDP_YEAR] != null ? {
+      d: Math.round(Number(row[GDP_YEAR])),
+      year: GDP_YEAR,
       source: 'World Bank',
     } : null;
   };
@@ -111,6 +124,7 @@ const createMetadata = async() => {
     },
     dataProfile: {
       population: getPopulation(d),
+      gdp: getGDP(d),
       income: getIncomeCategory(d),
     },
     // worldBankRegion: {
