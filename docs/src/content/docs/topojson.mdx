@@ -3,7 +3,7 @@ title: TopoJSON maps
 description: Fetch country polygons and border lines at three detail levels.
 ---
 
-Geometry lives in [`@reuters-graphics/graphics-atlas-topojson`](https://github.com/reuters-graphics/graphics-atlas-topojson) and is fetched from the CDN. Every fetcher takes an optional **detail** level — `'low'`, `'medium'` (default) or `'high'`.
+Geometry ships with this package (generated at publish time from [`country-borders`](https://github.com/reuters-graphics/country-borders)). Use it two ways — **fetch** it from the CDN at runtime, or **import** files directly for a tree-shakeable local bundle. Every fetcher takes an optional **detail** level — `'low'`, `'medium'` (default) or `'high'`.
 
 ## Polygons
 
@@ -32,6 +32,17 @@ The result's `lines` object holds the segments; style `disputed === 1` different
 :::note
 Coarser detail levels omit the smallest island geographies (there's no source geometry for them at that scale). The fetchers throw a clear error rather than silently substituting — catch it and retry at a higher detail.
 :::
+
+## Local import (tree-shakeable)
+
+When the geography is known at build time, import the file directly — your bundler includes only that file, tree-shaking the rest of the geometry away:
+
+```js
+import de from '@reuters-graphics/graphics-atlas-client/topojson/polygons/high/DE.json';
+// raw Node ESM: add an import attribute → ...high/DE.json' with { type: 'json' };
+```
+
+Unlike a `fetch*` call (which is resolved at runtime and can't be tree-shaken), a static import with a literal path bundles only what you reference.
 
 ## Layout
 
