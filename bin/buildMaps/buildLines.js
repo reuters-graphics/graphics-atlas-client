@@ -11,16 +11,17 @@ const atlas = new AtlasClient();
 const INPUT_DIR = path.resolve(__dirname, '../../input');
 const OUTPUT_DIR = path.resolve(__dirname, '../../topojson/lines');
 const ALL_SCALES = ['low', 'medium', 'high'];
-const QUANTIZATION = 1e5;
+// Match the polygon grid per scale so borders track coastlines (#47).
+const QUANTIZATION = { low: 1e5, medium: 1e6, high: 1e6 };
 
 const bboxOverlap = (a, b) =>
   a[0] <= b[2] && b[0] <= a[2] && a[1] <= b[3] && b[1] <= a[3];
 
-const writeTopojson = (relPath, features) => {
+const writeTopojson = (relPath, features, quantization) => {
   const filePath = path.join(OUTPUT_DIR, relPath);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   const collection = { type: 'FeatureCollection', features };
-  const topo = quantize(topology({ lines: collection }), QUANTIZATION);
+  const topo = quantize(topology({ lines: collection }), quantization);
   fs.writeFileSync(filePath, JSON.stringify(topo));
   return fs.statSync(filePath).size;
 };
@@ -83,7 +84,7 @@ const buildScale = (scale) => {
   let files = 0;
   for (const [slug, feats] of buckets) {
     if (!feats.length) continue;
-    writeTopojson(path.join(scale, `${slug}.json`), feats);
+    writeTopojson(path.join(scale, `${slug}.json`), feats, QUANTIZATION[scale]);
     files++;
   }
   const perRegion = [...buckets].filter(([s]) => s !== 'world').map(([s, f]) => `${s}:${f.length}`);
