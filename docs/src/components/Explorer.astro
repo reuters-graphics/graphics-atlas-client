@@ -50,7 +50,6 @@
   const $ = (s) => document.querySelector(s);
   const svg = $('#ax-map');
   const SVGNS = 'http://www.w3.org/2000/svg';
-  let blobUrl = null;
   let detailIdx = 1;
   let renderSeq = 0; // guards against stale async renders drawing over a newer one
 
@@ -136,10 +135,18 @@
       <div class="place">${client.countries.length} countries · ${client.regions.length} regions · ${client.subregions.length} subregions</div>
       <dl class="facts"><dt>Country polygons</dt><dd>land fill per country</dd><dt>Country borders</dt><dd>borders, <span style="color:var(--map-disputed)">disputed</span> dashed</dd></dl>`;
   }
-  function setDownload(obj, filename, source) {
-    if (blobUrl) URL.revokeObjectURL(blobUrl);
-    blobUrl = URL.createObjectURL(new Blob([JSON.stringify(obj)], { type: 'application/json' }));
-    $('#ax-dl').innerHTML = `<a class="btn primary" href="${blobUrl}" download="${filename}">↓ TopoJSON</a> <a class="btn" href="${source}" target="_blank" rel="noopener">Source ↗</a>`;
+  // Turn a geography key into a valid JS identifier for the import example
+  // (e.g. 'western-europe' -> 'westernEurope', 'DE' -> 'de', 'world' -> 'world').
+  const importVar = (key) =>
+    key.toLowerCase().replace(/[^a-z0-9]+(.)?/g, (_, c) => (c ? c.toUpperCase() : '')) || 'topo';
+
+  // Offer a copy-paste local (tree-shakeable) import for the shown geography,
+  // plus a link to the raw source file.
+  function setActions(d, key, source) {
+    const path = `@reuters-graphics/graphics-atlas-client/topojson/polygons/${d}/${key}.json`;
+    const stmt = `import ${importVar(key)} from '${path}';`;
+    $('#ax-dl').innerHTML = `<button class="btn primary" id="ax-import">Copy import</button> <a class="btn" href="${source}" target="_blank" rel="noopener">Source ↗</a>`;
+    $('#ax-import').addEventListener('click', () => copy(stmt, 'Import'));
   }
   const polyUrl = (d, key) => `${TOPO_BASE}/topojson/polygons/${d}/${key}.json`;
 
@@ -162,7 +169,7 @@
         addPaths(lines.features, (f) => 'bline' + (f.properties.disputed ? ' disputed' : ''), path, 'lines-layer');
         const disp = lines.features.filter(f => f.properties.disputed).length;
         $('#ax-status').textContent = '';
-        setDownload(polyT, `world-${d}-polygons.json`, polyUrl(d, 'world'));
+        setActions(d, 'world', polyUrl(d, 'world'));
       } else if (kind === 'region' || kind === 'subregion') {
         const obj = kind === 'region' ? client.getRegion(key) : client.getSubregion(key);
         renderGroupCard(obj, kind === 'region' ? 'UN region' : 'UN subregion');
@@ -184,7 +191,7 @@
           } catch { /* no lines at this scale */ }
         }
         $('#ax-status').textContent = '';
-        setDownload(polyT, `${key}-${d}-polygons.json`, polyUrl(d, key));
+        setActions(d, key, polyUrl(d, key));
       } else {
         const c = client.getCountry(key);
         renderCountryCard(c);
@@ -226,7 +233,7 @@
           if (pt) { const dot = document.createElementNS(SVGNS, 'circle'); dot.setAttribute('cx', pt[0]); dot.setAttribute('cy', pt[1]); dot.setAttribute('r', '4.5'); dot.setAttribute('class', 'centroid'); svg.appendChild(dot); }
         }
         $('#ax-status').textContent = '';
-        setDownload(topo, `${c.isoAlpha2}-${d}-polygons.json`, polyUrl(d, c.isoAlpha2));
+        setActions(d, c.isoAlpha2, polyUrl(d, c.isoAlpha2));
       }
     } catch (e) {
       if (stale()) return;
