@@ -29,6 +29,7 @@
     "lint": "eslint lib/ bin/",
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive",
+    "changeset": "changeset",
     "docs:dev": "pnpm -C docs install && pnpm -C docs dev",
     "docs:build": "pnpm build && pnpm -C docs install && pnpm -C docs build"
   },
@@ -37,6 +38,7 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.0",
     "@eslint/js": "^9.0.0",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
