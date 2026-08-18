@@ -1,20 +1,14 @@
 #!/usr/bin/env node
 /**
- * build:maps — generate TopoJSON assets from reuters-graphics/country-borders.
- *
- * The map build lives in this package (folded in from the former
- * graphics-atlas-topojson repo). Output is written to ./topojson and shipped in
- * the published tarball; the client's fetch* methods read it from this package's
- * own version-pinned jsDelivr URL, and consumers can also import files directly
- * (tree-shakeable). See #46 for source coupling.
+ * build:maps — generate the TopoJSON assets under ./topojson from
+ * reuters-graphics/country-borders. Output ships in the published tarball.
  *
  * Pipeline:
- *   1. fetchInput  — download the PINNED country-borders GeoJSON (polygons +
- *                    lines, 3 scales) via gh; reproducible from the recorded SHA.
- *   2. buildPolygons — join iso_a2 -> atlas country; cut per country / UN region
- *                    / UN subregion / world; TopoJSON + quantize, 3 scales.
- *   3. buildLines  — spatially assign border lines to UN regions (+ global),
- *                    preserving the `disputed` flag; TopoJSON + quantize.
+ *   1. fetchInput    — download the pinned country-borders GeoJSON via `gh`.
+ *   2. buildPolygons — join iso_a2 → atlas country; cut per country / UN region
+ *                      / subregion / world; TopoJSON + quantize, 3 scales.
+ *   3. buildLines    — assign border lines to UN regions (+ global), keeping the
+ *                      `disputed` flag; TopoJSON + quantize.
  */
 const fetchInput = require('./fetchInput');
 const buildPolygons = require('./buildPolygons');

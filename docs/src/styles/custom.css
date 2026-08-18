@@ -36,6 +36,9 @@ starlight-file-tree {
   display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
   color: var(--sl-color-gray-3); margin: 0 0 6px;
 }
+/* Same Starlight override for the controls panel: drop the injected 1rem so
+   each label sits tight to its control (dropdown / segmented buttons). */
+.atlas-explorer .controls label + * { margin-top: 0; }
 .atlas-explorer .field { margin-bottom: 16px; }
 .atlas-explorer select {
   width: 100%; height: 40px; box-sizing: border-box; padding: 0 34px 0 12px; border-radius: 8px;
@@ -94,3 +97,14 @@ starlight-file-tree {
 .atlas-explorer .centroid { fill: var(--map-disputed); stroke: #fff; stroke-width: 1.2px; }
 .atlas-explorer .err { color: #e0a100; }
 .atlas-explorer .field-label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; line-height: 1.2; color: var(--sl-color-gray-3); margin: 0 0 4px; }
+
+/* The card renders inside .sl-markdown-content, whose default rule injects
+   margin-top:1rem between every block sibling — that pushes each field label
+   away from its value AND stacks extra space between groups. Scope an override
+   (the #ax-card id out-specifies Starlight): keep label -> value tight, and
+   give the info groups a single, roomier gap. */
+.atlas-explorer #ax-card .field-label { margin: 0 0 0.25rem; }
+.atlas-explorer #ax-card .field-label + * { margin-top: 0; }   /* label -> value: tight */
+.atlas-explorer #ax-card .fact { margin: 0 0 1.25rem; }        /* one clean gap between groups */
+.atlas-explorer #ax-card .fact + .fact { margin-top: 0; }      /* drop Starlight's extra top */
+.atlas-explorer #ax-card .fact:last-child { margin-bottom: 0; }

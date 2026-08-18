@@ -29,6 +29,10 @@ await client.fetchRegionLines('Europe', 'high');
 
 The result's `lines` object holds the segments; style `disputed === 1` differently (e.g. dashed).
 
+:::note[Reuters map policy]
+Borders and disputed territories follow the [Reuters map policy](https://reuters-graphics.github.io/country-borders/reuters-policy/) — consult it before publishing.
+:::
+
 :::note
 Coarser detail levels omit the smallest island geographies (there's no source geometry for them at that scale). The fetchers throw a clear error rather than silently substituting — catch it and retry at a higher detail.
 :::

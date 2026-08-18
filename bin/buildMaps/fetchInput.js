@@ -14,14 +14,12 @@ const FILES = [
   'country-lines-high-detail.geojson',
 ];
 
-// Downloads the country-borders GeoJSON build inputs via the GitHub CLI (the
-// repo is private, so this needs an authenticated `gh`).
+// Download the country-borders GeoJSON build inputs via the GitHub CLI (the
+// repo is private, so `gh` must be authenticated).
 //
-// Reproducible by default: the source commit is PINNED in
-// input/.country-borders-sha (committed to git) and every download is fetched at
-// that exact ref — a rebuild of a given client commit always yields the same
-// geometry. Pass { force: true } to re-pin to the current country-borders `main`
-// (this is how a border refresh gets deliberately pulled in — see #46).
+// Reproducible by default: the source commit is pinned in
+// input/.country-borders-sha (committed) and every file is fetched at that ref.
+// Pass { force: true } to re-pin to the latest country-borders `main`.
 module.exports = ({ force = false } = {}) => {
   fs.mkdirSync(INPUT_DIR, { recursive: true });
 
