@@ -1,8 +1,8 @@
 ---
-"@reuters-graphics/graphics-atlas-client": minor
+"@reuters-graphics/graphics-atlas-client": major
 ---
 
-Modernized release with the map build folded back into the package.
+First stable release (1.0.0) — modernized, with the map build folded back into the package.
 
 - **TopoJSON maps** ship in the package (country polygons + border lines at `low`/`medium`/`high`), fetched from the version-pinned CDN via `fetch*` methods or imported directly (tree-shakeable).
 - **Flags** via `flag-icons` (`getCountryFlag` / `getFlag`, incl. non-country flags) — URLs/classes only, nothing bundled.
