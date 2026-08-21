@@ -31,7 +31,8 @@
     "test:integration": "mocha test/integration --recursive",
     "changeset": "changeset",
     "docs:dev": "pnpm -C docs install && pnpm -C docs dev",
-    "docs:build": "pnpm build && pnpm -C docs install && pnpm -C docs build"
+    "build:docs": "pnpm -C docs install && pnpm -C docs build",
+    "docs:build": "pnpm build && pnpm run build:docs"
   },
   "packageManager": "pnpm@11.20.0",
   "engines": {

@@ -1,0 +1,19 @@
+name: Docs
+
+# Publishes the Starlight docs site to GitHub Pages via the shared org
+# workflow. Replaces the old gh-pages branch push, so the repo's Pages
+# publishing source must be set to "GitHub Actions".
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  docs:
+    uses: reuters-graphics/action-workflows/.github/workflows/docs.yaml@main
+    secrets: inherit
+    with:
+      # `docs/` is the Astro source; it builds to `docs/dist/`, which is what
+      # gets uploaded as the Pages artifact.
+      docs_directory: './docs/dist'
+      node_version: '22'
