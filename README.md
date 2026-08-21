@@ -2,7 +2,8 @@
 
 # graphics-atlas-client
 
-[![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fgraphics-atlas-client)
+[![npm version](https://img.shields.io/npm/v/@reuters-graphics/graphics-atlas-client)](https://www.npmjs.com/package/@reuters-graphics/graphics-atlas-client)
+[![docs](https://img.shields.io/badge/docs-graphics--atlas--client-blue)](https://reuters-graphics.github.io/graphics-atlas-client/)
 
 Global country **metadata** ([ISO 3166](https://www.iso.org/iso-3166-country-codes.html)) — names, translations (8 languages), ISO codes, `[lon, lat]` centroids, population, GDP and income group — plus **TopoJSON** country polygons and border lines at three detail levels. Zero runtime dependencies, dual ESM + CommonJS.
 
