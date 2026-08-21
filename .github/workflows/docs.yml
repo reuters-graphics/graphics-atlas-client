@@ -17,3 +17,8 @@ jobs:
       # gets uploaded as the Pages artifact.
       docs_directory: './docs/dist'
       node_version: '22'
+      # Root-only script: the shared workflow's "build all packages" step runs
+      # `pnpm run --recursive`, and a plain `build` would recurse into docs/ and
+      # run `astro build` before its deps are installed. The docs site is built
+      # separately by the `build:docs` script.
+      build_script: 'build:lib'

@@ -23,7 +23,8 @@
   "scripts": {
     "build:metadata": "npx ./bin/buildMetadata/index.js",
     "build:maps": "node bin/buildMaps/index.js",
-    "build": "rollup --config rollup.config.mjs",
+    "build:lib": "rollup --config rollup.config.mjs",
+    "build": "pnpm run build:lib",
     "prepare": "rollup --config rollup.config.mjs",
     "prepublishOnly": "pnpm build && pnpm build:maps",
     "lint": "eslint lib/ bin/",

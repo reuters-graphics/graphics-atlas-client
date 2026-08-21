@@ -19,4 +19,7 @@ jobs:
     secrets: inherit
     with:
       node_version: '22'
+      # Root-only script: the shared workflow runs `pnpm run --recursive`, and
+      # a plain `build` would recurse into docs/ and run `astro build` there.
+      build_script: 'build:lib'
       publish_docs: false
