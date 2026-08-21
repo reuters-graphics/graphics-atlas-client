@@ -30,6 +30,8 @@
     "test": "mocha",
     "test:integration": "mocha test/integration --recursive",
     "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "git add --all && changeset publish",
     "docs:dev": "pnpm -C docs install && pnpm -C docs dev",
     "build:docs": "pnpm -C docs install && pnpm -C docs build",
     "docs:build": "pnpm build && pnpm run build:docs"

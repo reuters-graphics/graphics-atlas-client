@@ -1,10 +1,11 @@
 // Integration tests — these hit the live jsDelivr CDN and are excluded from the
 // default `pnpm test` run. Run explicitly with `pnpm test:integration`.
 //
-// The topojson assets now ship inside this package; the client's FETCH_BASE
+// The topojson assets ship inside this package; the client's FETCH_BASE
 // (lib/index.js) points at this package's own version-pinned npm URL on
-// jsDelivr. These pass only once a version carrying the `topojson/` assets has
-// been published to npm (i.e. after the first release post-merge).
+// jsDelivr. They can therefore only run once a version carrying the `topojson/`
+// assets is on npm — before that the whole suite is skipped (see below) rather
+// than failing on a 404 it can't do anything about.
 const assert = require('node:assert/strict');
 const AtlasMetadataClient = require('../../dist');
 
@@ -12,6 +13,20 @@ const client = new AtlasMetadataClient();
 
 describe('Metadata client — topojson fetchers (integration)', function() {
   this.timeout(30000);
+
+  // Skip the suite when the published version has no geometry yet (404); any
+  // other failure is a real problem and should surface.
+  before(async function() {
+    try {
+      await client.fetchGlobalTopojson();
+    } catch (err) {
+      if (/\(404\)/.test(err.message)) {
+        console.log('    ↳ skipped: no published version with topojson/ assets yet');
+        this.skip();
+      }
+      throw err;
+    }
+  });
 
   // Polygons
   it('Should fetch world polygons (default medium)', async function() {
