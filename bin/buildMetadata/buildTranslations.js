@@ -1,7 +1,6 @@
-const fetch = require('node-fetch');
 const path = require('path');
 const fs = require('fs');
-const parseCSV = require('csv-parse/lib/sync');
+const parseCSV = require('csv-parse/sync').parse;
 
 const DATA_DIR = path.join(__dirname, '../../data/');
 const enMetadataFile = fs.readFileSync(path.join(DATA_DIR, 'base_metadata.csv'), 'utf-8');

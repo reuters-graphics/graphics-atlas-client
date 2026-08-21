@@ -1,21 +1,42 @@
 const path = require('path');
 const fs = require('fs');
-const parseCSV = require('csv-parse/lib/sync');
+const parseCSV = require('csv-parse/sync').parse;
 const buildTranslations = require('./buildTranslations');
 const buildAbbreviations = require('./buildAbbreviations');
 const slugify = require('@sindresorhus/slugify');
 const fetchPopulation = require('./fetchPopulation');
+const fetchGDP = require('./fetchGDP');
 const getCustomPopulation = require('./utils/getCustomPopulation');
 
 const customPopulation = getCustomPopulation();
 
-const POPULATION_YEAR = '2019';
+// Pick the most recent year that has (near-)complete coverage across the World
+// Bank population rows, so the whole dataset shares one current year instead of
+// a hardcoded one. Falls back to the latest year present if none is "complete".
+const getLatestCompleteYear = (rows) => {
+  const yearCols = Object.keys(rows[0] || {}).filter(k => /^\d{4}$/.test(k));
+  if (!yearCols.length) return null;
+  const count = y => rows.reduce((n, r) => n + (r[y] !== '' && r[y] != null ? 1 : 0), 0);
+  const maxCount = Math.max(...yearCols.map(count));
+  const complete = yearCols.filter(y => count(y) >= maxCount * 0.98);
+  return (complete.length ? complete : yearCols).sort().pop();
+};
 
 const DATA_DIR = path.join(__dirname, '../../data/');
 const unRegionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_region.csv'), 'utf-8');
 const unRegionTranslations = parseCSV(unRegionsFile, { columns: true, skip_empty_lines: true });
 const worldBankFile = fs.readFileSync(path.join(DATA_DIR, 'world-bank-classification.csv'), 'utf-8');
 const worldBankData = parseCSV(worldBankFile, { columns: true, skip_empty_lines: true });
+
+// Manually-editable country centroids (data/centroids.csv). Stored as
+// coordinates: [longitude, latitude] (GeoJSON order) on each country.
+const centroidsFile = fs.readFileSync(path.join(DATA_DIR, 'centroids.csv'), 'utf-8');
+const centroidsData = parseCSV(centroidsFile, { columns: true, skip_empty_lines: true });
+const getCoordinates = (d) => {
+  const row = centroidsData.find(c => c.isoAlpha3 === d.iso_alpha_3);
+  if (!row || row.latitude === '' || row.longitude === '') return null;
+  return [Number(row.longitude), Number(row.latitude)];
+};
 
 // const unSubregionsFile = fs.readFileSync(path.join(DATA_DIR, 'translations/un_subregion.csv'), 'utf-8');
 // const unSubregionTranslations = parseCSV(unSubregionsFile, { columns: true, skip_empty_lines: true });
@@ -25,6 +46,10 @@ const getRegionTranslations = (enName) => unRegionTranslations.find(d => d.en ==
 
 const createMetadata = async() => {
   const population = await fetchPopulation();
+  const POPULATION_YEAR = getLatestCompleteYear(population);
+
+  const gdp = await fetchGDP();
+  const GDP_YEAR = getLatestCompleteYear(gdp);
 
   const metadataPath = path.join(DATA_DIR, 'base_metadata.csv');
   const metadataFile = fs.readFileSync(metadataPath, 'utf-8');
@@ -59,8 +84,17 @@ const createMetadata = async() => {
     } : null;
   };
 
+  const getGDP = (d) => {
+    const row = gdp.find(g => g['Country Code'] === d.iso_alpha_3);
+    return row && row[GDP_YEAR] !== '' && row[GDP_YEAR] != null ? {
+      d: Math.round(Number(row[GDP_YEAR])),
+      year: GDP_YEAR,
+      source: 'World Bank',
+    } : null;
+  };
+
   const getIncomeCategory = (d) => {
-    const income = worldBankData.find(p => p['Code'] === d.iso_alpha_3);
+    const income = worldBankData.find(p => p.Code === d.iso_alpha_3);
     // if (!pop) console.log(`No pop for: ${d.name}`);
     return income ? {
       IncomeGroup: income['Income group'],
@@ -77,6 +111,7 @@ const createMetadata = async() => {
     slug: slugify(d.name),
     translations: translations[d.iso_alpha_2],
     abbreviations: abbreviations[d.iso_alpha_2],
+    coordinates: getCoordinates(d),
     unRegion: d.un_region === '' ? null : {
       name: d.un_region,
       slug: slugify(d.un_region),
@@ -89,7 +124,8 @@ const createMetadata = async() => {
     },
     dataProfile: {
       population: getPopulation(d),
-      income: getIncomeCategory(d)
+      gdp: getGDP(d),
+      income: getIncomeCategory(d),
     },
     // worldBankRegion: {
     //   name: d.world_bank_region === '' ? null : d.world_bank_region,

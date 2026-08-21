@@ -1,0 +1,58 @@
+---
+title: TopoJSON maps
+description: Fetch country polygons and border lines at three detail levels.
+---
+
+Geometry ships with this package (generated at publish time from [`country-borders`](https://github.com/reuters-graphics/country-borders)). Use it two ways — **fetch** it from the CDN at runtime, or **import** files directly for a tree-shakeable local bundle. Every fetcher takes an optional **detail** level — `'low'`, `'medium'` (default) or `'high'`.
+
+## Polygons
+
+Land-fill polygons per country, UN region, UN subregion and the world.
+
+```js
+await client.fetchCountryTopojson('germany', 'high');
+await client.fetchRegionTopojson('Africa');
+await client.fetchSubregionTopojson('Western Europe');
+await client.fetchGlobalTopojson('low');
+```
+
+Each result is a TopoJSON `Topology` with a `countries` object.
+
+## Border lines
+
+Border **lines** carry a `disputed` flag (`0` / `1`) for conditional styling. Published at the world and UN-region level.
+
+```js
+await client.fetchGlobalLines();
+await client.fetchRegionLines('Europe', 'high');
+```
+
+The result's `lines` object holds the segments; style `disputed === 1` differently (e.g. dashed).
+
+:::note[Reuters map policy]
+Borders and disputed territories follow the [Reuters map policy](https://reuters-graphics.github.io/country-borders/reuters-policy/) — consult it before publishing.
+:::
+
+:::note
+Coarser detail levels omit the smallest island geographies (there's no source geometry for them at that scale). The fetchers throw a clear error rather than silently substituting — catch it and retry at a higher detail.
+:::
+
+## Local import (tree-shakeable)
+
+When the geography is known at build time, import the file directly — your bundler includes only that file, tree-shaking the rest of the geometry away:
+
+```js
+import de from '@reuters-graphics/graphics-atlas-client/topojson/polygons/high/DE.json';
+// raw Node ESM: add an import attribute → ...high/DE.json' with { type: 'json' };
+```
+
+Unlike a `fetch*` call (which is resolved at runtime and can't be tree-shaken), a static import with a literal path bundles only what you reference.
+
+## Layout
+
+```
+topojson/polygons/{low,medium,high}/{world,<region>,<subregion>,<ISO2>}.json
+topojson/lines/{low,medium,high}/{world,<un-region>}.json
+```
+
+Try it on the [Explorer](../explorer/).

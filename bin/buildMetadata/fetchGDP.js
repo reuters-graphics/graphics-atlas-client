@@ -7,22 +7,22 @@ const ensureDir = require('./utils/ensureDir');
 const parseCSV = require('csv-parse/sync').parse;
 
 const WRITE_PATH = path.resolve(__dirname, '../../tmp/');
-const ARCHIVE_URI = 'https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv';
-const ARCHIVE_PATH = path.join(WRITE_PATH, 'world_bank_pop.zip');
-const ARCHIVE_DIR = path.join(WRITE_PATH, 'world_bank_pop');
+const ARCHIVE_URI = 'https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv';
+const ARCHIVE_PATH = path.join(WRITE_PATH, 'world_bank_gdp.zip');
+const ARCHIVE_DIR = path.join(WRITE_PATH, 'world_bank_gdp');
 
 const fetchArchive = async() => {
-  console.log('Fetching population archive');
+  console.log('Fetching GDP archive');
   ensureDir(ARCHIVE_DIR);
   const response = await fetch(ARCHIVE_URI);
   if (!response.ok) {
-    throw new Error(`Failed to fetch World Bank population archive: ${response.status}`);
+    throw new Error(`Failed to fetch World Bank GDP archive: ${response.status}`);
   }
   await pipeline(Readable.fromWeb(response.body), fs.createWriteStream(ARCHIVE_PATH));
 };
 
 const unzipArchive = async() => {
-  console.log('Unzipping population archive');
+  console.log('Unzipping GDP archive');
   return new Promise((resolve, reject) => {
     fs.createReadStream(ARCHIVE_PATH)
       .pipe(
@@ -36,11 +36,11 @@ module.exports = async() => {
   await fetchArchive();
   await unzipArchive();
 
-  const files = fs.readdirSync(path.join(WRITE_PATH, 'world_bank_pop'));
-  const POP_FILE = path.join(ARCHIVE_DIR, files.filter(d => d.match(/^API/))[0]);
-  const popFile = fs.readFileSync(POP_FILE, 'utf-8').split('\r\n').slice(4).join('\n');
+  const files = fs.readdirSync(path.join(WRITE_PATH, 'world_bank_gdp'));
+  const GDP_FILE = path.join(ARCHIVE_DIR, files.filter(d => d.match(/^API/))[0]);
+  const gdpFile = fs.readFileSync(GDP_FILE, 'utf-8').split('\r\n').slice(4).join('\n');
 
-  const population = parseCSV(popFile, {
+  const gdp = parseCSV(gdpFile, {
     columns: true,
     skip_empty_lines: true,
     quote: '"',
@@ -48,5 +48,5 @@ module.exports = async() => {
     delimiter: ',',
   });
 
-  return population;
+  return gdp;
 };

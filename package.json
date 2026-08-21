@@ -2,6 +2,16 @@
   "name": "@reuters-graphics/graphics-atlas-client",
   "version": "0.5.2",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./topojson/*": "./topojson/*",
+    "./package.json": "./package.json"
+  },
   "repository": "https://github.com/reuters-graphics/graphics-atlas-client",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "license": "MIT",
@@ -12,42 +22,50 @@
   ],
   "scripts": {
     "build:metadata": "npx ./bin/buildMetadata/index.js",
-    "build:maps": "npx ./bin/buildMaps/index.js",
-    "build:maps:custom": "npx ./bin/buildMaps/makeTopoJsonFromHandEditedFile.js",
-    "build": "rollup --config rollup.config.js",
-    "test": "mocha"
+    "build:maps": "node bin/buildMaps/index.js",
+    "build": "rollup --config rollup.config.mjs",
+    "prepare": "rollup --config rollup.config.mjs",
+    "prepublishOnly": "pnpm build && pnpm build:maps",
+    "lint": "eslint lib/ bin/",
+    "test": "mocha",
+    "test:integration": "mocha test/integration --recursive",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "git add --all && changeset publish",
+    "docs:dev": "pnpm -C docs install && pnpm -C docs dev",
+    "build:docs": "pnpm -C docs install && pnpm -C docs build",
+    "docs:build": "pnpm build && pnpm run build:docs"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
-    "@reuters-graphics/eslint-config": "^0.0.2",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^8.0.1",
-    "@sindresorhus/slugify": "^1.0.0",
-    "@turf/bbox": "^6.0.1",
-    "@turf/bbox-polygon": "^6.0.1",
-    "@turf/boolean-crosses": "^6.0.1",
-    "@turf/centroid": "^6.0.2",
-    "@turf/dissolve": "^5.1.5",
-    "@turf/helpers": "^6.1.4",
-    "@turf/union": "^6.0.3",
-    "axios": "^0.19.2",
-    "chalk": "^4.1.0",
-    "csv-parse": "^4.10.1",
-    "eslint": "^6.8.0",
-    "expect.js": "^0.3.1",
-    "gzip-size": "^5.1.1",
-    "mocha": "^7.1.2",
-    "node-fetch": "^2.6.0",
-    "rollup": "^2.10.5",
-    "rollup-plugin-node-externals": "^2.2.0",
-    "rollup-plugin-size-snapshot": "^0.12.0",
-    "shapefile": "^0.6.6",
-    "simplify-geojson": "^1.0.3",
-    "topojson": "^3.0.2",
-    "unzipper": "^0.10.11"
+    "@changesets/cli": "^3.0.0",
+    "@eslint/js": "^9.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@sindresorhus/slugify": "^1.1.2",
+    "@turf/bbox": "^7.2.0",
+    "@turf/boolean-intersects": "^7.2.0",
+    "@turf/helpers": "^7.2.0",
+    "csv-parse": "^5.5.6",
+    "d3-geo": "^3.1.1",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "mocha": "^11.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-node-externals": "^8.0.0",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "unzipper": "^0.12.0"
   },
-  "dependencies": {
-    "cross-fetch": "^3.0.5",
-    "glob": "^7.1.6",
-    "lodash": "^4.17.15"
+  "peerDependencies": {
+    "flag-icons": ">=7"
+  },
+  "peerDependenciesMeta": {
+    "flag-icons": {
+      "optional": true
+    }
   }
 }

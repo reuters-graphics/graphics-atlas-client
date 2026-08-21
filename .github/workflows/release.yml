@@ -1,0 +1,22 @@
+name: Release
+
+# Versioning + npm publish via the shared org workflow (changesets).
+#
+# On push to master it opens/updates a "Version Packages" PR; merging that PR
+# publishes to npm. Publishing runs `prepublishOnly` (build + build:maps),
+# which pulls GeoJSON from the private country-borders repo via `gh` — that
+# needs REPO_PAT_TOKEN, which the shared workflow exposes as GH_TOKEN.
+#
+# publish_docs stays false: docs.yml already deploys the site on every push
+# to master, so enabling it here would double-deploy.
+on:
+  push:
+    branches: [master]
+
+jobs:
+  release:
+    uses: reuters-graphics/action-workflows/.github/workflows/changesets-release.yaml@main
+    secrets: inherit
+    with:
+      node_version: '22'
+      publish_docs: false

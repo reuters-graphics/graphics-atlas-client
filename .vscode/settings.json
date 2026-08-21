@@ -1,0 +1,12 @@
+{
+  // VS Code runs tasks — including the npm Scripts tab — in a non-interactive
+  // shell, which never sources ~/.zshrc and so never loads nvm. Without this,
+  // scripts fail with "zsh:1: command not found: pnpm".
+  // -l -i gives tasks the same login+interactive shell you get in the terminal.
+  "terminal.integrated.automationProfile.osx": {
+    "path": "/bin/zsh",
+    "args": ["-l", "-i"]
+  },
+  // This repo is pnpm (packageManager: pnpm@11.20.0, pnpm-lock.yaml).
+  "npm.packageManager": "pnpm"
+}
