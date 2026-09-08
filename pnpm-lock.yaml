@@ -37,8 +37,8 @@ importers:
         specifier: ^7.2.0
         version: 7.4.0
       csv-parse:
-        specifier: ^5.5.6
-        version: 5.6.0
+        specifier: ^7.0.2
+        version: 7.0.2
       d3-geo:
         specifier: ^3.1.1
         version: 3.1.1
@@ -530,8 +530,8 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  csv-parse@5.6.0:
-    resolution: {integrity: sha512-l3nz3euub2QMg5ouu5U09Ew9Wf6/wQ8I++ch1loQ0ljmzhmfZYrH9fflS22i/PQEvsPvxCwxgz5q7UB8K1JO4Q==}
+  csv-parse@7.0.2:
+    resolution: {integrity: sha512-uKZghv9UmPkMVLYy//KZ9HFAIJsl7wkhoEdIL0+rhuSY9pZQlhaeGEDPIe+/w7eh81MOql8Q/9+inAGWG6ZHYA==}
 
   d3-array@3.2.4:
     resolution: {integrity: sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==}
@@ -608,6 +608,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -1600,7 +1601,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  csv-parse@5.6.0: {}
+  csv-parse@7.0.2: {}
 
   d3-array@3.2.4:
     dependencies:
