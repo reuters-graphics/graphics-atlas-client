@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.33.0",
-    "astro": "^5.0.0",
+    "astro": "^7.2.8",
     "sharp": "^0.35.0",
     "@reuters-graphics/graphics-atlas-client": "link:..",
     "d3-geo": "^3.1.1",
